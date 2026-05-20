@@ -47,7 +47,8 @@
         android:label="咸鱼助手"
         android:supportsRtl="true"
         android:theme="@style/Theme.Saltfish"
-        android:resizeableActivity="true">
+        android:resizeableActivity="true"
+        tools:replace="android:allowBackup,android:label,android:theme">
 
         <activity
             android:name=".MainActivity"
@@ -68,7 +69,8 @@
         <service
             android:name="com.stardust.autojs.core.accessibility.AccessibilityService"
             android:exported="true"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            tools:replace="android:exported">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>

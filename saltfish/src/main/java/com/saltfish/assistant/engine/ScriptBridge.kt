@@ -3,7 +3,7 @@ package com.saltfish.assistant.engine
 import com.saltfish.assistant.domain.model.TaskResult
 import com.stardust.autojs.engine.ScriptEngine
 import com.stardust.autojs.engine.ScriptEngineManager
-import com.stardust.autojs.script.JavaScriptSource
+import com.stardust.autojs.script.StringScriptSource
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -34,7 +34,7 @@ class ScriptBridge(
             ?: return TaskResult.Error("Adapter script not found: $platform")
 
         val engine = engineManager.createEngineOfSourceOrThrow(
-            JavaScriptSource("adapter_$platform", scriptContent)
+            StringScriptSource(scriptContent)
         )
         try {
             engine.put("__scriptBridge__", this)
@@ -46,7 +46,7 @@ class ScriptBridge(
             _taskState.value = TaskExecutionState.Running(platform, taskType, 0)
 
             val result = engine.execute(
-                JavaScriptSource("adapter_$platform", scriptContent)
+                StringScriptSource(scriptContent)
             )
 
             val finalResult = parseResult(result)
