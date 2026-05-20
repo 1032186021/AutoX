@@ -338,6 +338,7 @@ private fun DeviceInfoRow(label: String, value: String) {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SaltfishTopBar(onLogClick: () -> Unit) {
     CenterAlignedTopAppBar(
@@ -381,6 +382,7 @@ fun SaltfishTopBar(onLogClick: () -> Unit) {
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SaltfishBottomBar(currentRoute: String, onNavigate: (String) -> Unit) {
     NavigationBar(
