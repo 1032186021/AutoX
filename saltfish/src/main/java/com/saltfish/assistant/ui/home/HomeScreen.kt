@@ -2,27 +2,26 @@ package com.saltfish.assistant.ui.home
 
 import android.content.Intent
 import android.provider.Settings
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.saltfish.assistant.data.remote.SocketIOManager.ConnectionState
 import com.saltfish.assistant.engine.TaskExecutionState
-import com.saltfish.assistant.ui.components.PermissionItem
-import com.saltfish.assistant.ui.components.StatusCard
 import com.saltfish.assistant.ui.navigation.Screen
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     navController: NavController,
@@ -30,116 +29,128 @@ fun HomeScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
+    var showDeviceInfo by remember { mutableStateOf(false) }
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("咸鱼助手") },
-                actions = {
-                    IconButton(onClick = { navController.navigate(Screen.UserCenter.route) }) {
-                        Icon(Icons.Default.AccountCircle, contentDescription = "用户中心")
-                    }
-                    IconButton(onClick = { navController.navigate(Screen.Settings.route) }) {
-                        Icon(Icons.Default.Settings, contentDescription = "设置")
-                    }
-                }
-            )
+            SaltfishTopBar(onLogClick = { navController.navigate(Screen.Settings.route) })
         },
         bottomBar = {
-            BottomNavigation {
-                BottomNavigationItem(
-                    selected = true,
-                    onClick = {},
-                    icon = { Icon(Icons.Default.Home, contentDescription = null) },
-                    label = { Text("首页") }
-                )
-                BottomNavigationItem(
-                    selected = false,
-                    onClick = { navController.navigate(Screen.Task.route) },
-                    icon = { Icon(Icons.Default.List, contentDescription = null) },
-                    label = { Text("任务") }
-                )
-                BottomNavigationItem(
-                    selected = false,
-                    onClick = {},
-                    icon = { Icon(Icons.Default.PlayArrow, contentDescription = null) },
-                    label = { Text("自动化") }
-                )
-            }
+            SaltfishBottomBar(
+                currentRoute = Screen.Home.route,
+                onNavigate = { route -> navController.navigate(route) {
+                    popUpTo(Screen.Home.route) { saveState = true }
+                    launchSingleTop = true
+                    restoreState = true
+                }}
+            )
         }
-    ) { padding ->
+    ) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(padding)
+                .padding(innerPadding)
                 .verticalScroll(rememberScrollState())
-                .padding(16.dp),
+                .padding(horizontal = 16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            // Connection status
-            StatusCard(
-                title = "服务器连接",
-                value = when (uiState.wsState) {
-                    ConnectionState.CONNECTED -> "已连接"
-                    ConnectionState.CONNECTING -> "连接中..."
-                    ConnectionState.RECONNECTING -> "重连中..."
-                    ConnectionState.DISCONNECTED -> "未连接"
-                },
-                statusColor = when (uiState.wsState) {
-                    ConnectionState.CONNECTED -> Color(0xFF4CAF50)
-                    else -> Color(0xFFFF5722)
-                }
-            )
+            Spacer(modifier = Modifier.height(4.dp))
 
-            // Task status
-            StatusCard(
-                title = "当前任务",
-                value = when (val ts = uiState.taskState) {
-                    is TaskExecutionState.Idle -> "空闲"
-                    is TaskExecutionState.Running -> "运行中: ${ts.taskType}"
-                },
-                statusColor = when (uiState.taskState) {
-                    is TaskExecutionState.Idle -> Color(0xFF9E9E9E)
-                    is TaskExecutionState.Running -> Color(0xFF2196F3)
-                }
-            )
-
-            // Device info
-            Card(elevation = 2.dp) {
+            // Hero status card
+            ElevatedCard(
+                modifier = Modifier.fillMaxWidth(),
+                shape = MaterialTheme.shapes.large,
+                colors = CardDefaults.elevatedCardColors(
+                    containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
+                )
+            ) {
                 Column(modifier = Modifier.padding(16.dp)) {
-                    Text("设备信息", fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text("设备: ${uiState.deviceName}", fontSize = 14.sp)
-                    Text("内存: ${uiState.availableMemory}", fontSize = 14.sp)
-                    Text("电量: ${uiState.batteryLevel}%", fontSize = 14.sp)
-                    Text("用户: ${uiState.username}", fontSize = 14.sp)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceEvenly
+                    ) {
+                        HeroStatItem(
+                            label = "服务器",
+                            value = when (uiState.wsState) {
+                                ConnectionState.CONNECTED -> "已连接"
+                                else -> "未连接"
+                            },
+                            valueColor = if (uiState.wsState == ConnectionState.CONNECTED)
+                                MaterialTheme.colorScheme.primary
+                            else MaterialTheme.colorScheme.error
+                        )
+                        VerticalDivider(
+                            modifier = Modifier.height(40.dp),
+                            color = MaterialTheme.colorScheme.outlineVariant
+                        )
+                        HeroStatItem(
+                            label = "任务状态",
+                            value = when (uiState.taskState) {
+                                is TaskExecutionState.Idle -> "空闲"
+                                is TaskExecutionState.Running -> "运行中"
+                            },
+                            valueColor = MaterialTheme.colorScheme.onSurface
+                        )
+                        VerticalDivider(
+                            modifier = Modifier.height(40.dp),
+                            color = MaterialTheme.colorScheme.outlineVariant
+                        )
+                        HeroStatItem(
+                            label = "适配器",
+                            value = "${uiState.adapterVersions.size} 个",
+                            valueColor = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                    Spacer(modifier = Modifier.height(12.dp))
+                    LinearProgressIndicator(
+                        progress = if (uiState.wsState == ConnectionState.CONNECTED) 1f else 0.3f,
+                        modifier = Modifier.fillMaxWidth(),
+                        color = if (uiState.wsState == ConnectionState.CONNECTED)
+                            MaterialTheme.colorScheme.primary
+                        else MaterialTheme.colorScheme.error,
+                        trackColor = MaterialTheme.colorScheme.surfaceVariant,
+                    )
                 }
             }
 
-            // Permissions
-            Card(elevation = 2.dp) {
+            // Permission section
+            Text(
+                "系统权限",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(start = 4.dp)
+            )
+            ElevatedCard(
+                modifier = Modifier.fillMaxWidth(),
+                shape = MaterialTheme.shapes.medium
+            ) {
                 Column {
-                    Text(
-                        "系统权限",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp,
-                        modifier = Modifier.padding(16.dp, 12.dp)
-                    )
-                    PermissionItem(
+                    PermissionRow(
+                        icon = Icons.Default.Build,
                         label = "无障碍服务",
                         isGranted = uiState.isAccessibilityEnabled,
                         onClick = {
                             context.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
                         }
                     )
-                    PermissionItem(
+                    HorizontalDivider(
+                        modifier = Modifier.padding(horizontal = 16.dp),
+                        color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
+                    )
+                    PermissionRow(
+                        icon = Icons.Default.ExitToApp,
                         label = "悬浮窗权限",
                         isGranted = uiState.isFloatyPermissionGranted,
                         onClick = {
                             context.startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION))
                         }
                     )
-                    PermissionItem(
+                    HorizontalDivider(
+                        modifier = Modifier.padding(horizontal = 16.dp),
+                        color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
+                    )
+                    PermissionRow(
+                        icon = Icons.Default.BatteryAlert,
                         label = "电池优化白名单",
                         isGranted = uiState.isIgnoringBattery,
                         onClick = {
@@ -149,20 +160,43 @@ fun HomeScreen(
                 }
             }
 
-            // Adapter versions
-            if (uiState.adapterVersions.isNotEmpty()) {
-                Card(elevation = 2.dp) {
+            // Device info expandable
+            TextButton(
+                onClick = { showDeviceInfo = !showDeviceInfo },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Icon(
+                    if (showDeviceInfo) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
+                    contentDescription = null,
+                    modifier = Modifier.size(18.dp)
+                )
+                Spacer(modifier = Modifier.width(4.dp))
+                Text("设备信息", style = MaterialTheme.typography.labelMedium)
+            }
+            AnimatedVisibility(visible = showDeviceInfo) {
+                ElevatedCard(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = MaterialTheme.shapes.medium
+                ) {
                     Column(modifier = Modifier.padding(16.dp)) {
-                        Text("适配器版本", fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                        Spacer(modifier = Modifier.height(8.dp))
-                        uiState.adapterVersions.forEach { (platform, version) ->
-                            Text("$platform: v$version", fontSize = 13.sp)
-                        }
+                        val di = uiState.deviceInfo
+                        DeviceInfoRow("设备名称", di.name)
+                        DeviceInfoRow("品牌", di.brand)
+                        DeviceInfoRow("型号", di.model)
+                        DeviceInfoRow("Android", "${di.androidVersion} (SDK ${di.sdkLevel})")
+                        DeviceInfoRow("CPU", di.cpuAbi)
+                        DeviceInfoRow("Root", if (di.isRooted) "已 Root" else "未 Root")
+                        DeviceInfoRow("UUID", di.uuid.take(12) + "...")
+                        DeviceInfoRow("内存", "${di.availableMemory} / ${di.totalMemory}")
+                        DeviceInfoRow("存储", "${di.availableStorage} / ${di.totalStorage}")
+                        DeviceInfoRow("电量", "${di.batteryLevel}% (${di.batteryStatus})")
+                        DeviceInfoRow("分辨率", "${di.screenWidth} x ${di.screenHeight}")
+                        DeviceInfoRow("网络", "${di.networkType} / ${di.ipAddress}")
                     }
                 }
             }
 
-            // Connect/Disconnect button
+            // CTA button
             Button(
                 onClick = {
                     if (uiState.wsState == ConnectionState.CONNECTED) {
@@ -171,12 +205,216 @@ fun HomeScreen(
                         viewModel.connectWebSocket()
                     }
                 },
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(50.dp),
+                shape = MaterialTheme.shapes.small
             ) {
+                Icon(
+                    if (uiState.wsState == ConnectionState.CONNECTED)
+                        Icons.Default.Close else Icons.Default.PlayArrow,
+                    contentDescription = null,
+                    modifier = Modifier.size(18.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    if (uiState.wsState == ConnectionState.CONNECTED) "断开连接" else "连接服务器"
+                    if (uiState.wsState == ConnectionState.CONNECTED) "断开连接"
+                    else "连接服务器"
                 )
             }
+
+            // Adapter versions
+            if (uiState.adapterVersions.isNotEmpty()) {
+                Text(
+                    "适配器版本",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(start = 4.dp)
+                )
+                ElevatedCard(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = MaterialTheme.shapes.medium
+                ) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        uiState.adapterVersions.forEach { (platform, version) ->
+                            Text(
+                                "$platform: v$version",
+                                style = MaterialTheme.typography.bodySmall,
+                                modifier = Modifier.padding(vertical = 2.dp)
+                            )
+                        }
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(8.dp))
         }
+    }
+}
+
+@Composable
+private fun HeroStatItem(
+    label: String,
+    value: String,
+    valueColor: androidx.compose.ui.graphics.Color
+) {
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(
+            label,
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(4.dp))
+        Text(
+            value,
+            style = MaterialTheme.typography.titleMedium,
+            color = valueColor
+        )
+    }
+}
+
+@Composable
+private fun PermissionRow(
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    label: String,
+    isGranted: Boolean,
+    onClick: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .padding(horizontal = 16.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(
+            icon,
+            contentDescription = null,
+            modifier = Modifier.size(20.dp),
+            tint = if (isGranted) MaterialTheme.colorScheme.primary
+                   else MaterialTheme.colorScheme.error
+        )
+        Spacer(modifier = Modifier.width(12.dp))
+        Text(
+            label,
+            style = MaterialTheme.typography.bodyLarge,
+            modifier = Modifier.weight(1f)
+        )
+        if (isGranted) {
+            Icon(
+                Icons.Default.Check,
+                contentDescription = null,
+                modifier = Modifier.size(18.dp),
+                tint = MaterialTheme.colorScheme.primary
+            )
+        } else {
+            Text(
+                "去开启",
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.error
+            )
+            Icon(
+                Icons.Default.KeyboardArrowRight,
+                contentDescription = null,
+                modifier = Modifier.size(18.dp),
+                tint = MaterialTheme.colorScheme.error
+            )
+        }
+    }
+}
+
+@Composable
+private fun DeviceInfoRow(label: String, value: String) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 2.dp),
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        Text(
+            label,
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Text(
+            value,
+            style = MaterialTheme.typography.bodySmall
+        )
+    }
+}
+
+@Composable
+fun SaltfishTopBar(onLogClick: () -> Unit) {
+    CenterAlignedTopAppBar(
+        title = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Surface(
+                    modifier = Modifier.size(32.dp),
+                    shape = MaterialTheme.shapes.small,
+                    color = MaterialTheme.colorScheme.primaryContainer
+                ) {
+                    Box(contentAlignment = Alignment.Center) {
+                        Text("🐟", style = MaterialTheme.typography.labelMedium)
+                    }
+                }
+                Spacer(modifier = Modifier.width(10.dp))
+                Column {
+                    Text(
+                        "咸鱼助手",
+                        style = MaterialTheme.typography.titleMedium
+                    )
+                    Text(
+                        "智能自动化平台",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        },
+        actions = {
+            IconButton(onClick = onLogClick) {
+                Icon(
+                    Icons.Default.List,
+                    contentDescription = "日志",
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        },
+        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+            containerColor = MaterialTheme.colorScheme.background
+        )
+    )
+}
+
+@Composable
+fun SaltfishBottomBar(currentRoute: String, onNavigate: (String) -> Unit) {
+    NavigationBar(
+        containerColor = MaterialTheme.colorScheme.surface,
+        tonalElevation = 0.dp
+    ) {
+        NavigationBarItem(
+            selected = currentRoute == Screen.Home.route,
+            onClick = { onNavigate(Screen.Home.route) },
+            icon = { Icon(Icons.Default.Home, contentDescription = null) },
+            label = { Text("首页") }
+        )
+        NavigationBarItem(
+            selected = currentRoute == Screen.Automation.route,
+            onClick = { onNavigate(Screen.Automation.route) },
+            icon = { Icon(Icons.Default.PlayArrow, contentDescription = null) },
+            label = { Text("自动化") }
+        )
+        NavigationBarItem(
+            selected = currentRoute == Screen.Task.route,
+            onClick = { onNavigate(Screen.Task.route) },
+            icon = { Icon(Icons.Default.List, contentDescription = null) },
+            label = { Text("任务队列") }
+        )
+        NavigationBarItem(
+            selected = currentRoute == Screen.UserCenter.route,
+            onClick = { onNavigate(Screen.UserCenter.route) },
+            icon = { Icon(Icons.Default.AccountCircle, contentDescription = null) },
+            label = { Text("用户中心") }
+        )
     }
 }
