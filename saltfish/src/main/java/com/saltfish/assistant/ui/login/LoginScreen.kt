@@ -1,34 +1,27 @@
 package com.saltfish.assistant.ui.login
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.saltfish.assistant.ui.theme.Yellow500
-import com.saltfish.assistant.ui.theme.Yellow700
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginScreen(
     onLoginSuccess: () -> Unit,
@@ -42,19 +35,7 @@ fun LoginScreen(
         if (uiState.loginSuccess) onLoginSuccess()
     }
 
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(
-                Brush.verticalGradient(
-                    colors = listOf(
-                        Yellow500.copy(alpha = 0.15f),
-                        Color.Transparent,
-                        Color.Transparent
-                    )
-                )
-            )
-    ) {
+    Box(modifier = Modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -65,23 +46,20 @@ fun LoginScreen(
         ) {
             Spacer(modifier = Modifier.height(60.dp))
 
-            // Logo / App name
             Text(
-                text = "咸鱼助手",
-                fontSize = 28.sp,
-                fontWeight = FontWeight.Bold,
-                color = Yellow700
+                "咸鱼助手",
+                style = MaterialTheme.typography.displaySmall,
+                color = MaterialTheme.colorScheme.primary
             )
             Spacer(modifier = Modifier.height(8.dp))
             Text(
-                text = "登录您的账号",
-                fontSize = 14.sp,
-                color = Color.Gray
+                "登录您的账号",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
             Spacer(modifier = Modifier.height(40.dp))
 
-            // Username
             OutlinedTextField(
                 value = uiState.username,
                 onValueChange = viewModel::updateUsername,
@@ -95,13 +73,13 @@ fun LoginScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Password
             OutlinedTextField(
                 value = uiState.password,
                 onValueChange = viewModel::updatePassword,
                 label = { Text("密码") },
                 leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null) },
-                visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
+                visualTransformation = if (passwordVisible) VisualTransformation.None
+                    else PasswordVisualTransformation(),
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
                 shape = RoundedCornerShape(12.dp),
@@ -112,7 +90,6 @@ fun LoginScreen(
                 keyboardActions = KeyboardActions(onDone = { focusManager.clearFocus() })
             )
 
-            // Captcha (conditional)
             if (uiState.showCaptcha) {
                 Spacer(modifier = Modifier.height(16.dp))
                 OutlinedTextField(
@@ -126,12 +103,11 @@ fun LoginScreen(
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number, imeAction = ImeAction.Done)
                 )
                 Spacer(modifier = Modifier.height(8.dp))
-                // Captcha image placeholder
-                uiState.captchaBase64?.let { _ ->
+                uiState.captchaBase64?.let {
                     Text(
-                        text = "验证码图片(点此刷新)",
-                        fontSize = 12.sp,
-                        color = Yellow700,
+                        "验证码图片(点此刷新)",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.primary,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -140,7 +116,6 @@ fun LoginScreen(
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            // Remember account
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
@@ -150,19 +125,18 @@ fun LoginScreen(
                     onCheckedChange = viewModel::setRememberAccount
                 )
                 Text(
-                    text = "记住登录信息",
-                    fontSize = 14.sp,
-                    color = Color.Gray
+                    "记住登录信息",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
 
-            // Error message
             uiState.errorMessage?.let { error ->
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = error,
-                    color = MaterialTheme.colors.error,
-                    fontSize = 13.sp,
+                    error,
+                    color = MaterialTheme.colorScheme.error,
+                    style = MaterialTheme.typography.bodySmall,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -170,24 +144,20 @@ fun LoginScreen(
 
             Spacer(modifier = Modifier.height(24.dp))
 
-            // Login button
             Button(
                 onClick = { viewModel.login() },
                 enabled = !uiState.isLoading,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(50.dp),
-                shape = RoundedCornerShape(25.dp),
-                colors = ButtonDefaults.buttonColors(backgroundColor = Yellow700)
+                modifier = Modifier.fillMaxWidth().height(50.dp),
+                shape = RoundedCornerShape(25.dp)
             ) {
                 if (uiState.isLoading) {
                     CircularProgressIndicator(
                         modifier = Modifier.size(20.dp),
-                        color = Color.White,
+                        color = MaterialTheme.colorScheme.onPrimary,
                         strokeWidth = 2.dp
                     )
                 } else {
-                    Text("登  录", fontSize = 16.sp, color = Color.White)
+                    Text("登  录", style = MaterialTheme.typography.titleMedium)
                 }
             }
 
