@@ -3,99 +3,78 @@ package com.saltfish.assistant.ui.settings
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.saltfish.assistant.SaltfishApp
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen() {
     val context = LocalContext.current
     val app = context.applicationContext as SaltfishApp
-    var baseUrl by remember { mutableStateOf(app.preferencesManager.baseUrl) }
-    var wsUrl by remember { mutableStateOf(app.preferencesManager.wsUrl) }
     var autoUpgrade by remember { mutableStateOf(app.preferencesManager.autoUpgrade) }
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("设置") }
-            )
+            CenterAlignedTopAppBar(title = { Text("设置") })
         }
-    ) { padding ->
+    ) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(padding)
+                .padding(innerPadding)
                 .verticalScroll(rememberScrollState())
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            // Server config
-            Text("服务器配置", fontWeight = FontWeight.Bold, fontSize = 18.sp)
-            OutlinedTextField(
-                value = baseUrl,
-                onValueChange = { baseUrl = it },
-                label = { Text("API 地址") },
-                modifier = Modifier.fillMaxWidth(),
-                singleLine = true
-            )
-            OutlinedTextField(
-                value = wsUrl,
-                onValueChange = { wsUrl = it },
-                label = { Text("WebSocket 地址") },
-                modifier = Modifier.fillMaxWidth(),
-                singleLine = true
-            )
-
-            Divider()
-
-            // Update settings
-            Text("更新设置", fontWeight = FontWeight.Bold, fontSize = 18.sp)
-            Row(modifier = Modifier.fillMaxWidth()) {
-                Text("自动更新", modifier = Modifier.weight(1f), fontSize = 15.sp)
-                Switch(
-                    checked = autoUpgrade,
-                    onCheckedChange = {
-                        autoUpgrade = it
-                        app.preferencesManager.autoUpgrade = it
-                    }
-                )
+            Text("更新设置", style = MaterialTheme.typography.titleMedium)
+            ElevatedCard(shape = MaterialTheme.shapes.medium) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(16.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text("自动更新", style = MaterialTheme.typography.bodyLarge)
+                    Switch(
+                        checked = autoUpgrade,
+                        onCheckedChange = {
+                            autoUpgrade = it
+                            app.preferencesManager.autoUpgrade = it
+                        }
+                    )
+                }
             }
 
-            Divider()
+            HorizontalDivider()
 
-            // Debug section
-            Text("调试", fontWeight = FontWeight.Bold, fontSize = 18.sp)
-            Button(
-                onClick = {
-                    app.preferencesManager.baseUrl = baseUrl
-                    app.preferencesManager.wsUrl = wsUrl
-                },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text("保存设置")
-            }
-
+            Text("缓存管理", style = MaterialTheme.typography.titleMedium)
             OutlinedButton(
                 onClick = {
                     context.cacheDir.deleteRecursively()
                     context.cacheDir.mkdirs()
                 },
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                shape = MaterialTheme.shapes.small
             ) {
                 Text("清除缓存")
             }
 
-            Divider()
+            HorizontalDivider()
 
-            Text("关于", fontWeight = FontWeight.Bold, fontSize = 18.sp)
-            Text("咸鱼助手 v1.0.0", fontSize = 14.sp)
-            Text("基于 AutoX 引擎", fontSize = 12.sp, color = MaterialTheme.colors.onSurface.copy(alpha = 0.5f))
+            Text("关于", style = MaterialTheme.typography.titleMedium)
+            ElevatedCard(shape = MaterialTheme.shapes.medium) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text("咸鱼助手 v1.0.0", style = MaterialTheme.typography.bodyLarge)
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        "基于 AutoX 引擎",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
         }
     }
 }
