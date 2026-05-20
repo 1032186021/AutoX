@@ -57,6 +57,9 @@ data class ProjectConfig(
 
         fun fromJson(json: String): ProjectConfig? {
             val config = GSON.fromJson(json, ProjectConfig::class.java)
+            if (config.signingConfig == null) {
+                config.signingConfig = SigningConfig()
+            }
             return if (!isValid(config)) null else config
         }
 

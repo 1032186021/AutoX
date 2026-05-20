@@ -123,11 +123,13 @@ class ScriptExecuteActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d(LOG_TAG, "onDestroy")
+        Log.d(LOG_TAG, "onDestroy, isFinishing = $isFinishing")
         if (::mScriptEngine.isInitialized) {
             mScriptEngine.put("activity", null)
             mScriptEngine.setTag("activity", null)
-            mScriptEngine.destroy()
+            if (isFinishing) {
+                mScriptEngine.destroy()
+            }
         }
     }
 
