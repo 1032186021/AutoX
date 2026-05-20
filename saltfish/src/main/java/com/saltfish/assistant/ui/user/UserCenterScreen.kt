@@ -1,27 +1,22 @@
 package com.saltfish.assistant.ui.user
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.saltfish.assistant.SaltfishApp
-import com.saltfish.assistant.ui.theme.Yellow700
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun UserCenterScreen(
     onLogout: () -> Unit
@@ -41,7 +36,7 @@ fun UserCenterScreen(
                     showLogoutDialog = false
                     onLogout()
                 }) {
-                    Text("确定", color = MaterialTheme.colors.error)
+                    Text("确定", color = MaterialTheme.colorScheme.error)
                 }
             },
             dismissButton = {
@@ -52,138 +47,155 @@ fun UserCenterScreen(
         )
     }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-    ) {
-        // Header
-        Box(
+    Scaffold(
+        topBar = {
+            CenterAlignedTopAppBar(title = { Text("用户中心") })
+        }
+    ) { innerPadding ->
+        Column(
             modifier = Modifier
-                .fillMaxWidth()
-                .height(200.dp)
-                .background(
-                    Brush.verticalGradient(
-                        colors = listOf(Yellow700, Yellow700.copy(alpha = 0.7f))
-                    )
-                ),
-            contentAlignment = Alignment.Center
+                .fillMaxSize()
+                .padding(innerPadding)
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                // Avatar placeholder
-                Box(
-                    modifier = Modifier
-                        .size(72.dp)
-                        .clip(CircleShape)
-                        .background(Color.White.copy(alpha = 0.3f)),
-                    contentAlignment = Alignment.Center
-                ) {
+            Spacer(modifier = Modifier.height(24.dp))
+
+            // Avatar
+            Surface(
+                modifier = Modifier.size(72.dp),
+                shape = CircleShape,
+                color = MaterialTheme.colorScheme.primaryContainer
+            ) {
+                Box(contentAlignment = Alignment.Center) {
                     Icon(
                         Icons.Default.Person,
                         contentDescription = null,
                         modifier = Modifier.size(40.dp),
-                        tint = Color.White
+                        tint = MaterialTheme.colorScheme.onPrimaryContainer
                     )
                 }
-                Spacer(modifier = Modifier.height(12.dp))
-                Text(
-                    text = prefs.nickName ?: "未设置昵称",
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.White
-                )
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = if (prefs.isLoggedIn()) "已登录" else "未登录",
-                    fontSize = 13.sp,
-                    color = Color.White.copy(alpha = 0.8f)
+            }
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+            // Username
+            Text(
+                prefs.nickName ?: "未设置昵称",
+                style = MaterialTheme.typography.headlineSmall
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+
+            // Status chip
+            AssistChip(
+                onClick = {},
+                label = {
+                    Text(
+                        if (prefs.isLoggedIn()) "已登录" else "未登录",
+                        style = MaterialTheme.typography.labelMedium
+                    )
+                },
+                leadingIcon = {
+                    Icon(
+                        if (prefs.isLoggedIn()) Icons.Default.CheckCircle else Icons.Default.Close,
+                        contentDescription = null,
+                        modifier = Modifier.size(16.dp)
+                    )
+                }
+            )
+
+            Spacer(modifier = Modifier.height(32.dp))
+
+            // Account section
+            SectionHeader("账号管理")
+            ElevatedCard(shape = MaterialTheme.shapes.medium, modifier = Modifier.fillMaxWidth()) {
+                Column {
+                    CenterItem(
+                        icon = Icons.Default.AccountCircle,
+                        title = "个人信息",
+                        subtitle = prefs.nickName ?: "查看/修改个人信息"
+                    )
+                    HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
+                    CenterItem(
+                        icon = Icons.Default.Lock,
+                        title = "权限列表",
+                        subtitle = "查看当前权限"
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // Data section
+            SectionHeader("数据管理")
+            ElevatedCard(shape = MaterialTheme.shapes.medium, modifier = Modifier.fillMaxWidth()) {
+                Column {
+                    CenterItem(
+                        icon = Icons.Default.Refresh,
+                        title = "同步数据",
+                        subtitle = "从服务器同步最新配置"
+                    )
+                    HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
+                    CenterItem(
+                        icon = Icons.Default.Delete,
+                        title = "清除缓存",
+                        subtitle = "清除本地缓存数据",
+                        onClick = {
+                            context.cacheDir.deleteRecursively()
+                            context.cacheDir.mkdirs()
+                        }
+                    )
+                }
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // About section
+            SectionHeader("关于")
+            ElevatedCard(shape = MaterialTheme.shapes.medium, modifier = Modifier.fillMaxWidth()) {
+                CenterItem(
+                    icon = Icons.Default.Info,
+                    title = "咸鱼助手",
+                    subtitle = "v1.0.0 · 基于 AutoX 引擎"
                 )
             }
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            // Logout button
+            OutlinedButton(
+                onClick = { showLogoutDialog = true },
+                modifier = Modifier.fillMaxWidth().height(48.dp),
+                colors = ButtonDefaults.outlinedButtonColors(
+                    contentColor = MaterialTheme.colorScheme.error
+                ),
+                shape = MaterialTheme.shapes.small
+            ) {
+                Icon(Icons.Default.ExitToApp, contentDescription = null, modifier = Modifier.size(18.dp))
+                Spacer(modifier = Modifier.width(8.dp))
+                Text("退出登录")
+            }
+
+            Spacer(modifier = Modifier.height(32.dp))
         }
-
-        // Menu items
-        Spacer(modifier = Modifier.height(16.dp))
-
-        // Account section
-        SectionTitle("账号管理")
-
-        SettingsItem(
-            icon = Icons.Default.AccountCircle,
-            title = "个人信息",
-            subtitle = prefs.nickName ?: "查看/修改个人信息"
-        ) { }
-
-        SettingsItem(
-            icon = Icons.Default.Lock,
-            title = "权限列表",
-            subtitle = "查看当前权限"
-        ) { }
-
-        Divider(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
-
-        SectionTitle("数据")
-
-        SettingsItem(
-            icon = Icons.Default.Refresh,
-            title = "同步数据",
-            subtitle = "从服务器同步最新配置"
-        ) { }
-
-        SettingsItem(
-            icon = Icons.Default.Delete,
-            title = "清除缓存",
-            subtitle = "清除本地缓存数据"
-        ) {
-            context.cacheDir.deleteRecursively()
-            context.cacheDir.mkdirs()
-        }
-
-        Divider(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp))
-
-        SectionTitle("其他")
-
-        SettingsItem(
-            icon = Icons.Default.Info,
-            title = "关于咸鱼助手",
-            subtitle = "v1.0.0 · 基于 AutoX 引擎"
-        ) { }
-
-        Spacer(modifier = Modifier.height(24.dp))
-
-        // Logout button
-        Button(
-            onClick = { showLogoutDialog = true },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 32.dp)
-                .height(48.dp),
-            colors = ButtonDefaults.buttonColors(
-                backgroundColor = MaterialTheme.colors.error.copy(alpha = 0.1f)
-            ),
-            elevation = ButtonDefaults.elevation(0.dp)
-        ) {
-            Icon(Icons.Default.ExitToApp, contentDescription = null, tint = MaterialTheme.colors.error)
-            Spacer(modifier = Modifier.width(8.dp))
-            Text("退出登录", color = MaterialTheme.colors.error)
-        }
-
-        Spacer(modifier = Modifier.height(32.dp))
     }
 }
 
 @Composable
-private fun SectionTitle(title: String) {
+private fun SectionHeader(title: String) {
     Text(
-        text = title,
-        fontSize = 13.sp,
-        fontWeight = FontWeight.Medium,
-        color = Color.Gray,
-        modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
+        title,
+        style = MaterialTheme.typography.labelMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 4.dp, bottom = 8.dp)
     )
 }
 
 @Composable
-private fun SettingsItem(
+private fun CenterItem(
     icon: androidx.compose.ui.graphics.vector.ImageVector,
     title: String,
     subtitle: String,
@@ -200,18 +212,22 @@ private fun SettingsItem(
             icon,
             contentDescription = null,
             modifier = Modifier.size(22.dp),
-            tint = Yellow700
+            tint = MaterialTheme.colorScheme.primary
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
-            Text(title, fontSize = 15.sp, fontWeight = FontWeight.Medium)
-            Text(subtitle, fontSize = 12.sp, color = Color.Gray)
+            Text(title, style = MaterialTheme.typography.bodyLarge)
+            Text(
+                subtitle,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
         }
         Icon(
-            Icons.Default.ArrowForward,
+            Icons.Default.KeyboardArrowRight,
             contentDescription = null,
             modifier = Modifier.size(20.dp),
-            tint = Color.LightGray
+            tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
         )
     }
 }
