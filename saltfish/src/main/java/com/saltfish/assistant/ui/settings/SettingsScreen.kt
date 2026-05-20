@@ -47,7 +47,7 @@ fun SettingsScreen() {
                 }
             }
 
-            HorizontalDivider()
+            Divider()
 
             Text("缓存管理", style = MaterialTheme.typography.titleMedium)
             OutlinedButton(
@@ -61,7 +61,7 @@ fun SettingsScreen() {
                 Text("清除缓存")
             }
 
-            HorizontalDivider()
+            Divider()
 
             Text("关于", style = MaterialTheme.typography.titleMedium)
             ElevatedCard(shape = MaterialTheme.shapes.medium) {

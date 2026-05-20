@@ -3,6 +3,7 @@ package com.saltfish.assistant.ui.home
 import android.content.Intent
 import android.provider.Settings
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -79,10 +80,7 @@ fun HomeScreen(
                                 MaterialTheme.colorScheme.primary
                             else MaterialTheme.colorScheme.error
                         )
-                        VerticalDivider(
-                            modifier = Modifier.height(40.dp),
-                            color = MaterialTheme.colorScheme.outlineVariant
-                        )
+                        Box(modifier = Modifier.width(1.dp).height(40.dp).background(MaterialTheme.colorScheme.outlineVariant))
                         HeroStatItem(
                             label = "任务状态",
                             value = when (uiState.taskState) {
@@ -91,10 +89,7 @@ fun HomeScreen(
                             },
                             valueColor = MaterialTheme.colorScheme.onSurface
                         )
-                        VerticalDivider(
-                            modifier = Modifier.height(40.dp),
-                            color = MaterialTheme.colorScheme.outlineVariant
-                        )
+                        Box(modifier = Modifier.width(1.dp).height(40.dp).background(MaterialTheme.colorScheme.outlineVariant))
                         HeroStatItem(
                             label = "适配器",
                             value = "${uiState.adapterVersions.size} 个",
@@ -133,7 +128,7 @@ fun HomeScreen(
                             context.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
                         }
                     )
-                    HorizontalDivider(
+                    Divider(
                         modifier = Modifier.padding(horizontal = 16.dp),
                         color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
                     )
@@ -145,12 +140,12 @@ fun HomeScreen(
                             context.startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION))
                         }
                     )
-                    HorizontalDivider(
+                    Divider(
                         modifier = Modifier.padding(horizontal = 16.dp),
                         color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
                     )
                     PermissionRow(
-                        icon = Icons.Default.BatteryAlert,
+                        icon = Icons.Default.Warning,
                         label = "电池优化白名单",
                         isGranted = uiState.isIgnoringBattery,
                         onClick = {
@@ -166,7 +161,7 @@ fun HomeScreen(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Icon(
-                    if (showDeviceInfo) Icons.Default.ExpandLess else Icons.Default.ExpandMore,
+                    if (showDeviceInfo) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowDown,
                     contentDescription = null,
                     modifier = Modifier.size(18.dp)
                 )

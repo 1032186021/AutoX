@@ -121,7 +121,7 @@ fun AutomationScreen(viewModel: AutomationViewModel = viewModel()) {
                 }
             }
 
-            HorizontalDivider()
+            Divider()
 
             // Platform selector
             Text("选择平台", style = MaterialTheme.typography.titleMedium)
@@ -192,7 +192,7 @@ fun AutomationScreen(viewModel: AutomationViewModel = viewModel()) {
                 )
             }
 
-            HorizontalDivider()
+            Divider()
 
             // Log section
             Text("运行日志", style = MaterialTheme.typography.titleMedium)
