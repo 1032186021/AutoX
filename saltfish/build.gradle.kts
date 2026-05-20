@@ -34,9 +34,17 @@ android {
     }
 
     buildTypes {
+        named("debug") {
+            buildConfigField("String", "API_BASE_URL", "\"http://192.168.68.217:8001\"")
+            buildConfigField("String", "WS_URL", "\"http://192.168.68.217:8001/socket\"")
+            buildConfigField("String", "SCRIPT_VERSION", "\"1.0.0\"")
+        }
         named("release") {
             isMinifyEnabled = true
             isShrinkResources = true
+            buildConfigField("String", "API_BASE_URL", "\"https://tool-admin.yunibobo.com/api\"")
+            buildConfigField("String", "WS_URL", "\"https://tool-admin.yunibobo.com/socket\"")
+            buildConfigField("String", "SCRIPT_VERSION", "\"1.0.0\"")
             setProguardFiles(
                 listOf(
                     getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -57,14 +65,12 @@ dependencies {
 
     // Compose
     implementation(libs.compose.ui)
-    implementation(libs.compose.material)
+    implementation(libs.compose.material3)
     implementation(libs.compose.ui.tooling.preview)
     debugImplementation(libs.compose.ui.tooling)
     implementation(libs.compose.foundation)
     implementation(libs.compose.foundation.layout)
     implementation(libs.activity.compose)
-    implementation(libs.accompanist.systemuicontroller)
-    implementation(libs.accompanist.insets)
 
     // Lifecycle
     val lifecycleVersion = "2.5.1"
