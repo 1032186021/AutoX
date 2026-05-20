@@ -7,9 +7,11 @@ import android.view.View
 import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.*
+import com.saltfish.assistant.ui.components.MessageHost
 import com.saltfish.assistant.ui.splash.SplashScreen
 import com.saltfish.assistant.ui.splash.isNetworkAvailable
 import com.saltfish.assistant.ui.splash.isVpnOrProxyActive
@@ -45,7 +47,10 @@ class SplashActivity : ComponentActivity() {
         setContent {
             SaltfishTheme {
                 Surface(color = MaterialTheme.colorScheme.background) {
-                    SplashContent()
+                    Box {
+                        SplashContent()
+                        MessageHost()
+                    }
                 }
             }
         }

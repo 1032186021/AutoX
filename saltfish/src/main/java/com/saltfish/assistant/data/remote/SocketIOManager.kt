@@ -73,6 +73,13 @@ class SocketIOManager(private val prefs: PreferencesManager) {
                     }
                 }
 
+                on("device:command") { args ->
+                    if (args.isNotEmpty()) {
+                        val data = JSONObject(args[0].toString())
+                        _eventChannel.trySend(SocketEvent.DeviceCommand(data))
+                    }
+                }
+
                 connect()
             }
         } catch (e: Exception) {
@@ -98,4 +105,5 @@ sealed class SocketEvent {
     data class TaskExecute(val data: JSONObject) : SocketEvent()
     data class ConfigUpdate(val data: JSONObject) : SocketEvent()
     data class AdapterUpgrade(val data: JSONObject) : SocketEvent()
+    data class DeviceCommand(val data: JSONObject) : SocketEvent()
 }
