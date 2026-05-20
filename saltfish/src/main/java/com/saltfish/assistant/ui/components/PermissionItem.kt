@@ -1,15 +1,12 @@
 package com.saltfish.assistant.ui.components
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun PermissionItem(
     label: String,
@@ -19,7 +16,8 @@ fun PermissionItem(
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
-        onClick = onClick
+        onClick = onClick,
+        color = MaterialTheme.colorScheme.surface
     ) {
         Row(
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
@@ -27,26 +25,26 @@ fun PermissionItem(
         ) {
             Surface(
                 modifier = Modifier.size(8.dp),
-                shape = MaterialTheme.shapes.small,
+                shape = MaterialTheme.shapes.extraSmall,
                 color = if (isGranted) {
-                    Color(0xFF4CAF50)
+                    MaterialTheme.colorScheme.primary
                 } else {
-                    Color(0xFFFF5722)
+                    MaterialTheme.colorScheme.error
                 }
             ) {}
             Spacer(modifier = Modifier.width(12.dp))
             Text(
                 text = label,
                 modifier = Modifier.weight(1f),
-                fontSize = 15.sp
+                style = MaterialTheme.typography.bodyLarge
             )
             Text(
                 text = if (isGranted) "已授权" else "未授权",
-                fontSize = 13.sp,
+                style = MaterialTheme.typography.labelMedium,
                 color = if (isGranted) {
-                    Color(0xFF4CAF50)
+                    MaterialTheme.colorScheme.primary
                 } else {
-                    Color(0xFFFF5722)
+                    MaterialTheme.colorScheme.error
                 }
             )
         }
