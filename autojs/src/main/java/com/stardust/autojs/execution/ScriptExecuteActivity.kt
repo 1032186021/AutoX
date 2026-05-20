@@ -74,7 +74,9 @@ class ScriptExecuteActivity : AppCompatActivity() {
     }
 
     private fun onException(e: Throwable) {
-        mExecutionListener!!.onException(mScriptExecution, e)
+        if (::mScriptExecution.isInitialized) {
+            mExecutionListener?.onException(mScriptExecution, e)
+        }
         super.finish()
     }
 
@@ -106,7 +108,7 @@ class ScriptExecuteActivity : AppCompatActivity() {
     }
 
     override fun finish() {
-        if (mExecutionListener == null) {
+        if (mExecutionListener == null || !::mScriptEngine.isInitialized) {
             super.finish()
             return
         }
@@ -130,6 +132,10 @@ class ScriptExecuteActivity : AppCompatActivity() {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
+        if (!::mScriptExecution.isInitialized) {
+            super.onSaveInstanceState(outState)
+            return
+        }
         super.onSaveInstanceState(outState)
         outState.putInt(EXTRA_EXECUTION_ID, mScriptExecution.id)
         emit("save_instance_state", outState)
@@ -192,10 +198,13 @@ class ScriptExecuteActivity : AppCompatActivity() {
     }
 
     fun emit(event: String?, vararg args: Any?) {
+        if (!::eventEmitter.isInitialized) return
         try {
             eventEmitter.emit(event, *args)
         } catch (e: Exception) {
-            mRuntime.exit(e)
+            if (::mRuntime.isInitialized) {
+                mRuntime.exit(e)
+            }
         }
     }
 
