@@ -36,6 +36,9 @@ fun HomeScreen(
             TopAppBar(
                 title = { Text("咸鱼助手") },
                 actions = {
+                    IconButton(onClick = { navController.navigate(Screen.UserCenter.route) }) {
+                        Icon(Icons.Default.AccountCircle, contentDescription = "用户中心")
+                    }
                     IconButton(onClick = { navController.navigate(Screen.Settings.route) }) {
                         Icon(Icons.Default.Settings, contentDescription = "设置")
                     }
