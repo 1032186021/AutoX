@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -135,7 +136,10 @@ fun DeviceActivationScreen(
             confirmButton = {
                 TextButton(onClick = {
                     showResetDialog = false
-                    app.preferencesManager.clearAll()
+                    app.preferencesManager.logout()
+                    app.preferencesManager.deviceId = null
+                    app.preferencesManager.deviceKey = null
+                    app.preferencesManager.guideShown = false
                     onDone()
                 }) {
                     Text("确定", color = MaterialTheme.colorScheme.error)
