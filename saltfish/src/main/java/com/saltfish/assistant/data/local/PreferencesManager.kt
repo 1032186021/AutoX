@@ -3,26 +3,30 @@ package com.saltfish.assistant.data.local
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
+import com.saltfish.assistant.data.remote.ApiConfig
 
 class PreferencesManager(context: Context) {
+    private val appContext = context.applicationContext
     private val prefs: SharedPreferences =
         context.getSharedPreferences("saltfish_prefs", Context.MODE_PRIVATE)
 
-    var baseUrl: String
-        get() = prefs.getString("base_url", "https://api.saltfish.example.com") ?: ""
-        set(value) = prefs.edit { putString("base_url", value) }
+    val baseUrl: String
+        get() = ApiConfig.API_BASE_URL
 
     var token: String?
         get() = prefs.getString("token", null)
         set(value) = prefs.edit { putString("token", value) }
 
+    /** Device hardware-bound UUID — always derived, never from editable prefs. */
+    val uuid: String
+        get() = DeviceIdentity.getUUID(appContext) ?: ""
+
     var deviceId: String?
         get() = prefs.getString("device_id", null)
         set(value) = prefs.edit { putString("device_id", value) }
 
-    var wsUrl: String
-        get() = prefs.getString("ws_url", "wss://ws.saltfish.example.com") ?: ""
-        set(value) = prefs.edit { putString("ws_url", value) }
+    val wsUrl: String
+        get() = ApiConfig.WS_URL
 
     var autoUpgrade: Boolean
         get() = prefs.getBoolean("auto_upgrade", true)
@@ -43,6 +47,14 @@ class PreferencesManager(context: Context) {
     var password: String
         get() = prefs.getString("password", "") ?: ""
         set(value) = prefs.edit { putString("password", value) }
+
+    var deviceKey: String?
+        get() = prefs.getString("device_key", null)
+        set(value) = prefs.edit { putString("device_key", value) }
+
+    var guideShown: Boolean
+        get() = prefs.getBoolean("guide_shown", false)
+        set(value) = prefs.edit { putBoolean("guide_shown", value) }
 
     var rememberAccount: Boolean
         get() = prefs.getBoolean("remember_account", false)
@@ -65,6 +77,11 @@ class PreferencesManager(context: Context) {
             remove("nick_name")
             remove("user_info_json")
         }
+    }
+
+    /** 清除所有本地配置，用于重置设备 */
+    fun clearAll() {
+        prefs.edit { clear() }
     }
 
     fun logCrash(ex: Throwable) {

@@ -3,6 +3,7 @@ package com.saltfish.assistant.ui.activation
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -166,16 +167,18 @@ fun DeviceActivationScreen(
     if (showResetDialog) {
         AlertDialog(
             onDismissRequest = { showResetDialog = false },
-            title = { Text("重置设备") },
-            text = { Text("将清除本地设备数据，需要重新登录并激活。确定继续？") },
+            title = { Text("使用帮助") },
+            text = { Text("咸鱼助手如注册异常，可以尝试重新初始化，应用将自动重启。确定继续？") },
             confirmButton = {
                 TextButton(onClick = {
                     showResetDialog = false
-                    app.preferencesManager.logout()
-                    app.preferencesManager.deviceId = null
-                    app.preferencesManager.deviceKey = null
-                    app.preferencesManager.guideShown = false
-                    onDone()
+                    app.preferencesManager.clearAll()
+                    val intent = app.packageManager.getLaunchIntentForPackage(app.packageName)
+                    intent?.let {
+                        it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                        app.startActivity(it)
+                    }
+                    android.os.Process.killProcess(android.os.Process.myPid())
                 }) {
                     Text("确定", color = MaterialTheme.colorScheme.error)
                 }
