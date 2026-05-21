@@ -22,7 +22,10 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.animation.core.*
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.sp
 import com.saltfish.assistant.SaltfishApp
 import com.saltfish.assistant.engine.DeviceState
@@ -196,21 +199,11 @@ fun DeviceActivationScreen(
         ) {
             Spacer(modifier = Modifier.height(32.dp))
 
-            // Hero icon placeholder
-            Surface(
-                modifier = Modifier.size(72.dp),
-                shape = CircleShape,
-                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.12f)
-            ) {
-                Box(contentAlignment = Alignment.Center) {
-                    Icon(
-                        Icons.Default.Lock,
-                        contentDescription = null,
-                        modifier = Modifier.size(36.dp),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
+            StatusIcon(
+                isLoading = isLoading,
+                isSuccess = isSuccess,
+                isError = isShakeError
+            )
 
             Spacer(modifier = Modifier.height(16.dp))
 
@@ -256,6 +249,62 @@ fun DeviceActivationScreen(
             }
 
             Spacer(modifier = Modifier.height(32.dp))
+        }
+    }
+}
+
+// ── Animated StatusIcon ──
+@Composable
+private fun StatusIcon(
+    isLoading: Boolean,
+    isSuccess: Boolean,
+    isError: Boolean,
+    modifier: Modifier = Modifier
+) {
+    // Rotation animation for loading
+    val infiniteTransition = rememberInfiniteTransition()
+    val rotation by infiniteTransition.animateFloat(
+        initialValue = 0f,
+        targetValue = 360f,
+        animationSpec = infiniteRepeatable(
+            animation = tween(1000, easing = LinearEasing),
+            repeatMode = RepeatMode.Restart
+        )
+    )
+
+    // Shake animation for error
+    val shakeOffset = remember { Animatable(0f) }
+    LaunchedEffect(isError) {
+        if (isError) {
+            for (i in 0..2) {
+                shakeOffset.animateTo(10f, tween(50))
+                shakeOffset.animateTo(-10f, tween(50))
+            }
+            shakeOffset.animateTo(0f, tween(50))
+        }
+    }
+
+    val (icon, tint) = when {
+        isSuccess -> Icons.Default.CheckCircle to MaterialTheme.colorScheme.primary
+        isError -> Icons.Default.Lock to MaterialTheme.colorScheme.error
+        else -> Icons.Default.Lock to MaterialTheme.colorScheme.onSurfaceVariant
+    }
+
+    Surface(
+        modifier = modifier
+            .size(72.dp)
+            .offset(x = shakeOffset.value.dp)
+            .then(if (isLoading) Modifier.rotate(rotation) else Modifier),
+        shape = CircleShape,
+        color = tint.copy(alpha = 0.12f)
+    ) {
+        Box(contentAlignment = Alignment.Center) {
+            Icon(
+                icon,
+                contentDescription = null,
+                modifier = Modifier.size(36.dp),
+                tint = tint
+            )
         }
     }
 }
