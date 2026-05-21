@@ -24,7 +24,10 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ContentTransform
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.*
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -51,7 +54,7 @@ enum class ActivationMode(val title: String, val promptHint: String, val btnLabe
     Renew("续费使用", "请输入咸鱼助手的续费卡密", "续费")
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalAnimationApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun DeviceActivationScreen(
     mode: ActivationMode,
@@ -354,7 +357,6 @@ fun DeviceActivationScreen(
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            // Submit button placeholder
             Button(
                 onClick = { doSubmit() },
                 modifier = Modifier
@@ -364,11 +366,57 @@ fun DeviceActivationScreen(
                 shape = MaterialTheme.shapes.large,
                 enabled = !isLoading && secret.isNotBlank(),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.primary,
+                    containerColor = if (isSuccess)
+                        StatusGreen
+                    else
+                        MaterialTheme.colorScheme.primary,
                     disabledContainerColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.12f)
                 )
             ) {
-                Text(mode.btnLabel, style = MaterialTheme.typography.labelLarge)
+                AnimatedContent(
+                    targetState = isLoading to isSuccess,
+                    transitionSpec = {
+                        ContentTransform(
+                            targetContentEnter = fadeIn(tween(200)),
+                            initialContentExit = fadeOut(tween(200))
+                        )
+                    }
+                ) { (loading, success) ->
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        when {
+                            loading -> {
+                                CircularProgressIndicator(
+                                    modifier = Modifier.size(22.dp),
+                                    color = MaterialTheme.colorScheme.onPrimary,
+                                    strokeWidth = 2.dp
+                                )
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Text("提交中...", style = MaterialTheme.typography.labelLarge)
+                            }
+                            success -> {
+                                Icon(
+                                    Icons.Default.Check,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(20.dp)
+                                )
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(
+                                    if (isRenew) "续费成功" else "激活成功",
+                                    style = MaterialTheme.typography.labelLarge
+                                )
+                            }
+                            else -> {
+                                Icon(
+                                    Icons.Default.VpnKey,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(20.dp)
+                                )
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(mode.btnLabel, style = MaterialTheme.typography.labelLarge)
+                            }
+                        }
+                    }
+                }
             }
 
             Spacer(modifier = Modifier.height(32.dp))
