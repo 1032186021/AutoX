@@ -3,6 +3,7 @@ package com.saltfish.assistant.ui.home
 import android.content.Intent
 import android.provider.Settings
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -14,56 +15,112 @@ import androidx.compose.material.icons.filled.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import com.saltfish.assistant.SaltfishApp
 import com.saltfish.assistant.data.remote.SocketIOManager.ConnectionState
-import com.saltfish.assistant.engine.TaskExecutionState
-import com.saltfish.assistant.ui.navigation.Screen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(
-    navController: NavController,
+fun HomeTopBar(onSettings: () -> Unit) {
+    CenterAlignedTopAppBar(
+        title = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Surface(
+                    modifier = Modifier.size(32.dp),
+                    shape = MaterialTheme.shapes.small,
+                    color = MaterialTheme.colorScheme.primaryContainer,
+                    tonalElevation = 2.dp,
+                    shadowElevation = 4.dp
+                ) {
+                    Box(contentAlignment = Alignment.Center) {
+                        Text("🐟", style = MaterialTheme.typography.labelMedium)
+                    }
+                }
+                Spacer(modifier = Modifier.width(10.dp))
+                Column {
+                    Text(
+                        "咸鱼助手",
+                        style = MaterialTheme.typography.titleMedium
+                    )
+                    Text(
+                        "智能自动化平台",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.7f)
+                    )
+                }
+            }
+        },
+        actions = {
+            IconButton(onClick = onSettings) {
+                Icon(
+                    Icons.Default.Settings,
+                    contentDescription = "设置",
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        },
+        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+            containerColor = MaterialTheme.colorScheme.background.copy(alpha = 0.8f)
+        )
+    )
+}
+
+@Composable
+fun HomeContent(
+    rootNavController: NavController,
     viewModel: HomeViewModel = viewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
     var showDeviceInfo by remember { mutableStateOf(false) }
 
-    Scaffold(
-        topBar = {
-            SaltfishTopBar(onLogClick = { navController.navigate(Screen.Settings.route) })
-        },
-        bottomBar = {
-            SaltfishBottomBar(
-                currentRoute = Screen.Home.route,
-                onNavigate = { route -> navController.navigate(route) {
-                    popUpTo(Screen.Home.route) { saveState = true }
-                    launchSingleTop = true
-                    restoreState = true
-                }}
-            )
-        }
-    ) { innerPadding ->
+    LaunchedEffect(Unit) {
+        (context.applicationContext as SaltfishApp).lifecycleManager.onMainEntered()
+    }
+
+    // Background glow
+    Box(modifier = Modifier.fillMaxSize()) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(200.dp)
+                .background(
+                    Brush.radialGradient(
+                        colors = listOf(
+                            MaterialTheme.colorScheme.primary.copy(alpha = 0.06f),
+                            Color.Transparent
+                        )
+                    )
+                )
+        )
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(innerPadding)
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             Spacer(modifier = Modifier.height(4.dp))
 
-            // Hero status card
-            ElevatedCard(
+            // Hero status card — glass style
+            Card(
                 modifier = Modifier.fillMaxWidth(),
                 shape = MaterialTheme.shapes.large,
-                colors = CardDefaults.elevatedCardColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
-                )
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.7f)
+                ),
+                border = BorderStroke(
+                    0.5.dp,
+                    MaterialTheme.colorScheme.primary.copy(alpha = 0.08f)
+                ),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Row(
@@ -77,32 +134,50 @@ fun HomeScreen(
                                 else -> "未连接"
                             },
                             valueColor = if (uiState.wsState == ConnectionState.CONNECTED)
-                                MaterialTheme.colorScheme.primary
-                            else MaterialTheme.colorScheme.error
+                                Brush.linearGradient(
+                                    listOf(
+                                        MaterialTheme.colorScheme.primary,
+                                        MaterialTheme.colorScheme.tertiary
+                                    )
+                                )
+                            else null
                         )
-                        Box(modifier = Modifier.width(1.dp).height(40.dp).background(MaterialTheme.colorScheme.outlineVariant))
+                        Box(
+                            modifier = Modifier
+                                .width(1.dp)
+                                .height(40.dp)
+                                .background(MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
+                        )
                         HeroStatItem(
                             label = "任务状态",
                             value = when (uiState.taskState) {
-                                is TaskExecutionState.Idle -> "空闲"
-                                is TaskExecutionState.Running -> "运行中"
+                                is com.saltfish.assistant.engine.TaskExecutionState.Idle -> "空闲"
+                                is com.saltfish.assistant.engine.TaskExecutionState.Running -> "运行中"
                             },
-                            valueColor = MaterialTheme.colorScheme.onSurface
+                            valueColor = null
                         )
-                        Box(modifier = Modifier.width(1.dp).height(40.dp).background(MaterialTheme.colorScheme.outlineVariant))
+                        Box(
+                            modifier = Modifier
+                                .width(1.dp)
+                                .height(40.dp)
+                                .background(MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
+                        )
                         HeroStatItem(
                             label = "适配器",
                             value = "${uiState.adapterVersions.size} 个",
-                            valueColor = MaterialTheme.colorScheme.primary
+                            valueColor = Brush.linearGradient(
+                                listOf(
+                                    MaterialTheme.colorScheme.primary,
+                                    MaterialTheme.colorScheme.tertiary
+                                )
+                            )
                         )
                     }
                     Spacer(modifier = Modifier.height(12.dp))
                     LinearProgressIndicator(
                         progress = if (uiState.wsState == ConnectionState.CONNECTED) 1f else 0.3f,
                         modifier = Modifier.fillMaxWidth(),
-                        color = if (uiState.wsState == ConnectionState.CONNECTED)
-                            MaterialTheme.colorScheme.primary
-                        else MaterialTheme.colorScheme.error,
+                        color = MaterialTheme.colorScheme.primary,
                         trackColor = MaterialTheme.colorScheme.surfaceVariant,
                     )
                 }
@@ -115,9 +190,17 @@ fun HomeScreen(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(start = 4.dp)
             )
-            ElevatedCard(
+            Card(
                 modifier = Modifier.fillMaxWidth(),
-                shape = MaterialTheme.shapes.medium
+                shape = MaterialTheme.shapes.medium,
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.6f)
+                ),
+                border = BorderStroke(
+                    0.5.dp,
+                    MaterialTheme.colorScheme.primary.copy(alpha = 0.06f)
+                ),
+                elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
             ) {
                 Column {
                     PermissionRow(
@@ -128,9 +211,9 @@ fun HomeScreen(
                             context.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
                         }
                     )
-                    Divider(
+                    HorizontalDivider(
                         modifier = Modifier.padding(horizontal = 16.dp),
-                        color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
+                        color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f)
                     )
                     PermissionRow(
                         icon = Icons.Default.ExitToApp,
@@ -140,9 +223,9 @@ fun HomeScreen(
                             context.startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION))
                         }
                     )
-                    Divider(
+                    HorizontalDivider(
                         modifier = Modifier.padding(horizontal = 16.dp),
-                        color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
+                        color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f)
                     )
                     PermissionRow(
                         icon = Icons.Default.Warning,
@@ -161,7 +244,8 @@ fun HomeScreen(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Icon(
-                    if (showDeviceInfo) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowDown,
+                    if (showDeviceInfo) Icons.Default.KeyboardArrowUp
+                    else Icons.Default.KeyboardArrowDown,
                     contentDescription = null,
                     modifier = Modifier.size(18.dp)
                 )
@@ -169,9 +253,17 @@ fun HomeScreen(
                 Text("设备信息", style = MaterialTheme.typography.labelMedium)
             }
             AnimatedVisibility(visible = showDeviceInfo) {
-                ElevatedCard(
+                Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = MaterialTheme.shapes.medium
+                    shape = MaterialTheme.shapes.medium,
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.6f)
+                    ),
+                    border = BorderStroke(
+                        0.5.dp,
+                        MaterialTheme.colorScheme.primary.copy(alpha = 0.06f)
+                    ),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
                         val di = uiState.deviceInfo
@@ -191,7 +283,7 @@ fun HomeScreen(
                 }
             }
 
-            // CTA button
+            // CTA button — gradient style
             Button(
                 onClick = {
                     if (uiState.wsState == ConnectionState.CONNECTED) {
@@ -203,19 +295,40 @@ fun HomeScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp),
-                shape = MaterialTheme.shapes.small
+                shape = MaterialTheme.shapes.small,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Transparent
+                ),
+                contentPadding = PaddingValues(0.dp)
             ) {
-                Icon(
-                    if (uiState.wsState == ConnectionState.CONNECTED)
-                        Icons.Default.Close else Icons.Default.PlayArrow,
-                    contentDescription = null,
-                    modifier = Modifier.size(18.dp)
-                )
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    if (uiState.wsState == ConnectionState.CONNECTED) "断开连接"
-                    else "连接服务器"
-                )
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(
+                            Brush.horizontalGradient(
+                                listOf(
+                                    MaterialTheme.colorScheme.primary,
+                                    MaterialTheme.colorScheme.tertiary
+                                )
+                            ),
+                            shape = MaterialTheme.shapes.small
+                        ),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(
+                            if (uiState.wsState == ConnectionState.CONNECTED)
+                                Icons.Default.Close else Icons.Default.PlayArrow,
+                            contentDescription = null,
+                            modifier = Modifier.size(18.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            if (uiState.wsState == ConnectionState.CONNECTED) "断开连接"
+                            else "连接服务器"
+                        )
+                    }
+                }
             }
 
             // Adapter versions
@@ -226,9 +339,17 @@ fun HomeScreen(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(start = 4.dp)
                 )
-                ElevatedCard(
+                Card(
                     modifier = Modifier.fillMaxWidth(),
-                    shape = MaterialTheme.shapes.medium
+                    shape = MaterialTheme.shapes.medium,
+                    colors = CardDefaults.cardColors(
+                        containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.6f)
+                    ),
+                    border = BorderStroke(
+                        0.5.dp,
+                        MaterialTheme.colorScheme.primary.copy(alpha = 0.06f)
+                    ),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
                         uiState.adapterVersions.forEach { (platform, version) ->
@@ -251,7 +372,7 @@ fun HomeScreen(
 private fun HeroStatItem(
     label: String,
     value: String,
-    valueColor: androidx.compose.ui.graphics.Color
+    valueColor: Brush? = null
 ) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(
@@ -260,11 +381,20 @@ private fun HeroStatItem(
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
         Spacer(modifier = Modifier.height(4.dp))
-        Text(
-            value,
-            style = MaterialTheme.typography.titleMedium,
-            color = valueColor
-        )
+        if (valueColor != null) {
+            Text(
+                value,
+                style = MaterialTheme.typography.titleMedium.copy(
+                    brush = valueColor
+                )
+            )
+        } else {
+            Text(
+                value,
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onSurface
+            )
+        }
     }
 }
 
@@ -296,24 +426,39 @@ private fun PermissionRow(
             modifier = Modifier.weight(1f)
         )
         if (isGranted) {
-            Icon(
-                Icons.Default.Check,
-                contentDescription = null,
-                modifier = Modifier.size(18.dp),
-                tint = MaterialTheme.colorScheme.primary
-            )
+            Surface(
+                shape = MaterialTheme.shapes.extraSmall,
+                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)
+            ) {
+                Text(
+                    "已开启",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp)
+                )
+            }
         } else {
-            Text(
-                "去开启",
-                style = MaterialTheme.typography.labelMedium,
-                color = MaterialTheme.colorScheme.error
-            )
-            Icon(
-                Icons.Default.KeyboardArrowRight,
-                contentDescription = null,
-                modifier = Modifier.size(18.dp),
-                tint = MaterialTheme.colorScheme.error
-            )
+            Surface(
+                shape = MaterialTheme.shapes.extraSmall,
+                color = MaterialTheme.colorScheme.error.copy(alpha = 0.08f)
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.padding(start = 8.dp, end = 4.dp, top = 2.dp, bottom = 2.dp)
+                ) {
+                    Text(
+                        "去开启",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.error
+                    )
+                    Icon(
+                        Icons.Default.KeyboardArrowRight,
+                        contentDescription = null,
+                        modifier = Modifier.size(14.dp),
+                        tint = MaterialTheme.colorScheme.error
+                    )
+                }
+            }
         }
     }
 }
@@ -333,85 +478,9 @@ private fun DeviceInfoRow(label: String, value: String) {
         )
         Text(
             value,
-            style = MaterialTheme.typography.bodySmall
-        )
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun SaltfishTopBar(onLogClick: () -> Unit) {
-    CenterAlignedTopAppBar(
-        title = {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Surface(
-                    modifier = Modifier.size(32.dp),
-                    shape = MaterialTheme.shapes.small,
-                    color = MaterialTheme.colorScheme.primaryContainer
-                ) {
-                    Box(contentAlignment = Alignment.Center) {
-                        Text("🐟", style = MaterialTheme.typography.labelMedium)
-                    }
-                }
-                Spacer(modifier = Modifier.width(10.dp))
-                Column {
-                    Text(
-                        "咸鱼助手",
-                        style = MaterialTheme.typography.titleMedium
-                    )
-                    Text(
-                        "智能自动化平台",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
-        },
-        actions = {
-            IconButton(onClick = onLogClick) {
-                Icon(
-                    Icons.Default.List,
-                    contentDescription = "日志",
-                    tint = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        },
-        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-            containerColor = MaterialTheme.colorScheme.background
-        )
-    )
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun SaltfishBottomBar(currentRoute: String, onNavigate: (String) -> Unit) {
-    NavigationBar(
-        containerColor = MaterialTheme.colorScheme.surface,
-        tonalElevation = 0.dp
-    ) {
-        NavigationBarItem(
-            selected = currentRoute == Screen.Home.route,
-            onClick = { onNavigate(Screen.Home.route) },
-            icon = { Icon(Icons.Default.Home, contentDescription = null) },
-            label = { Text("首页") }
-        )
-        NavigationBarItem(
-            selected = currentRoute == Screen.Automation.route,
-            onClick = { onNavigate(Screen.Automation.route) },
-            icon = { Icon(Icons.Default.PlayArrow, contentDescription = null) },
-            label = { Text("自动化") }
-        )
-        NavigationBarItem(
-            selected = currentRoute == Screen.Task.route,
-            onClick = { onNavigate(Screen.Task.route) },
-            icon = { Icon(Icons.Default.List, contentDescription = null) },
-            label = { Text("任务队列") }
-        )
-        NavigationBarItem(
-            selected = currentRoute == Screen.UserCenter.route,
-            onClick = { onNavigate(Screen.UserCenter.route) },
-            icon = { Icon(Icons.Default.AccountCircle, contentDescription = null) },
-            label = { Text("用户中心") }
+            style = MaterialTheme.typography.bodySmall,
+            modifier = Modifier.widthIn(max = 180.dp),
+            overflow = TextOverflow.Ellipsis
         )
     }
 }
