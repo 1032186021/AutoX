@@ -6,6 +6,7 @@ import android.content.Context
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.rememberScrollState
@@ -352,6 +353,78 @@ fun DeviceActivationScreen(
                         value = uuid,
                         onCopy = { uuid }
                     )
+
+                    // Device detail section (renew mode only)
+                    if (isRenew && device != null) {
+                        Divider(
+                            modifier = Modifier.padding(vertical = 12.dp),
+                            color = MaterialTheme.colorScheme.outlineVariant
+                        )
+
+                        // Section header
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.padding(bottom = 8.dp)
+                        ) {
+                            Icon(
+                                Icons.Default.PhoneAndroid,
+                                contentDescription = null,
+                                modifier = Modifier.size(16.dp),
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                "设备详情",
+                                style = MaterialTheme.typography.labelMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+
+                        // Detail surface
+                        Surface(
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = MaterialTheme.shapes.small,
+                            color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
+                        ) {
+                            Column(modifier = Modifier.padding(12.dp)) {
+                                DeviceDetailRow("设备名称", device.name ?: "-")
+                                DeviceDetailRow("到期时间", device.expiresTime ?: "-")
+
+                                Spacer(modifier = Modifier.height(4.dp))
+
+                                // Remaining days badge
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween,
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Text(
+                                        "剩余天数",
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+
+                                    val badgeColor = when {
+                                        remainingDays <= 0 -> StatusRed
+                                        remainingDays <= 7 -> StatusOrange
+                                        else -> StatusGreen
+                                    }
+
+                                    Surface(
+                                        shape = RoundedCornerShape(6.dp),
+                                        color = badgeColor.copy(alpha = 0.15f)
+                                    ) {
+                                        Text(
+                                            text = if (remainingDays <= 0) "已过期" else "${remainingDays} 天",
+                                            color = badgeColor,
+                                            style = MaterialTheme.typography.labelMedium,
+                                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -529,6 +602,31 @@ private fun ClipboardChip(
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun DeviceDetailRow(
+    label: String,
+    value: String
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 4.dp),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            label,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Text(
+            value,
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurface
+        )
     }
 }
 
