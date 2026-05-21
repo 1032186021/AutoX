@@ -136,6 +136,7 @@ fun DeviceActivationScreen(
                     }
                 }
                 if (success) {
+                    isLoading = false
                     isSuccess = true
                     app.deviceManager.onActivationResolved?.invoke()
                     delay(600)
