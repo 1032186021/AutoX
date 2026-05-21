@@ -38,7 +38,6 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.unit.IntOffset
 import com.saltfish.assistant.SaltfishApp
 import com.saltfish.assistant.engine.DeviceState
 import com.saltfish.assistant.ui.theme.StatusGreen
