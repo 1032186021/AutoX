@@ -32,6 +32,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.sp
@@ -257,8 +258,77 @@ fun DeviceActivationScreen(
                         visible = showClipboardChip
                     )
 
-                    // Placeholder for remaining card content (Tasks 4-5)
-                    Text("Card placeholder — to be replaced in Tasks 4-5")
+                    // Prompt text
+                    Text(
+                        text = mode.promptHint,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(bottom = 16.dp)
+                    )
+
+                    // Input field
+                    OutlinedTextField(
+                        value = secret,
+                        onValueChange = {
+                            secret = it
+                            errorText = ""
+                            isShakeError = false
+                        },
+                        placeholder = { Text("请输入卡密", style = MaterialTheme.typography.bodyLarge) },
+                        leadingIcon = {
+                            Icon(Icons.Default.Key, contentDescription = null,
+                                 tint = MaterialTheme.colorScheme.onSurfaceVariant)
+                        },
+                        trailingIcon = {
+                            if (secret.isNotEmpty()) {
+                                IconButton(onClick = { secret = "" }) {
+                                    Icon(Icons.Default.Clear, contentDescription = "清除")
+                                }
+                            }
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .onFocusChanged { focusState ->
+                                if (focusState.isFocused) checkClipboard()
+                            },
+                        singleLine = true,
+                        enabled = !isLoading,
+                        shape = MaterialTheme.shapes.medium,
+                        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+                        keyboardActions = KeyboardActions(
+                            onDone = {
+                                focusManager.clearFocus()
+                                doSubmit()
+                            }
+                        )
+                    )
+
+                    // Error text with animation
+                    AnimatedVisibility(
+                        visible = errorText.isNotEmpty(),
+                        enter = fadeIn(tween(300)),
+                        exit = fadeOut(tween(200))
+                    ) {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.padding(top = 10.dp)
+                        ) {
+                            Icon(
+                                Icons.Default.Error,
+                                contentDescription = null,
+                                modifier = Modifier.size(16.dp),
+                                tint = MaterialTheme.colorScheme.error
+                            )
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                errorText,
+                                color = MaterialTheme.colorScheme.error,
+                                style = MaterialTheme.typography.bodySmall
+                            )
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(12.dp))
                 }
             }
 
