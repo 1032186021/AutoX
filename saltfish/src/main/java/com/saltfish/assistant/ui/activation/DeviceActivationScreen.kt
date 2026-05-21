@@ -22,7 +22,12 @@ import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.*
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.IntOffset
@@ -77,6 +82,24 @@ fun DeviceActivationScreen(
         else -> MaterialTheme.colorScheme.onSurfaceVariant
     }
 
+    // Clipboard detection
+    fun checkClipboard() {
+        if (showClipboardChip) return
+        try {
+            val cm = app.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            val clip = cm.primaryClip?.getItemAt(0)?.text?.toString()
+            if (!clip.isNullOrBlank() && clip != secret) {
+                clipboardText = clip
+                showClipboardChip = true
+            }
+        } catch (_: Exception) {}
+    }
+
+    // Trigger clipboard check on first composition
+    LaunchedEffect(Unit) {
+        checkClipboard()
+    }
+
     // ── Submit handler ──
     fun doSubmit() {
         if (submitted || isLoading) return
@@ -117,19 +140,6 @@ fun DeviceActivationScreen(
                 errorText = "网络连接失败，请检查网络后重试"
             }
         }
-    }
-
-    // Clipboard detection
-    fun checkClipboard() {
-        if (showClipboardChip) return
-        try {
-            val cm = app.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val clip = cm.primaryClip?.getItemAt(0)?.text?.toString()
-            if (!clip.isNullOrBlank() && clip != secret) {
-                clipboardText = clip
-                showClipboardChip = true
-            }
-        } catch (_: Exception) {}
     }
 
     // Block back when non-dismissible
@@ -225,7 +235,19 @@ fun DeviceActivationScreen(
                 elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
             ) {
                 Column(modifier = Modifier.padding(24.dp)) {
-                    Text("Card placeholder — to be replaced in Tasks 3-5")
+                    // Clipboard chip (shown when clipboard has text)
+                    ClipboardChip(
+                        text = clipboardText,
+                        onFill = {
+                            secret = clipboardText
+                            errorText = ""
+                        },
+                        onDismiss = { showClipboardChip = false },
+                        visible = showClipboardChip
+                    )
+
+                    // Placeholder for remaining card content (Tasks 4-5)
+                    Text("Card placeholder — to be replaced in Tasks 4-5")
                 }
             }
 
@@ -307,6 +329,56 @@ private fun StatusIcon(
                 modifier = Modifier.size(36.dp),
                 tint = tint
             )
+        }
+    }
+}
+
+// ── ClipboardChip ──
+@Composable
+private fun ClipboardChip(
+    text: String,
+    onFill: () -> Unit,
+    onDismiss: () -> Unit,
+    visible: Boolean
+) {
+    AnimatedVisibility(
+        visible = visible,
+        enter = slideInVertically(initialOffsetY = { -it }) + fadeIn(tween(300)),
+        exit = slideOutVertically(targetOffsetY = { -it }) + fadeOut(tween(200))
+    ) {
+        Surface(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 12.dp),
+            shape = MaterialTheme.shapes.small,
+            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
+        ) {
+            Row(
+                modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    Icons.Default.ContentPaste,
+                    contentDescription = null,
+                    modifier = Modifier.size(16.dp),
+                    tint = MaterialTheme.colorScheme.primary
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Text(
+                    "检测到剪贴板中的卡密",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    modifier = Modifier.weight(1f),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                TextButton(onClick = {
+                    onFill()
+                    onDismiss()
+                }) {
+                    Text("一键填入", style = MaterialTheme.typography.labelMedium)
+                }
+            }
         }
     }
 }
