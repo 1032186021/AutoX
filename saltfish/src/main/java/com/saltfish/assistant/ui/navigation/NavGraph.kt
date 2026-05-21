@@ -5,13 +5,15 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.saltfish.assistant.SaltfishApp
-import com.saltfish.assistant.ui.automation.AutomationScreen
-import com.saltfish.assistant.ui.home.HomeScreen
+import com.saltfish.assistant.engine.DeviceState
+import com.saltfish.assistant.ui.activation.ActivationMode
+import com.saltfish.assistant.ui.activation.DeviceActivationScreen
+import com.saltfish.assistant.ui.guide.GuideScreen
+import com.saltfish.assistant.ui.home.MainScaffold
 import com.saltfish.assistant.ui.login.LoginScreen
 import com.saltfish.assistant.ui.permissions.PermissionsGuideScreen
 import com.saltfish.assistant.ui.settings.SettingsScreen
-import com.saltfish.assistant.ui.task.TaskScreen
-import com.saltfish.assistant.ui.user.UserCenterScreen
+import kotlinx.coroutines.launch
 
 sealed class Screen(val route: String) {
     object Home : Screen("home")
@@ -21,7 +23,9 @@ sealed class Screen(val route: String) {
     object Login : Screen("login")
     object UserCenter : Screen("user_center")
     object PermissionsGuide : Screen("permissions_guide")
+    object Guide : Screen("guide")
     object Log : Screen("log")
+    object DeviceActivation : Screen("device_activation")
 }
 
 @Composable
@@ -29,53 +33,67 @@ fun SaltfishNavGraph(
     splashLoggedIn: Boolean? = null,
     onSplashOverrideConsumed: () -> Unit = {}
 ) {
-    val navController = rememberNavController()
+    val rootNavController = rememberNavController()
     val context = androidx.compose.ui.platform.LocalContext.current
     val app = context.applicationContext as SaltfishApp
+    val lifecycleManager = app.lifecycleManager
+    val scope = rememberCoroutineScope()
 
     LaunchedEffect(splashLoggedIn) {
         if (splashLoggedIn != null) onSplashOverrideConsumed()
     }
 
-    val startRoute = when {
-        splashLoggedIn == true -> {
-            if (app.preferencesManager.isFirstLaunch) Screen.PermissionsGuide.route
-            else Screen.Home.route
-        }
-        splashLoggedIn == false -> Screen.Login.route
-        !app.preferencesManager.isLoggedIn() -> Screen.Login.route
-        app.preferencesManager.isFirstLaunch -> Screen.PermissionsGuide.route
-        else -> Screen.Home.route
+    var startRoute by remember { mutableStateOf<String?>(null) }
+    LaunchedEffect(Unit) {
+        startRoute = lifecycleManager.resolveStartRoute(splashLoggedIn)
     }
 
-    NavHost(navController = navController, startDestination = startRoute) {
+    if (startRoute == null) return
+
+    NavHost(navController = rootNavController, startDestination = startRoute!!) {
         composable(Screen.Login.route) {
             LoginScreen(
                 onLoginSuccess = {
-                    val dest = if (app.preferencesManager.isFirstLaunch)
-                        Screen.PermissionsGuide.route
-                    else
-                        Screen.Home.route
-                    navController.navigate(dest) {
-                        popUpTo(Screen.Login.route) { inclusive = true }
+                    scope.launch {
+                        val dest = lifecycleManager.onLoginSuccess()
+                        rootNavController.navigate(dest) {
+                            popUpTo(Screen.Login.route) { inclusive = true }
+                        }
                     }
                 }
             )
         }
-        composable(Screen.Home.route) {
-            HomeScreen(navController)
-        }
-        composable(Screen.Task.route) {
-            TaskScreen()
-        }
-        composable(Screen.Automation.route) {
-            AutomationScreen()
+        composable(Screen.Guide.route) {
+            GuideScreen(
+                onDone = {
+                    rootNavController.navigate(lifecycleManager.onGuideDone()) {
+                        popUpTo(Screen.Guide.route) { inclusive = true }
+                    }
+                }
+            )
         }
         composable(Screen.PermissionsGuide.route) {
             PermissionsGuideScreen(
                 onComplete = {
-                    navController.navigate(Screen.Home.route) {
+                    rootNavController.navigate(lifecycleManager.onPermissionsDone()) {
                         popUpTo(Screen.PermissionsGuide.route) { inclusive = true }
+                    }
+                }
+            )
+        }
+        composable(Screen.DeviceActivation.route) {
+            val mode = when (app.deviceManager.state) {
+                DeviceState.Idle -> ActivationMode.Register
+                else -> ActivationMode.Renew
+            }
+            DeviceActivationScreen(
+                mode = mode,
+                onDone = {
+                    scope.launch {
+                        val dest = lifecycleManager.onDeviceActivated()
+                        rootNavController.navigate(dest) {
+                            popUpTo(Screen.DeviceActivation.route) { inclusive = true }
+                        }
                     }
                 }
             )
@@ -83,14 +101,9 @@ fun SaltfishNavGraph(
         composable(Screen.Settings.route) {
             SettingsScreen()
         }
-        composable(Screen.UserCenter.route) {
-            UserCenterScreen(
-                onLogout = {
-                    navController.navigate(Screen.Login.route) {
-                        popUpTo(0) { inclusive = true }
-                    }
-                }
-            )
+        // Main screen hosts the inner NavHost for tabs via MainScaffold
+        composable(Screen.Home.route) {
+            MainScaffold(rootNavController = rootNavController)
         }
     }
 }
