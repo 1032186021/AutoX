@@ -281,6 +281,8 @@ private fun StatusIcon(
                 shakeOffset.animateTo(-10f, tween(50))
             }
             shakeOffset.animateTo(0f, tween(50))
+        } else {
+            shakeOffset.snapTo(0f)
         }
     }
 
@@ -294,7 +296,7 @@ private fun StatusIcon(
         modifier = modifier
             .size(72.dp)
             .offset(x = shakeOffset.value.dp)
-            .then(if (isLoading) Modifier.rotate(rotation) else Modifier),
+            .then(Modifier.rotate(if (isLoading) rotation else 0f)),
         shape = CircleShape,
         color = tint.copy(alpha = 0.12f)
     ) {
