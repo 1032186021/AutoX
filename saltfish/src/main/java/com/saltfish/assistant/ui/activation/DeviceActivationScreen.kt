@@ -4,7 +4,6 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import androidx.activity.compose.BackHandler
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardActions
@@ -34,8 +33,8 @@ import androidx.compose.animation.slideOutVertically
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.IntOffset
-import androidx.compose.ui.unit.sp
 import com.saltfish.assistant.SaltfishApp
 import com.saltfish.assistant.engine.DeviceState
 import com.saltfish.assistant.ui.theme.StatusGreen
@@ -329,6 +328,27 @@ fun DeviceActivationScreen(
                     }
 
                     Spacer(modifier = Modifier.height(12.dp))
+                    // Device info rows
+                    val appVersion = "v${app.packageManager.getPackageInfo(app.packageName, 0).versionName}"
+                    InfoRow(
+                        icon = Icons.Default.PhoneAndroid,
+                        label = "App 版本",
+                        value = appVersion,
+                        onCopy = { appVersion }
+                    )
+                    InfoRow(
+                        icon = Icons.Default.Code,
+                        label = "脚本版本",
+                        value = "v1.0.0",
+                        onCopy = { "v1.0.0" }
+                    )
+                    val uuid = app.preferencesManager.uuid
+                    InfoRow(
+                        icon = Icons.Default.Fingerprint,
+                        label = "唯一标识",
+                        value = uuid,
+                        onCopy = { uuid }
+                    )
                 }
             }
 
@@ -464,58 +484,67 @@ private fun ClipboardChip(
     }
 }
 
-// InfoRow — keep existing implementation unchanged for now
 @Composable
 private fun InfoRow(
-    icon: String,
+    icon: ImageVector,
     label: String,
     value: String,
-    onCopy: (() -> String)? = null,
-    snackbarHostState: SnackbarHostState? = null
+    onCopy: (() -> String)? = null
 ) {
+    var showCopied by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
+
     Row(
-        verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(bottom = 4.dp)
-            .then(
-                if (onCopy != null) {
-                    Modifier.clickable(
-                        interactionSource = remember { androidx.compose.foundation.interaction.MutableInteractionSource() },
-                        indication = null
-                    ) {
-                        val text = onCopy()
-                        val clipboard = SaltfishApp.instance
-                            .getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-                        clipboard.setPrimaryClip(ClipData.newPlainText("text", text))
-                        scope.launch {
-                            snackbarHostState?.showSnackbar("已复制到剪贴板")
-                        }
-                    }
-                } else Modifier
-            )
+            .padding(vertical = 6.dp),
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = icon, fontSize = 18.sp)
-        Spacer(modifier = Modifier.width(8.dp))
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            modifier = Modifier.size(18.dp),
+            tint = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.width(10.dp))
         Text(
             text = label,
+            style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurface,
-            fontSize = 14.sp,
-            modifier = Modifier.width(90.dp)
+            modifier = Modifier.width(80.dp)
         )
         Text(
             text = value,
+            style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
-            fontSize = 12.sp,
             modifier = Modifier.weight(1f),
             textAlign = TextAlign.End,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
         if (onCopy != null) {
-            Spacer(modifier = Modifier.width(4.dp))
-            Text(text = "📋", fontSize = 16.sp, color = MaterialTheme.colorScheme.outline)
+            Spacer(modifier = Modifier.width(6.dp))
+            IconButton(
+                onClick = {
+                    val text = onCopy()
+                    val clipboard = SaltfishApp.instance
+                        .getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                    clipboard.setPrimaryClip(ClipData.newPlainText("text", text))
+                    showCopied = true
+                    scope.launch {
+                        delay(800)
+                        showCopied = false
+                    }
+                },
+                modifier = Modifier.size(28.dp)
+            ) {
+                Icon(
+                    imageVector = if (showCopied) Icons.Default.Check else Icons.Default.ContentCopy,
+                    contentDescription = if (showCopied) "已复制" else "复制",
+                    modifier = Modifier.size(14.dp),
+                    tint = if (showCopied) StatusGreen else MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
         }
     }
 }
