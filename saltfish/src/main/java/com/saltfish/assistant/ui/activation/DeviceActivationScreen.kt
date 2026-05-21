@@ -19,6 +19,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -95,9 +98,16 @@ fun DeviceActivationScreen(
         } catch (_: Exception) {}
     }
 
-    // Trigger clipboard check on first composition
-    LaunchedEffect(Unit) {
-        checkClipboard()
+    // Trigger clipboard check on resume (and initial composition)
+    val lifecycle = LocalLifecycleOwner.current.lifecycle
+    DisposableEffect(lifecycle) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                checkClipboard()
+            }
+        }
+        lifecycle.addObserver(observer)
+        onDispose { lifecycle.removeObserver(observer) }
     }
 
     // ── Submit handler ──
@@ -111,6 +121,7 @@ fun DeviceActivationScreen(
         submitted = true
         isLoading = true
         errorText = ""
+        isShakeError = false
 
         scope.launch {
             try {
