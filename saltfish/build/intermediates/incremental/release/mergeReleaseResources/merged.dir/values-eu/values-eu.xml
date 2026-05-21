@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Lehenetsia</item>  
+    <item>Erakutsi egunean behin</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Ausaz</item>  
+    <item>Albisteak</item>  
+    <item>Harreman soziala</item>  
+    <item>Marrazki bizidunak</item>  
+    <item>Jokoa</item> 
+  </string-array>
+    <string-array name="control_keys_short_names">
+        <item>Bola</item>
+        <item>\@</item>
+        <item>Ezker-Alt</item>
+        <item>Eskuin-Alt</item>
+        <item>Bol-Igo</item>
+        <item>Bol-Jaitsi</item>
+        <item>Kamera</item>
+        <item>Bat ere ez</item>
+    </string-array>
+    <string-array name="entries_actionbar_preference">
+        
+        <item>Beti erakutsi ekintza-barra</item>
+        <item>Ezkutatu ekintza-barra (erakusteko ukitu pantailaren goialdea edo Menu tekla)</item>
+    </string-array>
+    <string-array name="entries_backaction_preference">
+        <item>Terminal leiho guztiak ixten ditu</item>
+        <item>Soilik terminal leiho hau ixten du</item>
+        <item>Jarduera ixten du, saioak martxan utziz</item>
+        <item>ESC bidaltzen du terminalera</item>
+        <item>TAB bidaltzen du terminalera</item>
+    </string-array>
+    <string-array name="entries_color_preference">
+        <item>Testu beltza zuriaren gainean</item>
+        <item>Testu zuria beltzaren gainean</item>
+        <item>Testu zuria urdinaren gainean</item>
+        <item>Testu berdea beltzaren gainean</item>
+        <item>Testu anbarra beltzaren gainean</item>
+        <item>Testu gorria beltzaren gainean</item>
+        <item>Solarized Light</item>
+        <item>Solarized Dark</item>
+        <item>Linux Console</item>
+    </string-array>
+    <string-array name="entries_controlkey_preference">
+        <item>Jog bola</item>
+        <item>\@ tekla</item>
+        <item>Ezker Alt tekla</item>
+        <item>Eskuin Alt tekla</item>
+        <item>Bol Igo tekla</item>
+        <item>Bol Jaitsi tekla</item>
+        <item>Kamera tekla</item>
+        <item>Bat ere ez</item>
+    </string-array>
+    <string-array name="entries_cursorblink_preference">
+        <item>Kurtsore ez-keinukaria</item>
+        <item>Kurtsore keinukaria</item>
+    </string-array>
+    <string-array name="entries_cursorstyle_preference">
+        <item>Laukizuzena</item>
+        <item>Azpimarra</item>
+        <item>Barra bertikala</item>
+    </string-array>
+    <string-array name="entries_fnkey_preference">
+        <item>Jog bola</item>
+        <item>\@ tekla</item>
+        <item>Ezker Alt tekla</item>
+        <item>Eskuin Alt tekla</item>
+        <item>Bol Igo tekla</item>
+        <item>Bol Jaitsi tekla</item>
+        <item>Kamera tekla</item>
+        <item>Bat ere ez</item>
+    </string-array>
+    <string-array name="entries_fontsize_preference">
+        <item>4 x 8 pixel</item>
+        <item>6 pt</item>
+        <item>7 pt</item>
+        <item>8 pt</item>
+        <item>9 pt</item>
+        <item>10 pt</item>
+        <item>12 pt</item>
+        <item>14 pt</item>
+        <item>16 pt</item>
+        <item>20 pt</item>
+        <item>24 pt</item>
+        <item>28 pt</item>
+        <item>32 pt</item>
+        <item>36 pt</item>
+        <item>42 pt</item>
+        <item>48 pt</item>
+        <item>64 pt</item>
+        <item>72 pt</item>
+        <item>96 pt</item>
+        <item>144 pt</item>
+        <item>288 pt</item>
+    </string-array>
+    <string-array name="entries_ime_preference">
+        <item>Karaktereetan oinarritua</item>
+        <item>Hitzetan oinarritua</item>
+    </string-array>
+    <string-array name="entries_statusbar_preference">
+        <item>Erakutsi egoera-barra</item>
+        <item>Ezkutatu egoera-barra</item>
+    </string-array>
+    <string-array name="fn_keys_short_names">
+        <item>Bola</item>
+        <item>\@</item>
+        <item>Ezker-Alt</item>
+        <item>Eskuin-Alt</item>
+        <item>Bol-Igo</item>
+        <item>Bol-Jaitsi</item>
+        <item>Kamera</item>
+        <item>Bat ere ez</item>
+    </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Tokiko dokumentazioa</item>  
+    <item>Sareko dokumentazioa</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Js fitxategi editagarria</item>  
+    <item>Bitar editaezina</item> 
+  </string-array>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d jakinarazpen berri</item>
+    <item quantity="other">%d jakinarazpen berri</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Joan orri nagusira"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Joan gora"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Aukera gehiago"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Eginda"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Ikusi guztiak"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Aukeratu aplikazio bat"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"DESAKTIBATU"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"AKTIBATU"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ktrl +"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"ezabatu"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"sartu"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Funtzioa +"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Maius +"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"zuriunea"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menua +"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Bilatu…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Garbitu kontsulta"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Bilaketa-kontsulta"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Bilatu"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Bidali kontsulta"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Ahozko bilaketa"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Partekatu honekin"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Partekatu <ns1:g id="APPLICATION_NAME">%s</ns1:g> aplikazioarekin"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Tolestu"</string>
+    <string name="application_terminal">Terminal Emulatzailea</string>
+    <string name="bottomsheet_action_collapse">Tolestu pantailaren behealdean ainguratutako orria</string>
+    <string name="bottomsheet_action_expand">Zabaldu pantailaren behealdean ainguratutako orria</string>
+    <string name="bottomsheet_action_expand_halfway">Zabaldu erdiraino</string>
+    <string name="bottomsheet_drag_handle_clicked">Birritan sakatu da arrastatzeko kontrol-puntua</string>
+    <string name="bottomsheet_drag_handle_content_description">Arrastatzeko kontrol-puntua</string>
+    <string name="cancel">Utzi</string>
+    <string name="character_counter_content_description">%1$d/%2$d karaktere idatzi dira</string>
+    <string name="character_counter_overflowed_content_description">Karaktere-muga gainditu da: %1$d/%2$d</string>
+    <string name="clear_text_end_icon_content_description">Garbitu testua</string>
+    <string msgid="406453423630273620" name="close_drawer">"Itxi nabigazio-menua"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Itxi orria"</string>
+    <string name="close_window">Leihoa itxi</string>
+    <string msgid="5389587048670450460" name="collapsed">"Tolestuta"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Gaitu</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s aplikazioak ez du funtzionatuko Google Play Services gaitzen ez baduzu.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Gaitu Google Play Services</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Instalatu</string>
+    <string name="common_google_play_services_install_text">%1$s ez da exekutatuko Google Play Services gabe, baina ez dago halakorik gailuan.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Lortu Google Play Services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play Services-en erabilgarritasuna</string>
+    <string name="common_google_play_services_notification_ticker">Google Play Services-en errorea</string>
+    <string name="common_google_play_services_unknown_issue">%1$s aplikazioak arazoak ditu Google Play Services-ekin. Saiatu berriro.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s aplikazioa ezin da erabili Google Play Services gabe, baina zure gailua ez da harekin bateragarria.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Eguneratu</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s ez da exekutatuko Google Play Services eguneratzen ez baduzu.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Eguneratu Google Play Services</string>
+    <string name="common_google_play_services_updating_text">%1$s ez da exekutatuko Google Play Services gabe; zerbitzu hori eguneratzen ari da.</string>
+    <string name="common_google_play_services_wear_update_text">Google Play Services-en bertsio berria behar da. Berehala eguneratuko da automatikoki.</string>
+    <string name="common_open_on_phone">Ireki telefonoan</string>
+    <string name="common_signin_button_text">Hasi saioa</string>
+    <string name="common_signin_button_text_long">Hasi saioa Google-ko kontuarekin</string>
+    <string name="confirm_window_close_message">Leiho hau itxi?</string>
+    <string name="control_key_dialog_control_disabled_text">Ez da kontrol teklarik ezarri.</string>
+    <string name="control_key_dialog_control_text">CTRLKEY Zuriunea : Kontrol-@ (NUL)\nCTRLKEY A..Z : Kontrol-A..Z\nCTRLKEY 5 : Kontrol-]\nCTRLKEY 6 : Kontrol-^\nCTRLKEY 7 : Kontrol-_\nCTRLKEY 9 : F11\nCTRLKEY 0 : F12</string>
+    <string name="control_key_dialog_fn_disabled_text">Ez da funtzio teklarik ezarri.</string>
+    <string name="control_key_dialog_fn_text">FNKEY 1..9 : F1-F9\nFNKEY 0 : F10\nFNKEY W : Gora\nFNKEY A : Ezkerra\nFNKEY S : Behera\nFNKEY D : Eskuina\nFNKEY P : Hurrengo-orria\nFNKEY N : Aurreko-orria\nFNKEY T : Tabulatzailea\nFNKEY L : | (kanalizazioa)\nFNKEY U : _ (azpimarra)\nFNKEY E : Kontrol-[ (ESC)\nFNKEY X : Ezabatu\nFNKEY I : Txertatu\nFNKEY H : Etxea\nFNKEY F : Bukaera\nFNKEY . : Kontrol-\\\n</string>
+    <string name="control_key_dialog_title">Kontrol and Funtzio Teklak</string>
+    <string msgid="6083905920877235314" name="copy">"Kopiatu"</string>
+    <string name="copy_all">Kopiatu guztia</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Sarrerak ez du balio"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Leiho gainerakorra"</string>
+    <string msgid="4057925834421392736" name="dialog">"Leihoa"</string>
+    <string name="dialog_title_actionbar_preference">Ekintza-barraren portaera</string>
+    <string name="dialog_title_backaction_preference">Atzera botoiaren portaera</string>
+    <string name="dialog_title_color_preference">Testuaren kolorea</string>
+    <string name="dialog_title_controlkey_preference">Kontrol tekla</string>
+    <string name="dialog_title_cursorblink_preference">Kurtsore-keinua</string>
+    <string name="dialog_title_cursorstyle_preference">Kurtsore-estiloa</string>
+    <string name="dialog_title_fnkey_preference">Fn tekla</string>
+    <string name="dialog_title_fontsize_preference">Letra-tamaina</string>
+    <string name="dialog_title_ime_preference">Sarrera-metodoa</string>
+    <string name="dialog_title_initialcommand_preference">Hasierako Komandoa</string>
+    <string name="dialog_title_shell_preference">Shell</string>
+    <string name="dialog_title_statusbar_preference">Egoera-barra</string>
+    <string name="dialog_title_termtype_preference">Terminal mota</string>
+    <string name="disable_wakelock">Desgaitu WakeLock</string>
+    <string name="disable_wifilock">Desgaitu WifiLock</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Goitibeherako menua"</string>
+    <string name="edit_text">Editatu testua</string>
+    <string name="enable_wakelock">Gaitu WakeLock</string>
+    <string name="enable_wifilock">Gaitu WifiLock</string>
+    <string name="error_activity_not_found_for_apk_installing">Ezin da aurkitu apk instalatzeko aplikazioa</string>
+    <string name="error_icon_content_description">Errorea</string>
+    <string name="exception_notification_service_disabled">Jakinarazpen-zerbitzua ez dago martxan. Mesedez, gaitu berriro jakinarazpen-baimena</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Hobespen aurreratuak"</string>
+    <string msgid="5974471714631304645" name="expanded">"Zabalduta"</string>
+    <string name="exposed_dropdown_menu_content_description">Erakutsi goitibeherako menua</string>
+    <string name="icon_content_description">Leihoko ikonoa</string>
+    <string msgid="6827826412747255547" name="in_progress">"Abian"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Erdi-markatuta"</string>
+    <string name="item_view_role_description">Fitxa</string>
+    <string name="keyboard_preferences">Teklatua</string>
+    <string name="material_clock_toggle_content_description">Hautatu AM edo PM</string>
+    <string name="material_hour_24h_suffix">%1$s ordu</string>
+    <string name="material_hour_selection">Hautatu ordua</string>
+    <string name="material_hour_suffix">%1$s(r)ak dira</string>
+    <string name="material_minute_selection">Hautatu minutuak</string>
+    <string name="material_minute_suffix">%1$s minutu</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">Aldatu erloju modura ordua zehazteko.</string>
+    <string name="material_timepicker_hour">Ordua</string>
+    <string name="material_timepicker_minute">Minutua</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">Hautatu ordua</string>
+    <string name="material_timepicker_text_input_mode_description">Ordua idazteko, aldatu testua idazteko metodora.</string>
+    <string name="mtrl_badge_numberless_content_description">Jakinarazpen berria</string>
+    <string name="mtrl_chip_close_icon_content_description">Kendu %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">%1$d jakinarazpen berri baino gehiago</string>
+    <string name="mtrl_picker_a11y_next_month">Aldatu hurrengo hilabetera</string>
+    <string name="mtrl_picker_a11y_prev_month">Aldatu aurreko hilabetera</string>
+    <string name="mtrl_picker_announce_current_selection">Oraingo hautapena: %1$s</string>
+    <string name="mtrl_picker_cancel">Utzi</string>
+    <string name="mtrl_picker_confirm">Ados</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Hautatu data</string>
+    <string name="mtrl_picker_date_header_unselected">Hautatutako data</string>
+    <string name="mtrl_picker_day_of_week_column_header">Egunen zutabea:%1$s</string>
+    <string name="mtrl_picker_invalid_format">Formatuak ez du balio.</string>
+    <string name="mtrl_picker_invalid_format_example">Adibidea: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Erabili: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Tarteak ez du balio.</string>
+    <string name="mtrl_picker_navigate_to_year_description">Joan %1$s. urtera</string>
+    <string name="mtrl_picker_out_of_range">Onartutako barrutitik kanpo: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Hasiera-data – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – Amaiera-data</string>
+    <string name="mtrl_picker_range_header_selected">%1$s-%2$s</string>
+    <string name="mtrl_picker_range_header_title">Hautatu barrutia</string>
+    <string name="mtrl_picker_range_header_unselected">Hasiera-data - Amaiera-data</string>
+    <string name="mtrl_picker_save">Gorde</string>
+    <string name="mtrl_picker_text_input_date_hint">Data</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Amaiera-data</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Hasiera-data</string>
+    <string name="mtrl_picker_text_input_day_abbr">e</string>
+    <string name="mtrl_picker_text_input_month_abbr">h</string>
+    <string name="mtrl_picker_text_input_year_abbr">u</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Aldatu egutegiaren idazketa-metodora</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Sakatu eguna hautatzeko modura aldatzeko</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Aldatu testua idazteko modura</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Sakatu urtea hautatzeko modura aldatzeko</string>
+    <string name="mtrl_timepicker_cancel">Utzi</string>
+    <string name="mtrl_timepicker_confirm">Ados</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Nabigazio-menua"</string>
+    <string name="new_window">Leiho berria</string>
+    <string name="next_window">Hurrengo leihoa</string>
+    <string name="no_read_phone_state_permissin">Ez dago baimenik gailuaren informazioa irakurtzeko</string>
+    <string name="no_write_settings_permissin">Ez dago sistemaren ezarpenak aldatzeko baimenik</string>
+    <string msgid="6610465462668679431" name="not_selected">"Hautatu gabe"</string>
+    <string msgid="6573031135582639649" name="not_set">"Ez da ezarri"</string>
+    <string msgid="875452955155264703" name="off">"Desaktibatuta"</string>
+    <string name="ok">Noski</string>
+    <string msgid="8655164131929253426" name="on">"Aktibatuta"</string>
+    <string name="password_toggle_content_description">Erakutsi pasahitza</string>
+    <string name="paste">Itsatsi</string>
+    <string name="perm_run_script">Exekutatu hautazko komandoak Terminal Emulatzailean</string>
+    <string name="permdesc_run_script">Aplikazioari baimena ematen dio Android Terminal Emulatzailean leiho berriak irekitzeko eta leiho hauetan komandoak exekutatzeko Android Terminal Emulatzailearen baimen guztiekin, Interneterako eta zure SD txartelerako sarbidea barne.</string>
+    <string msgid="6685851473431805375" name="preference_copied">"Arbelean kopiatu da \"<ns1:g id="SUMMARY">%1$s</ns1:g>\"."</string>
+    <string name="preferences">Hobespenak</string>
+    <string name="prev_window">Aurreko leihoa</string>
+    <string name="process_exit_message">Terminal saioa amaituta</string>
+    <string msgid="5941395253238309765" name="range_end">"Barrutiaren amaiera"</string>
+    <string msgid="7097486360902471446" name="range_start">"Barrutiaren hasiera"</string>
+    <string name="reset">Berrezarri terminala</string>
+    <string name="reset_toast_notification">-Terminal leiho honen egoera berrezarri da.</string>
+    <string name="screen_preferences">Pantaila</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Bilatu"</string>
+    <string name="select_text">Hautatu testua</string>
+    <string msgid="6043586758067023" name="selected">"Hautatuta"</string>
+    <string name="send_control_key">Bidali kontrol tekla</string>
+    <string name="send_email">Bidali eposta ...(r)i</string>
+    <string name="send_fn_key">Bidali fn tekla</string>
+    <string name="service_notify_text">Terminal saioa martxan dago</string>
+    <string name="shell_preferences">Shell</string>
+    <string name="special_keys">Tekla bereziak</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="summary_actionbar_preference">Aukeratu ekintza-barraren portaera (Android 3.0tik aurrera).</string>
+    <string name="summary_backaction_preference">Aukeratu atzera botoia sakatzeak zer egiten duen.</string>
+    <string name="summary_close_window_on_process_exit_preference">Bere shell-a irtetean leiho bat itxi behar litzatekeen ala ez.</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="summary_color_preference">Hautatu testuaren kolorea.</string>
+    <string name="summary_controlkey_preference">Hautatu kontrol tekla.</string>
+    <string name="summary_cursorblink_preference">Hautatu kurtsore-keinua.</string>
+    <string name="summary_cursorstyle_preference">Hautatu kurtsore-estiloa.</string>
+    <string name="summary_fnkey_preference">Hautatu Fn tekla.</string>
+    <string name="summary_fontsize_preference">Hautatu karaktereen tamaina puntutan.</string>
+    <string name="summary_ime_preference">Hautatu sarrera-metodoa soft teklatuarentzat.</string>
+    <string name="summary_initialcommand_preference">Bidali shell-era abiarazten denean.</string>
+    <string name="summary_shell_preference">Zehaztu shell komando lerroa.</string>
+    <string name="summary_statusbar_preference">Erakutsi/ezkutatu egoera-barra.</string>
+    <string name="summary_termtype_preference">Terminal motaren berri eman shell-ari.</string>
+    <string name="summary_utf8_by_default_preference">UTF-8 modu lehenetsian gaitzen den ala ez.</string>
+    <string msgid="1672349317127674378" name="tab">"Fitxa"</string>
+    <string msgid="5946805113151406391" name="template_percent">"Ehuneko <ns1:g id="PERCENTAGE">%1$d</ns1:g>."</string>
+    <string name="text_accessibility_service_description">Script-eragiketak automatizatzeko beharrezkoa da (klik, sakatu luzea, irristatu, etab.), desgaituta badago, eragiketa automatikorik ez duten script-ak bakarrik exekutatu ahal izango dira.</string>
+    <string name="text_already_stop_n_scripts">%d script exekutatzen gelditu dira</string>
+    <string name="text_console">Kontsola</string>
+    <string name="text_drawer_close">Itxi goitibeherako menua</string>
+    <string name="text_drawer_open">Ireki goitibeherako menua</string>
+    <string name="text_error">Akatsa:</string>
+    <string name="text_file_not_exists">Fitxategia ez da existitzen</string>
+    <string name="text_no_file_rw_permission">Ez dago fitxategiak irakurtzeko eta idazteko baimenik</string>
+    <string name="text_no_floating_window_permission">Ez dago leiho mugikorren baimenik</string>
+    <string name="text_no_running_script">Ez dago martxan gidoirik</string>
+    <string name="text_path_is_empty">Bidea hutsik dago</string>
+    <string name="text_preferences">Testua</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Script honek Auto.js bertsio-zenbakia %d edo handiagoa behar du exekutatzeko</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Script honek Android bertsio hau behar du exekutatzeko:</string>
+    <string name="text_should_enable_gesture_observing">Keinuen monitorizazioa ez dago gaituta, gaitu ezazu softwarearen ezarpenetan</string>
+    <string name="text_should_enable_key_observing">Gakoen monitorizazioa ez dago gaituta, gaitu ezazu softwarearen ezarpenetan</string>
+    <string name="text_start_running">Martxan jarri</string>
+    <string name="title_actionbar_preference">Ekintza-barra</string>
+    <string name="title_backaction_preference">Atzera botoiaren portaera</string>
+    <string name="title_close_window_on_process_exit_preference">Itxi leihoa irtetean</string>
+    <string name="title_color_preference">Koloreak</string>
+    <string name="title_controlkey_preference">Kontrol tekla</string>
+    <string name="title_cursorblink_preference">Kurtsore-keinua</string>
+    <string name="title_cursorstyle_preference">Kurtsore-estiloa</string>
+    <string name="title_fnkey_preference">Fn tekla</string>
+    <string name="title_fontsize_preference">Letra-tamaina</string>
+    <string name="title_ime_preference">Sarrera-metodoa</string>
+    <string name="title_initialcommand_preference">Hasierako komandoa</string>
+    <string name="title_shell_preference">Komando lerroa</string>
+    <string name="title_statusbar_preference">Egoera-barra</string>
+    <string name="title_termtype_preference">Terminal mota</string>
+    <string name="title_utf8_by_default_preference">Lehenetsi UTF-8</string>
+    <string name="toggle_soft_keyboard">Txandakatu soft teklatua</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"DESAKTIBATUTA"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"AKTIBATUTA"</string>
+    <string name="window_list">Leihoak</string>
+    <string name="window_title">%1$d leihoa</string>
+</resources>

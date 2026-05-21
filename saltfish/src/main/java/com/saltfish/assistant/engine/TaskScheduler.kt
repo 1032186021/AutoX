@@ -29,8 +29,25 @@ class TaskScheduler(
     val state: StateFlow<SchedulerState> = _state.asStateFlow()
 
     private var isRunning = false
+    @Volatile private var paused = false
+
+    fun pause() {
+        paused = true
+        currentJob?.cancel()
+        currentJob = null
+        currentTask = null
+        _state.value = SchedulerState(queueSize = queue.size, isRunning = false)
+    }
+
+    fun resume() {
+        paused = false
+        if (queue.isNotEmpty()) {
+            scheduleNext()
+        }
+    }
 
     fun enqueue(task: TaskEntity) {
+        if (paused) return
         queue.add(task.copy(status = TaskStatus.PENDING))
         _state.value = _state.value.copy(queueSize = queue.size)
         scheduleNext()
@@ -49,7 +66,7 @@ class TaskScheduler(
     fun getQueue(): List<TaskEntity> = queue.toList().sortedBy { it.priority }
 
     private fun scheduleNext() {
-        if (isRunning) return
+        if (isRunning || paused) return
 
         scope.launch {
             isRunning = true

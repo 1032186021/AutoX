@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Gᴐmedzeƒe</item>  
+    <item>Ðee fia zi ɖeka gbesiagbe</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Si mele ɖoɖonu o</item>  
+    <item>Nyadzɔdzɔ</item>  
+    <item>Hadome kadodo kple amewo</item>  
+    <item>Nutata ƒe nutata</item>  
+    <item>Hoʋiʋli</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Nutoa me nuŋlɔɖiwo</item>  
+    <item>Nuŋlɔɖiwo wɔwɔ le Internet dzi</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Js faɛl si woate ŋu atrɔ asi le</item>  
+    <item>Binary si womate ŋu atrɔ asi le o</item> 
+  </string-array>
+    <string name="cancel">Te fli ɖe eme</string>
+    <string name="error_activity_not_found_for_apk_installing">Mete ŋu ke ɖe app ŋu be yeaɖo apk ɖe wò kɔmpiuta dzi o</string>
+    <string name="exception_notification_service_disabled">Nyatakakadɔa mele dɔ wɔm o, taflatse gbugbɔ wɔ gbeƒãɖeɖe ƒe mɔɖeɖe ŋudɔ</string>
+    <string name="no_read_phone_state_permissin">Mɔɖeɖe aɖeke meli be woaxlẽ mɔ̃a ŋuti nyatakakawo o</string>
+    <string name="no_write_settings_permissin">Mɔɖeɖe aɖeke meli be woatrɔ asi le ɖoɖoa ƒe ɖoɖowo ŋu o</string>
+    <string name="ok">Ka ɖe edzi</string>
+    <string name="text_accessibility_service_description">Wobia tso asiwò be nàwɔ ŋɔŋlɔdzesiwo ƒe dɔwɔwɔ le wo ɖokui si (zi edzi, te didi, ʋuʋu, kple bubuawo), ne wowɔe nuwɔametɔe la, ŋɔŋlɔdzesi siwo meku ɖe dɔwɔwɔ le wo ɖokui si ŋu o koe woate ŋu awɔ.</string>
+    <string name="text_already_stop_n_scripts">%d ƒe ŋɔŋlɔdzesiwo ƒe dɔwɔwɔ tɔ</string>
+    <string name="text_console">Console ƒe ƒuƒoƒo</string>
+    <string name="text_drawer_close">Do nu siwo le fli dzi la nu</string>
+    <string name="text_drawer_open">Ʋu nusiwo le fli dzi la</string>
+    <string name="text_error">Vodada:</string>
+    <string name="text_file_not_exists">Faɛl la meli o</string>
+    <string name="text_no_file_rw_permission">Faɛl xexlẽ kple nuŋɔŋlɔ ƒe mɔɖeɖe aɖeke meli o</string>
+    <string name="text_no_floating_window_permission">Fesre si le tsia dzi ƒe mɔɖeɖe aɖeke meli o</string>
+    <string name="text_no_running_script">Ŋɔŋlɔdzesi aɖeke mele du dzi o</string>
+    <string name="text_path_is_empty">Mɔa le ƒuƒlu</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Script sia bia Auto.js ƒe tɔtrɔ xexlẽdzesi %d alo esi wu nenema be wòawɔ dɔ</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Script sia bia be Android ƒe tɔtrɔ sia nate ŋu awɔ dɔ:</string>
+    <string name="text_should_enable_gesture_observing">Womewɔ asiwɔwɔ ɖe nya dzi ƒe ŋkuléle ɖe nu ŋu ŋudɔ o, taflatse wɔe le kɔmpiutadziɖoɖowo ƒe ɖoɖowo me</string>
+    <string name="text_should_enable_key_observing">Womewɔ safuiwo dzi kpɔkpɔ ŋudɔ o, taflatse wɔe le kɔmpiutadziɖoɖoa ƒe ɖoɖowo me</string>
+    <string name="text_start_running">Dze dɔwɔwɔ gɔme</string>
+</resources>

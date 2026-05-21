@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.saltfish.assistant.saltfish-mergeDebugResources-90:/values-v14/values-v14.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\zhiyo\\.gradle\\caches\\transforms-3\\940a905d3555e3dea7f19a04e4342783\\transformed\\jetified-core-0.9.2.3\\res\\values-v14\\values-v14.xml",
+                    "from": {
+                        "startLines": "2,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,428",
+                        "endLines": "8,17",
+                        "endColumns": "12,12",
+                        "endOffsets": "423,855"
+                    },
+                    "to": {
+                        "startLines": "2,9",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,428",
+                        "endLines": "8,14",
+                        "endColumns": "12,12",
+                        "endOffsets": "423,727"
+                    }
+                }
+            ]
+        }
+    ]
+}

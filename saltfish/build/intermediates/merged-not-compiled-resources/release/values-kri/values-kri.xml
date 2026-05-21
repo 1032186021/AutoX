@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Balans</item>  
+    <item>Sho wan tɛm insay di de</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Jɔs apin</item>  
+    <item>Nyuz</item>  
+    <item>Soshal kɔntakt</item>  
+    <item>Katun fim dɛn</item>  
+    <item>Gem</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Lokal dɔkyumɛnt dɛn</item>  
+    <item>Di dɔkyumɛnt dɛn we de na di Intanɛt</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Js fayl we yu kin ɛdit</item>  
+    <item>Baynary we nɔ de ɛdit</item> 
+  </string-array>
+    <string name="cancel">Nɔ</string>
+    <string name="error_activity_not_found_for_apk_installing">Nɔ ebul fɔ fɛn ap fɔ instɔl apk</string>
+    <string name="exception_notification_service_disabled">Notis savis nɔ de rɔn, duya ri-ɛnabul notis pɔmishɔn</string>
+    <string name="no_read_phone_state_permissin">Nɔ gɛt rayt fɔ rid divays infɔmeshɔn</string>
+    <string name="no_write_settings_permissin">No permishɔn fɔ chenj di sistem sɛtin dɛn</string>
+    <string name="ok">Shɔ</string>
+    <string name="text_accessibility_service_description">I nid fɔ mek skript ɔpreshɔn dɛn ɔtomɛtik (klik, prɛs lɔng, swip, ɛn ɔda tin dɛn), if dɛn nɔ ebul fɔ du am, na skript dɛn nɔmɔ we nɔ gɛt ɔtomɛtik ɔpreshɔn dɛn go ebul fɔ du.</string>
+    <string name="text_already_stop_n_scripts">%d skript dɛn we de rɔn dɔn stɔp</string>
+    <string name="text_console">Kɔnsol fɔ yuz</string>
+    <string name="text_drawer_close">Klos di drɔp dɔŋ mɛnyu</string>
+    <string name="text_drawer_open">Opin di drɔp dɔŋ mɛnyu</string>
+    <string name="text_error">Mistek:</string>
+    <string name="text_file_not_exists">Fayl nɔ de</string>
+    <string name="text_no_file_rw_permission">Nɔ fayl rid ɛn rayt pɔmishɔn</string>
+    <string name="text_no_floating_window_permission">No flotin winda permishɔn nɔ de</string>
+    <string name="text_no_running_script">Nɔ skript we de rɔn</string>
+    <string name="text_path_is_empty">Di rod ɛmti</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Dis skript nid Auto.js vɛshɔn nɔmba %d ɔ ɔp fɔ rɔn</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Dis skript nid dis Andrɔyd vɛshɔn fɔ rɔn:</string>
+    <string name="text_should_enable_gesture_observing">Gesture monitoring nɔ de ɛnabul, duya ɛnabul am na softwe sɛtin</string>
+    <string name="text_should_enable_key_observing">Ki monitarin nɔ de ɛnabul, duya ɛnabul am na di softwe sɛtin dɛn</string>
+    <string name="text_start_running">Stat fɔ ɔpreshɔn</string>
+</resources>

@@ -1,0 +1,51 @@
+package com.saltfish.assistant.domain.entity
+
+data class SaltfishOrderEntity(
+    val id: String? = null,
+    val payId: String? = null,
+    val platform: String? = null,
+    val sellingPrice: Double = 0.0,
+    val discountAmount: Double = 0.0,
+    val originalPrice: Double = 0.0,
+    val finalPrice: Double = 0.0,
+    val freight: Double = 0.0,
+    val shopName: String? = null,
+    val buyer: String? = null,
+    val recipient: String? = null,
+    val phone: String? = null,
+    val address: String? = null,
+    val remark: String? = null,
+    val tipoff: String? = null,
+    val expressNo: String? = null,
+    val expressCompany: String? = null,
+    val userId: Long? = null,
+    val accountId: Long? = null,
+    val goodsId: String? = null,
+    val productId: Long? = null,
+    val goodsSku: Any? = null,
+    val extend: Any? = null,
+    val status: Int? = null,
+    val payTime: String? = null,
+    val deliveryTime: String? = null,
+    val createTime: String? = null,
+    val updateTime: String? = null,
+    val expressStatus: String? = null,
+    val urgeTime: String? = null
+)
+
+data class SaltfishOrderCashbackEntity(
+    val id: Long = 0,
+    val createTime: String? = null,
+    val updateTime: String? = null,
+    val amount: Double = 0.0,
+    val cipher: String? = null,
+    val tipoff: String? = null,
+    val comment: String? = null,
+    val remark: String? = null,
+    val progress: Int = 0,
+    val userId: Long? = null,
+    val isShowPhoto: Int = 0,
+    val screenshot: String? = null,
+    val refund: Double = 0.0,
+    val orderId: String? = null
+)

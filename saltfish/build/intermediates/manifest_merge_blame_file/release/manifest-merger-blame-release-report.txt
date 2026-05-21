@@ -1,0 +1,432 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.saltfish.assistant"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml
+10
+11    <!-- Network -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:6:5-67
+12-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:7:5-79
+13-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:7:22-76
+14
+15    <!-- Storage -->
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:10:5-80
+16-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:10:22-77
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+17-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:11:5-81
+17-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:11:22-78
+18
+19    <!-- Foreground service -->
+20    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+20-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:14:5-77
+20-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:14:22-74
+21    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+21-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:15:5-89
+21-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:15:22-86
+22
+23    <!-- Overlay -->
+24    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+24-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:18:5-78
+24-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:18:22-75
+25
+26    <!-- Battery -->
+27    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+27-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:21:5-95
+27-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:21:22-92
+28
+29    <!-- Boot -->
+30    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+30-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:24:5-81
+30-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:24:22-78
+31
+32    <!-- Accessibility -->
+33    <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+33-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:27:5-29:47
+33-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:28:9-69
+34
+35    <!-- Screenshot -->
+36    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
+36-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:32:5-94
+36-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:32:22-91
+37
+38    <!-- Notifications -->
+39    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+39-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:35:5-77
+39-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:35:22-74
+40
+41    <!-- Install APK -->
+42    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+42-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:38:5-83
+42-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:38:22-80
+43    <uses-permission android:name="android.permission.VIBRATE" />
+43-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:40:5-66
+43-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:40:22-63
+44    <uses-permission android:name="android.permission.WAKE_LOCK" />
+44-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:41:5-68
+44-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:41:22-65
+45    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+45-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:8:5-79
+45-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:8:22-76
+46    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+46-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-76
+46-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:9:22-73
+47    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+47-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:5-75
+47-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:10:22-72
+48    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" /> <!-- termux -->
+48-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:5-13:47
+48-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:12:9-70
+49    <uses-permission android:name="com.termux.permission.RUN_COMMAND" />
+49-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:5-73
+49-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:18:22-70
+50    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+50-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:19:5-21:47
+50-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:20:9-57
+51    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" /> <!-- 读取联系人的权限 -->
+51-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:22:5-24:47
+51-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:23:9-64
+52    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 写联系人的权限 -->
+52-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:26:5-72
+52-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:26:22-69
+53    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+53-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:28:5-73
+53-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:28:22-70
+54
+55    <application
+55-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:43:5-106:19
+56        android:name="com.saltfish.assistant.SaltfishApp"
+56-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:44:9-36
+57        android:allowBackup="false"
+57-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:45:9-36
+58        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+58-->[androidx.core:core:1.8.0] C:\Users\zhiyo\.gradle\caches\transforms-3\d30756a481c634b236f79e9d612dd6bf\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+59        android:icon="@mipmap/ic_launcher"
+59-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:46:9-43
+60        android:label="咸鱼助手"
+60-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:47:9-29
+61        android:networkSecurityConfig="@xml/network_security_config"
+61-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:51:9-69
+62        android:resizeableActivity="true"
+62-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:50:9-42
+63        android:supportsRtl="true"
+63-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:48:9-35
+64        android:theme="@style/Theme.Saltfish" >
+64-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:49:9-46
+65        <activity
+65-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:54:9-62:20
+66            android:name="com.saltfish.assistant.SplashActivity"
+66-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:55:13-43
+67            android:exported="true"
+67-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:56:13-36
+68            android:theme="@style/Theme.Saltfish" >
+68-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:57:13-50
+69            <intent-filter>
+69-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:58:13-61:29
+70                <action android:name="android.intent.action.MAIN" />
+70-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:59:17-69
+70-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:59:25-66
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:60:17-77
+72-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:60:27-74
+73            </intent-filter>
+74        </activity>
+75        <activity
+75-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:64:9-68:53
+76            android:name="com.saltfish.assistant.MainActivity"
+76-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:65:13-41
+77            android:exported="false"
+77-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:66:13-37
+78            android:launchMode="singleTop"
+78-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:67:13-43
+79            android:theme="@style/Theme.Saltfish" />
+79-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:68:13-50
+80
+81        <service
+81-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:70:9-73:58
+82            android:name="com.saltfish.assistant.service.ScriptService"
+82-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:71:13-50
+83            android:exported="false"
+83-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:72:13-37
+84            android:foregroundServiceType="specialUse" />
+84-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:73:13-55
+85        <service
+85-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:75:9-86:19
+86            android:name="com.stardust.autojs.core.accessibility.AccessibilityService"
+86-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:76:13-87
+87            android:exported="true"
+87-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:77:13-36
+88            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+88-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:78:13-79
+89            <intent-filter>
+89-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:80:13-82:29
+90                <action android:name="android.accessibilityservice.AccessibilityService" />
+90-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:81:17-92
+90-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:81:25-89
+91            </intent-filter>
+92
+93            <meta-data
+93-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:83:13-85:72
+94                android:name="android.accessibilityservice"
+94-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:84:17-60
+95                android:resource="@xml/accessibility_service_config" />
+95-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:85:17-69
+96        </service>
+97
+98        <receiver
+98-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:88:9-94:20
+99            android:name="com.saltfish.assistant.receiver.BootReceiver"
+99-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:89:13-50
+100            android:exported="true" >
+100-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:90:13-36
+101            <intent-filter>
+101-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:91:13-93:29
+102                <action android:name="android.intent.action.BOOT_COMPLETED" />
+102-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:92:17-79
+102-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:92:25-76
+103            </intent-filter>
+104        </receiver>
+105
+106        <provider
+107            android:name="androidx.core.content.FileProvider"
+107-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:97:13-62
+108            android:authorities="com.saltfish.assistant.fileprovider"
+108-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:98:13-64
+109            android:exported="false"
+109-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:99:13-37
+110            android:grantUriPermissions="true" >
+110-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:100:13-47
+111            <meta-data
+111-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:101:13-103:54
+112                android:name="android.support.FILE_PROVIDER_PATHS"
+112-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:102:17-67
+113                android:resource="@xml/file_paths" />
+113-->D:\code\AutoX\saltfish\src\main\AndroidManifest.xml:103:17-51
+114        </provider>
+115
+116        <activity
+116-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:32:9-35:50
+117            android:name="com.stardust.autojs.execution.ScriptExecuteActivity"
+117-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:33:13-79
+118            android:configChanges="fontScale|keyboard|keyboardHidden|locale|navigation|orientation|screenLayout|screenSize|uiMode"
+118-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:34:13-131
+119            android:theme="@style/ScriptTheme" />
+119-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:35:13-47
+120        <activity
+120-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:36:9-40:62
+121            android:name="com.stardust.autojs.core.permission.PermissionRequestActivity"
+121-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:37:13-89
+122            android:excludeFromRecents="true"
+122-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:38:13-46
+123            android:taskAffinity="com.stardust.autojs.runtime.api.image.ScreenCaptureRequestActivity"
+123-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:39:13-102
+124            android:theme="@style/ScriptTheme.Transparent" />
+124-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:40:13-59
+125        <activity
+125-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:41:9-45:62
+126            android:name="com.stardust.autojs.core.image.capture.ScreenCaptureRequestActivity"
+126-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:42:13-95
+127            android:excludeFromRecents="true"
+127-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:43:13-46
+128            android:taskAffinity="com.stardust.autojs.runtime.api.image.ScreenCaptureRequestActivity"
+128-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:44:13-102
+129            android:theme="@style/ScriptTheme.Transparent" />
+129-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:45:13-59
+130
+131        <service
+131-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:59:9-62:63
+132            android:name="com.stardust.autojs.core.image.capture.CaptureForegroundService"
+132-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:60:13-91
+133            android:exported="false"
+133-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:61:13-37
+134            android:foregroundServiceType="mediaProjection" />
+134-->[:autojs] D:\code\AutoX\autojs\build\intermediates\merged_manifest\release\AndroidManifest.xml:62:13-60
+135        <service android:name="org.eclipse.paho.android.service.MqttService" />
+135-->[:common] D:\code\AutoX\common\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:9-80
+135-->[:common] D:\code\AutoX\common\build\intermediates\merged_manifest\release\AndroidManifest.xml:11:18-77
+136        <service android:name="com.stardust.enhancedfloaty.FloatyService" />
+136-->[com.github.hyb1996:EnhancedFloaty:0.31] C:\Users\zhiyo\.gradle\caches\transforms-3\220037479aad09d4e19bef5e23f34118\transformed\jetified-EnhancedFloaty-0.31\AndroidManifest.xml:14:9-77
+136-->[com.github.hyb1996:EnhancedFloaty:0.31] C:\Users\zhiyo\.gradle\caches\transforms-3\220037479aad09d4e19bef5e23f34118\transformed\jetified-EnhancedFloaty-0.31\AndroidManifest.xml:14:18-74
+137        <service
+137-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\a51836041ba2eb8e36283dcfa2429510\transformed\jetified-play-services-mlkit-text-recognition-common-17.1.0\AndroidManifest.xml:9:9-15:19
+138            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+138-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\a51836041ba2eb8e36283dcfa2429510\transformed\jetified-play-services-mlkit-text-recognition-common-17.1.0\AndroidManifest.xml:10:13-91
+139            android:directBootAware="true"
+139-->[com.google.mlkit:common:18.5.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1a38b79bb28113802ce8d707448aaaea\transformed\jetified-common-18.5.0\AndroidManifest.xml:17:13-43
+140            android:exported="false" >
+140-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\a51836041ba2eb8e36283dcfa2429510\transformed\jetified-play-services-mlkit-text-recognition-common-17.1.0\AndroidManifest.xml:11:13-37
+141            <meta-data
+141-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\a51836041ba2eb8e36283dcfa2429510\transformed\jetified-play-services-mlkit-text-recognition-common-17.1.0\AndroidManifest.xml:12:13-14:85
+142                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+142-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\a51836041ba2eb8e36283dcfa2429510\transformed\jetified-play-services-mlkit-text-recognition-common-17.1.0\AndroidManifest.xml:13:17-114
+143                android:value="com.google.firebase.components.ComponentRegistrar" />
+143-->[com.google.android.gms:play-services-mlkit-text-recognition-common:17.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\a51836041ba2eb8e36283dcfa2429510\transformed\jetified-play-services-mlkit-text-recognition-common-17.1.0\AndroidManifest.xml:14:17-82
+144            <meta-data
+144-->[com.google.mlkit:vision-common:17.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\53f800dcab1c33b28610f430f7e9e80b\transformed\jetified-vision-common-17.2.0\AndroidManifest.xml:12:13-14:85
+145                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+145-->[com.google.mlkit:vision-common:17.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\53f800dcab1c33b28610f430f7e9e80b\transformed\jetified-vision-common-17.2.0\AndroidManifest.xml:13:17-124
+146                android:value="com.google.firebase.components.ComponentRegistrar" />
+146-->[com.google.mlkit:vision-common:17.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\53f800dcab1c33b28610f430f7e9e80b\transformed\jetified-vision-common-17.2.0\AndroidManifest.xml:14:17-82
+147            <meta-data
+147-->[com.google.mlkit:common:18.5.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1a38b79bb28113802ce8d707448aaaea\transformed\jetified-common-18.5.0\AndroidManifest.xml:20:13-22:85
+148                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+148-->[com.google.mlkit:common:18.5.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1a38b79bb28113802ce8d707448aaaea\transformed\jetified-common-18.5.0\AndroidManifest.xml:21:17-120
+149                android:value="com.google.firebase.components.ComponentRegistrar" />
+149-->[com.google.mlkit:common:18.5.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1a38b79bb28113802ce8d707448aaaea\transformed\jetified-common-18.5.0\AndroidManifest.xml:22:17-82
+150        </service>
+151
+152        <provider
+152-->[com.google.mlkit:common:18.5.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1a38b79bb28113802ce8d707448aaaea\transformed\jetified-common-18.5.0\AndroidManifest.xml:9:9-13:38
+153            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+153-->[com.google.mlkit:common:18.5.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1a38b79bb28113802ce8d707448aaaea\transformed\jetified-common-18.5.0\AndroidManifest.xml:10:13-78
+154            android:authorities="com.saltfish.assistant.mlkitinitprovider"
+154-->[com.google.mlkit:common:18.5.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1a38b79bb28113802ce8d707448aaaea\transformed\jetified-common-18.5.0\AndroidManifest.xml:11:13-69
+155            android:exported="false"
+155-->[com.google.mlkit:common:18.5.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1a38b79bb28113802ce8d707448aaaea\transformed\jetified-common-18.5.0\AndroidManifest.xml:12:13-37
+156            android:initOrder="99" />
+156-->[com.google.mlkit:common:18.5.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1a38b79bb28113802ce8d707448aaaea\transformed\jetified-common-18.5.0\AndroidManifest.xml:13:13-35
+157
+158        <activity
+158-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\54d9af8ce418b5925d8716c33c6d0e07\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+159            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+159-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\54d9af8ce418b5925d8716c33c6d0e07\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+160            android:exported="false"
+160-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\54d9af8ce418b5925d8716c33c6d0e07\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+161            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+161-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\54d9af8ce418b5925d8716c33c6d0e07\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+162
+163        <meta-data
+163-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\acb30caf5d9181a2290fa8ec592c12c1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+164            android:name="com.google.android.gms.version"
+164-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\acb30caf5d9181a2290fa8ec592c12c1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+165            android:value="@integer/google_play_services_version" />
+165-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\zhiyo\.gradle\caches\transforms-3\acb30caf5d9181a2290fa8ec592c12c1\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+166
+167        <uses-library
+167-->[androidx.window:window:1.0.0] C:\Users\zhiyo\.gradle\caches\transforms-3\f501223f4021ec6f0ef9cb9ac582b292\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+168            android:name="androidx.window.extensions"
+168-->[androidx.window:window:1.0.0] C:\Users\zhiyo\.gradle\caches\transforms-3\f501223f4021ec6f0ef9cb9ac582b292\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+169            android:required="false" />
+169-->[androidx.window:window:1.0.0] C:\Users\zhiyo\.gradle\caches\transforms-3\f501223f4021ec6f0ef9cb9ac582b292\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+170        <uses-library
+170-->[androidx.window:window:1.0.0] C:\Users\zhiyo\.gradle\caches\transforms-3\f501223f4021ec6f0ef9cb9ac582b292\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+171            android:name="androidx.window.sidecar"
+171-->[androidx.window:window:1.0.0] C:\Users\zhiyo\.gradle\caches\transforms-3\f501223f4021ec6f0ef9cb9ac582b292\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+172            android:required="false" />
+172-->[androidx.window:window:1.0.0] C:\Users\zhiyo\.gradle\caches\transforms-3\f501223f4021ec6f0ef9cb9ac582b292\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+173
+174        <service
+174-->[androidx.room:room-runtime:2.4.3] C:\Users\zhiyo\.gradle\caches\transforms-3\80effbcfa936d4c0913e90bf0ccdb896\transformed\room-runtime-2.4.3\AndroidManifest.xml:25:9-28:40
+175            android:name="androidx.room.MultiInstanceInvalidationService"
+175-->[androidx.room:room-runtime:2.4.3] C:\Users\zhiyo\.gradle\caches\transforms-3\80effbcfa936d4c0913e90bf0ccdb896\transformed\room-runtime-2.4.3\AndroidManifest.xml:26:13-74
+176            android:directBootAware="true"
+176-->[androidx.room:room-runtime:2.4.3] C:\Users\zhiyo\.gradle\caches\transforms-3\80effbcfa936d4c0913e90bf0ccdb896\transformed\room-runtime-2.4.3\AndroidManifest.xml:27:13-43
+177            android:exported="false" />
+177-->[androidx.room:room-runtime:2.4.3] C:\Users\zhiyo\.gradle\caches\transforms-3\80effbcfa936d4c0913e90bf0ccdb896\transformed\room-runtime-2.4.3\AndroidManifest.xml:28:13-37
+178
+179        <provider
+179-->[com.squareup.leakcanary:leakcanary-object-watcher-android:2.13] C:\Users\zhiyo\.gradle\caches\transforms-3\65890cd180c1250b0a7d4ae25db9e716\transformed\jetified-leakcanary-object-watcher-android-2.13\AndroidManifest.xml:8:9-12:40
+180            android:name="leakcanary.internal.MainProcessAppWatcherInstaller"
+180-->[com.squareup.leakcanary:leakcanary-object-watcher-android:2.13] C:\Users\zhiyo\.gradle\caches\transforms-3\65890cd180c1250b0a7d4ae25db9e716\transformed\jetified-leakcanary-object-watcher-android-2.13\AndroidManifest.xml:9:13-78
+181            android:authorities="com.saltfish.assistant.leakcanary-installer"
+181-->[com.squareup.leakcanary:leakcanary-object-watcher-android:2.13] C:\Users\zhiyo\.gradle\caches\transforms-3\65890cd180c1250b0a7d4ae25db9e716\transformed\jetified-leakcanary-object-watcher-android-2.13\AndroidManifest.xml:10:13-72
+182            android:enabled="@bool/leak_canary_watcher_auto_install"
+182-->[com.squareup.leakcanary:leakcanary-object-watcher-android:2.13] C:\Users\zhiyo\.gradle\caches\transforms-3\65890cd180c1250b0a7d4ae25db9e716\transformed\jetified-leakcanary-object-watcher-android-2.13\AndroidManifest.xml:11:13-69
+183            android:exported="false" />
+183-->[com.squareup.leakcanary:leakcanary-object-watcher-android:2.13] C:\Users\zhiyo\.gradle\caches\transforms-3\65890cd180c1250b0a7d4ae25db9e716\transformed\jetified-leakcanary-object-watcher-android-2.13\AndroidManifest.xml:12:13-37
+184        <provider
+184-->[androidx.emoji2:emoji2:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\eac5ac09af6c8665bdc7c0ca3a6494ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+185            android:name="androidx.startup.InitializationProvider"
+185-->[androidx.emoji2:emoji2:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\eac5ac09af6c8665bdc7c0ca3a6494ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+186            android:authorities="com.saltfish.assistant.androidx-startup"
+186-->[androidx.emoji2:emoji2:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\eac5ac09af6c8665bdc7c0ca3a6494ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+187            android:exported="false" >
+187-->[androidx.emoji2:emoji2:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\eac5ac09af6c8665bdc7c0ca3a6494ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+188            <meta-data
+188-->[androidx.emoji2:emoji2:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\eac5ac09af6c8665bdc7c0ca3a6494ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+189                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+189-->[androidx.emoji2:emoji2:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\eac5ac09af6c8665bdc7c0ca3a6494ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+190                android:value="androidx.startup" />
+190-->[androidx.emoji2:emoji2:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\eac5ac09af6c8665bdc7c0ca3a6494ea\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+191            <meta-data
+191-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\zhiyo\.gradle\caches\transforms-3\31d3219cafc8f5f23d9ee7f021b6d3d5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+192                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+192-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\zhiyo\.gradle\caches\transforms-3\31d3219cafc8f5f23d9ee7f021b6d3d5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+193                android:value="androidx.startup" />
+193-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\zhiyo\.gradle\caches\transforms-3\31d3219cafc8f5f23d9ee7f021b6d3d5\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+194            <meta-data
+194-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:30:13-32:52
+195                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+195-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:31:17-85
+196                android:value="androidx.startup" />
+196-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:32:17-49
+197        </provider>
+198
+199        <receiver
+199-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:35:9-47:20
+200            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+200-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:36:13-76
+201            android:directBootAware="false"
+201-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:37:13-44
+202            android:enabled="true"
+202-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:38:13-35
+203            android:exported="true"
+203-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:39:13-36
+204            android:permission="android.permission.DUMP" >
+204-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:40:13-57
+205            <intent-filter>
+205-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:41:13-43:29
+206                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+206-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:17-91
+206-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:42:25-88
+207            </intent-filter>
+208            <intent-filter>
+208-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:44:13-46:29
+209                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+209-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:17-85
+209-->[androidx.profileinstaller:profileinstaller:1.2.0] C:\Users\zhiyo\.gradle\caches\transforms-3\1fb1a34db5495745b64b437c8f34e660\transformed\jetified-profileinstaller-1.2.0\AndroidManifest.xml:45:25-82
+210            </intent-filter>
+211        </receiver>
+212
+213        <service
+213-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\zhiyo\.gradle\caches\transforms-3\d71a132054a5588e4b4dfc6a4fae56d4\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+214            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+214-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\zhiyo\.gradle\caches\transforms-3\d71a132054a5588e4b4dfc6a4fae56d4\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+215            android:exported="false" >
+215-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\zhiyo\.gradle\caches\transforms-3\d71a132054a5588e4b4dfc6a4fae56d4\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+216            <meta-data
+216-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\zhiyo\.gradle\caches\transforms-3\d71a132054a5588e4b4dfc6a4fae56d4\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+217                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+217-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\zhiyo\.gradle\caches\transforms-3\d71a132054a5588e4b4dfc6a4fae56d4\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+218                android:value="cct" />
+218-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\zhiyo\.gradle\caches\transforms-3\d71a132054a5588e4b4dfc6a4fae56d4\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+219        </service>
+220        <service
+220-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\zhiyo\.gradle\caches\transforms-3\c52facfdda9c6881b4ca782224a30eb7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+221            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+221-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\zhiyo\.gradle\caches\transforms-3\c52facfdda9c6881b4ca782224a30eb7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+222            android:exported="false"
+222-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\zhiyo\.gradle\caches\transforms-3\c52facfdda9c6881b4ca782224a30eb7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+223            android:permission="android.permission.BIND_JOB_SERVICE" >
+223-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\zhiyo\.gradle\caches\transforms-3\c52facfdda9c6881b4ca782224a30eb7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+224        </service>
+225
+226        <receiver
+226-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\zhiyo\.gradle\caches\transforms-3\c52facfdda9c6881b4ca782224a30eb7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+227            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+227-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\zhiyo\.gradle\caches\transforms-3\c52facfdda9c6881b4ca782224a30eb7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+228            android:exported="false" />
+228-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\zhiyo\.gradle\caches\transforms-3\c52facfdda9c6881b4ca782224a30eb7\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+229    </application>
+230
+231</manifest>

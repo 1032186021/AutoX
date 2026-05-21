@@ -38,7 +38,7 @@ class SaltfishApp : Application() {
     val socketIOManager by lazy { SocketIOManager(preferencesManager) }
     val deviceRepository by lazy { DeviceRepository(apiClient, preferencesManager, deviceInfoCollector) }
     val deviceInfoCollector by lazy { DeviceInfoCollector(this, preferencesManager) }
-    val accountRepository by lazy { AccountRepository(apiClient, preferencesManager) }
+    val accountRepository by lazy { AccountRepository(apiClient, preferencesManager, deviceRepository) }
     val taskRepository by lazy { TaskRepository(apiClient, preferencesManager, db) }
     val upgradeManager by lazy {
         UpgradeManager(this, preferencesManager) {
@@ -49,6 +49,7 @@ class SaltfishApp : Application() {
         }
     }
     val deviceManager by lazy { com.saltfish.assistant.engine.DeviceManager(this) }
+    val lifecycleManager by lazy { com.saltfish.assistant.engine.AppLifecycleManager(this) }
     val notificationHelper by lazy { NotificationHelper(this) }
 
     override fun onCreate() {
@@ -73,18 +74,6 @@ class SaltfishApp : Application() {
         notificationHelper.createChannels()
 
         apiClient.onUnauthorized = { preferencesManager.logout() }
-
-        registerDeviceOnStartup()
-    }
-
-    private fun registerDeviceOnStartup() {
-        appScope.launch {
-            try {
-                deviceRepository.registerDevice()
-            } catch (e: Exception) {
-                // 启动注册失败不阻塞应用，下次启动重试
-            }
-        }
     }
 
     private fun setupCrashHandler() {

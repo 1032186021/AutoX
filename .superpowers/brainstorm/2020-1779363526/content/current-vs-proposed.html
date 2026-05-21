@@ -1,0 +1,83 @@
+<h2>当前问题 & 重构方案</h2>
+<p class="subtitle">现在每个子页面各自包 Scaffold，切 Tab 时底部导航消失。重构后外层统一管理</p>
+
+<div class="split">
+  <div class="mockup">
+    <div class="mockup-header">当前架构 — 每页独立 Scaffold</div>
+    <div class="mockup-body">
+      <div style="background:#1C1B1F;border-radius:12px;padding:12px;color:#E6E1E5">
+        <!-- Home tab -->
+        <div style="background:#2C2C2C;border-radius:8px;padding:10px;margin-bottom:8px">
+          <div style="font-size:11px;color:#999;margin-bottom:4px">HomeScreen</div>
+          <div style="font-size:9px;color:#6750A4;margin-bottom:2px">✓ Scaffold</div>
+          <div style="font-size:9px;color:#6750A4;margin-bottom:2px">✓ TopAppBar</div>
+          <div style="font-size:9px;color:#6750A4">✓ NavigationBar</div>
+        </div>
+        <!-- Other tabs -->
+        <div style="background:#2C2C2C;border-radius:8px;padding:10px;margin-bottom:8px;opacity:0.6">
+          <div style="font-size:11px;color:#999;margin-bottom:4px">AutomationScreen</div>
+          <div style="font-size:9px;color:#F44336;margin-bottom:2px">✓ Scaffold</div>
+          <div style="font-size:9px;color:#F44336;margin-bottom:2px">✓ TopAppBar</div>
+          <div style="font-size:9px;color:#F44336">✗ NavigationBar → 消失</div>
+        </div>
+        <div style="background:#2C2C2C;border-radius:8px;padding:10px;margin-bottom:8px;opacity:0.6">
+          <div style="font-size:11px;color:#999;margin-bottom:4px">TaskScreen</div>
+          <div style="font-size:9px;color:#F44336;margin-bottom:2px">✗ NavigationBar → 消失</div>
+        </div>
+        <div style="background:#2C2C2C;border-radius:8px;padding:10px;opacity:0.6">
+          <div style="font-size:11px;color:#999;margin-bottom:4px">UserCenterScreen</div>
+          <div style="font-size:9px;color:#F44336">✗ NavigationBar → 消失</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">重构方案 — MainScaffold 外层统一</div>
+    <div class="mockup-body">
+      <div style="background:#1C1B1F;border-radius:12px;padding:12px;color:#E6E1E5">
+        <!-- Outer shell -->
+        <div style="background:#3C1A5C;border-radius:8px;padding:10px;margin-bottom:8px;border:1px solid #6750A4">
+          <div style="font-size:11px;color:#EADDFF;margin-bottom:4px">MainScaffold（外层壳）</div>
+          <div style="font-size:9px;color:#EADDFF;margin-bottom:2px">✓ 统一的 Scaffold</div>
+          <div style="font-size:9px;color:#EADDFF;margin-bottom:2px">✓ 共享 NavigationBar（持久）</div>
+          <div style="font-size:9px;color:#EADDFF">✓ 各页面提供自己的 TopBar</div>
+        </div>
+        <!-- Content area -->
+        <div style="background:#2C2C2C;border-radius:8px;padding:10px;margin-bottom:8px">
+          <div style="font-size:9px;color:#999;text-align:center">NavHost 内容区</div>
+        </div>
+        <!-- Bottom bar -->
+        <div style="display:flex;justify-content:space-around;background:#2C2C2C;border-radius:8px;padding:8px">
+          <div style="text-align:center"><div style="font-size:16px">🏠</div><div style="font-size:8px;color:#6750A4">首页</div></div>
+          <div style="text-align:center"><div style="font-size:16px">▶️</div><div style="font-size:8px;color:#999">自动化</div></div>
+          <div style="text-align:center"><div style="font-size:16px">📋</div><div style="font-size:8px;color:#999">任务</div></div>
+          <div style="text-align:center"><div style="font-size:16px">👤</div><div style="font-size:8px;color:#999">我的</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:24px">
+  <h3>关键变更</h3>
+  <div class="pros-cons">
+    <div class="pros">
+      <h4>收益</h4>
+      <ul>
+        <li>底部导航栏 4 个 Tab 间切换不再消失</li>
+        <li>Scaffold 只渲染一次，减少重组开销</li>
+        <li>TopAppBar 各页面独立，灵活性保留</li>
+        <li>导航状态集中在 MainScaffold 管理</li>
+      </ul>
+    </div>
+    <div class="cons">
+      <h4>影响</h4>
+      <ul>
+        <li>需新建 MainScaffold.kt</li>
+        <li>Login/Guide/Splash 等非主流程页面要走独立路由</li>
+        <li>NavGraph 需拆分为 AuthGraph + MainGraph</li>
+      </ul>
+    </div>
+  </div>
+</div>

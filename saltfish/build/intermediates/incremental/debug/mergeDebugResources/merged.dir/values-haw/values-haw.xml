@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Paʻamau</item>  
+    <item>Hōʻike i hoʻokahi manawa i ka lā</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Kūʻokoʻa</item>  
+    <item>Nūhou</item>  
+    <item>Pili pilikanaka</item>  
+    <item>Kiʻi paʻi kiʻi</item>  
+    <item>Pāʻani</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Palapala kūloko</item>  
+    <item>Palapala pūnaewele</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Waihona js hiki ke hoʻoponopono</item>  
+    <item>Binary hiki ole ke hooponopono</item> 
+  </string-array>
+    <string name="cancel">Hoʻopau</string>
+    <string name="error_activity_not_found_for_apk_installing">ʻAʻole hiki ke loaʻa ka polokalamu e hoʻokomo i ka apk</string>
+    <string name="exception_notification_service_disabled">ʻAʻole holo ka lawelawe hoʻolaha, e ʻoluʻolu e hoʻā hou i ka ʻae hoʻolaha</string>
+    <string name="no_read_phone_state_permissin">ʻAʻole ʻae ʻia e heluhelu i ka ʻike mea hana</string>
+    <string name="no_write_settings_permissin">ʻAʻohe ʻae e hoʻololi i nā hoʻonohonoho ʻōnaehana</string>
+    <string name="ok">ʻOiaʻiʻo</string>
+    <string name="text_accessibility_service_description">Pono e hoʻokaʻawale i nā hana hōʻailona (kaomi, paʻi lōʻihi, swipe, a me nā mea ʻē aʻe), inā pio, hiki ke hoʻokō ʻia nā palapala ʻaʻole pili i nā hana ʻakomi.</string>
+    <string name="text_already_stop_n_scripts">%d ka holo ʻana o nā palapala i kū</string>
+    <string name="text_console">Hooluolu</string>
+    <string name="text_drawer_close">Pani i ka papa kuhikuhi koho</string>
+    <string name="text_drawer_open">E wehe i ka papa kuhikuhi</string>
+    <string name="text_error">Kuhi hewa:</string>
+    <string name="text_file_not_exists">ʻaʻole i loaʻa ka faila</string>
+    <string name="text_no_file_rw_permission">ʻAʻohe palapala ʻae heluhelu a kākau</string>
+    <string name="text_no_floating_window_permission">ʻAʻohe ʻae pukaaniani lana</string>
+    <string name="text_no_running_script">ʻaʻohe palapala holo</string>
+    <string name="text_path_is_empty">Ua hakahaka ke ala</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Pono kēia palapala i ka helu mana Auto.js %d a i ʻole e holo</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Pono kēia palapala i kēia mana Android e holo:</string>
+    <string name="text_should_enable_gesture_observing">ʻAʻole ʻae ʻia ka mākaʻikaʻi ʻana, e ʻoluʻolu e ʻae iā ia ma nā hoʻonohonoho polokalamu</string>
+    <string name="text_should_enable_key_observing">ʻAʻole ʻae ʻia ka nānā ʻana i nā kī, e ʻoluʻolu e ʻae iā ia ma nā hoʻonohonoho polokalamu</string>
+    <string name="text_start_running">Hoʻomaka i ka hana</string>
+</resources>

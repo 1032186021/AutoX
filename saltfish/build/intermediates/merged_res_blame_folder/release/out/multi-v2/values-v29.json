@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.saltfish.assistant.saltfish-mergeReleaseResources-86:/values-v29/values-v29.xml",
+            "map": [
+                {
+                    "source": "D:\\code\\AutoX\\autojs\\build\\intermediates\\packaged_res\\release\\values-v29\\values-v29.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "17",
+                        "endColumns": "12",
+                        "endOffsets": "1037"
+                    }
+                }
+            ]
+        }
+    ]
+}

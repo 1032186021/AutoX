@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="ad_showing_mode_keys"> 
+    <item>ნაგულისხმევი</item>  
+    <item>აჩვენეთ დღეში ერთხელ</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>შემთხვევითი</item>  
+    <item>ახალი ამბები</item>  
+    <item>სოციალური კონტაქტი</item>  
+    <item>მულტფილმი</item>  
+    <item>თამაში</item> 
+  </string-array>
+    <string-array name="control_keys_short_names">
+        <item>ბურთი</item>
+        <item>\@</item>
+        <item>მარცხ.-Alt</item>
+        <item>მარჯვ.-Alt</item>
+        <item>ხმა-ზემოთ</item>
+        <item>ხმა-ქვემოთ</item>
+        <item>კამერა</item>
+        <item>არცერთი</item>
+    </string-array>
+    <string-array name="entries_actionbar_preference">
+        
+        <item>სტატუსის ხაზის მიმაგრება ეკრანზე</item>
+        <item>სტატუსის ხაზის დამალვა(საჩვენებლად შეეხეთ ეკრანის ზედა ნაწილს ან მენიუს ღილაკს)</item>
+    </string-array>
+    <string-array name="entries_backaction_preference">
+        <item>ტერმინალის ყველა ფანჯრის დახურვა</item>
+        <item>ტერმინალის მონიშნული ფანჯრის დახურვა</item>
+        <item>ფანჯრის დახურვა სესიების გაშვებულ მდგომარეობაში დატოვებით</item>
+        <item>ტერმინალისათვის ESC-ის გაგზავნა</item>
+        <item>ტერმინალისათვის TAB-ის გაგზავნა</item>
+    </string-array>
+    <string-array name="entries_color_preference">
+        <item>შავი თეთრზე</item>
+        <item>თეთრი შავზე</item>
+        <item>თეთრი ლურჯზე</item>
+        <item>მწვანე შავზე</item>
+        <item>ქარვისფერი შავზე</item>
+        <item>წითელი შავზე</item>
+        <item>ღია ლურჯი შავზე</item>
+        <item>Solarized Light</item>
+        <item>Solarized Dark</item>
+        <item>Linux Console</item>
+    </string-array>
+    <string-array name="entries_controlkey_preference">
+        <item>Jog ball</item>
+        <item>\@ ღილაკი</item>
+        <item>მარცხენა Alt ღილაკი</item>
+        <item>მარჯვენა Alt ღილაკი</item>
+        <item>ხმის აწევის ღილაკი</item>
+        <item>ხმის დაწევის ღილაკი</item>
+        <item>კამერის ღილაკი</item>
+        <item>არცერთი</item>
+    </string-array>
+    <string-array name="entries_cursorblink_preference">
+        <item>არა-მოციმციმე კურსორი</item>
+        <item>მოციმციმე კურსორი</item>
+    </string-array>
+    <string-array name="entries_cursorstyle_preference">
+        <item>ოთხკუთხედი</item>
+        <item>ქვედა ტირე</item>
+        <item>ვერტიკალური ხაზი</item>
+    </string-array>
+    <string-array name="entries_fnkey_preference">
+        <item>Jog ball</item>
+        <item>\@ ღილაკი</item>
+        <item>მარცხენა Alt ღილაკი</item>
+        <item>მარჯვენა Alt ღილაკი</item>
+        <item>ხმის აწევის ღილაკი</item>
+        <item>ხმის დაწევის ღილაკი</item>
+        <item>ამერის ღილაკი</item>
+        <item>არცერთი</item>
+    </string-array>
+    <string-array name="entries_fontsize_preference">
+        <item>4 x 8 პიქსელი</item>
+        <item>6 pt</item>
+        <item>7 pt</item>
+        <item>8 pt</item>
+        <item>9 pt</item>
+        <item>10 pt</item>
+        <item>12 pt</item>
+        <item>14 pt</item>
+        <item>16 pt</item>
+        <item>20 pt</item>
+        <item>24 pt</item>
+        <item>28 pt</item>
+        <item>32 pt</item>
+        <item>36 pt</item>
+        <item>42 pt</item>
+        <item>48 pt</item>
+        <item>64 pt</item>
+        <item>72 pt</item>
+        <item>96 pt</item>
+        <item>144 pt</item>
+        <item>288 pt</item>
+    </string-array>
+    <string-array name="entries_ime_preference">
+        <item>სიმბოლოებზე დამოკიდებული</item>
+        <item>სიტყვებზე დამოკიდებული</item>
+    </string-array>
+    <string-array name="entries_statusbar_preference">
+        <item>სტატუსის ხაზის ჩვენება</item>
+        <item>სტატუსის ხაზის დამალვა</item>
+    </string-array>
+    <string-array name="fn_keys_short_names">
+        <item>ბურთი</item>
+        <item>\@</item>
+        <item>მარცხ.-Alt</item>
+        <item>მარჯვ.-Alt</item>
+        <item>ხმა-ზემოთ</item>
+        <item>ხმა-ქვემოთ</item>
+        <item>კამერა</item>
+        <item>არცერთი</item>
+    </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>ადგილობრივი დოკუმენტაცია</item>  
+    <item>ონლაინ დოკუმენტაცია</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>რედაქტირებადი js ფაილი</item>  
+    <item>არარედაქტირებადი ორობითი</item> 
+  </string-array>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d ახალი შეტყობინება</item>
+    <item quantity="other">%d ახალი შეტყობინება</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"მთავარზე გადასვლა"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"ზემოთ გადასვლა"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"სხვა ვარიანტები"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"მზადაა"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"ყველას ნახვა"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"აირჩიეთ აპი"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"გამორთვა"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"ჩართვა"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"შორისი"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"ძიება…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"მოთხოვნის გასუფთავება"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"მოთხოვნის ძიება"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"ძიება"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"მოთხოვნის გადაგზავნა"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"ხმოვანი ძიება"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"გაზიარება:"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"<ns1:g id="APPLICATION_NAME">%s</ns1:g>-ით გაზიარება"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"ჩაკეცვა"</string>
+    <string name="application_terminal">Terminal Emulator</string>
+    <string name="bottomsheet_action_collapse">ქვედა ფურცლის ჩაკეცვა</string>
+    <string name="bottomsheet_action_expand">ქვედა ფურცლის გაშლა</string>
+    <string name="bottomsheet_action_expand_halfway">ნახევრამდე გაფართოება</string>
+    <string name="bottomsheet_drag_handle_clicked">ორმაგი შეხება ჩავლების სახელურზე</string>
+    <string name="bottomsheet_drag_handle_content_description">სახელური ჩავლებისთვის</string>
+    <string name="cancel">გაუქმება</string>
+    <string name="character_counter_content_description">შეყვანილია %2$d-დან %1$d სიმბოლო</string>
+    <string name="character_counter_overflowed_content_description">გადაჭარბებულია სიმბოლოთა ლიმიტი (%2$d-დან %1$d)</string>
+    <string name="clear_text_end_icon_content_description">ტექსტის გასუფთავება</string>
+    <string msgid="406453423630273620" name="close_drawer">"ნავიგაციის მენიუს დახურვა"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"ფურცლის დახურვა"</string>
+    <string name="close_window">ფანჯრის დახურვა</string>
+    <string msgid="5389587048670450460" name="collapsed">"ჩაკეცილი"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">ჩართვა</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s ვერ იმუშავებს Google Play Services-ის ჩართვამდე.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play Services-ის ჩართვა</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">ინსტალაცია</string>
+    <string name="common_google_play_services_install_text">%1$s ვერ გაეშვება Google Play Services-ის გარეშე, რომელიც აკლია თქვენს მოწყობილობას.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play Services-ის ჩამოტვირთვა</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services-ის ხელმისაწვდომობა</string>
+    <string name="common_google_play_services_notification_ticker">Google Play Services-ის შეცდომა</string>
+    <string name="common_google_play_services_unknown_issue">%1$s-ს Google Play Services-თან პრობლემა შეექმნა. გთხოვთ, ცადოთ ხელახლა.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s ვერ გაეშვება Google Play Services-ის გარეშე, რომლებიც მხარდაუჭერელია თქვენი მოწყობილობის მიერ.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">განახლება</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s ვერ გაეშვება, თუ Google Play სერვისებს არ განაახლებთ.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">განაახლეთ Google Play Services</string>
+    <string name="common_google_play_services_updating_text">%1$s ვერ გაეშვება Google Play Services-ის გარეშე, რომელთა განახლებაც ამჟამად მიმდინარეობს.</string>
+    <string name="common_google_play_services_wear_update_text">საჭიროა Google Play Services-ის ახალი ვერსია. ის მალე განახლდება.</string>
+    <string name="common_open_on_phone">ტელეფონში გახსნა</string>
+    <string name="common_signin_button_text">შესვლა</string>
+    <string name="common_signin_button_text_long">Google-ით შესვლა</string>
+    <string name="confirm_window_close_message">გნებავთ ფანჯრის დახურვა?</string>
+    <string name="control_key_dialog_control_disabled_text">ღილაკი Control მითითებული არაა.</string>
+    <string name="control_key_dialog_control_text">CTRLKEY Space : Control-@ (NUL)\nCTRLKEY A..Z : Control-A..Z\nCTRLKEY 5 : Control-]\nCTRLKEY 6 : Control-^\nCTRLKEY 7 : Control-_\nCTRLKEY 9 : F11\nCTRLKEY 0 : F12</string>
+    <string name="control_key_dialog_fn_disabled_text">ღილაკი Function მითითებული არაა.</string>
+    <string name="control_key_dialog_fn_text">FNKEY 1..9 : F1-F9\nFNKEY 0 : F10\nFNKEY W : Up\nFNKEY A : Left\nFNKEY S : Down\nFNKEY D : Right\nFNKEY P : PageUp\nFNKEY N : PageDown\nFNKEY T : Tab\nFNKEY L : | (pipe)\nFNKEY U : _ (underscore)\nFNKEY E : Control-[ (ESC)\nFNKEY X : Delete\nFNKEY I : Insert\nFNKEY H : Home\nFNKEY F : End\nFNKEY . : Control-\\\n</string>
+    <string name="control_key_dialog_title">Control და Function ღილაკები</string>
+    <string msgid="6083905920877235314" name="copy">"კოპირება"</string>
+    <string name="copy_all">ასლი</string>
+    <string msgid="8038256446254964252" name="default_error_message">"შენატანი არასწორია"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"ამომხტარი ფანჯარა"</string>
+    <string msgid="4057925834421392736" name="dialog">"დიალოგი"</string>
+    <string name="dialog_title_actionbar_preference">მოქმედების ხაზის ქცევა</string>
+    <string name="dialog_title_backaction_preference">ღილაკ Back-ის ქცევა</string>
+    <string name="dialog_title_color_preference">ტექსტის ფერი</string>
+    <string name="dialog_title_controlkey_preference">ღილაკი Control</string>
+    <string name="dialog_title_cursorblink_preference">კურსორის ციმციმი</string>
+    <string name="dialog_title_cursorstyle_preference">კურსორის სტილი</string>
+    <string name="dialog_title_fnkey_preference">ღილაკი Fn</string>
+    <string name="dialog_title_fontsize_preference">ფონტის ზომა</string>
+    <string name="dialog_title_ime_preference">შეყვანის მეთოდი</string>
+    <string name="dialog_title_initialcommand_preference">საწყისი ბრძანება</string>
+    <string name="dialog_title_shell_preference">გარსი</string>
+    <string name="dialog_title_statusbar_preference">მდგომარეობის ხაზი</string>
+    <string name="dialog_title_termtype_preference">ტერმინალის ტიპი</string>
+    <string name="disable_wakelock">WakeLock-ის გამორთვა</string>
+    <string name="disable_wifilock">WifiLock-ის გამორთვა</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"ჩამოსაშლელი მენიუ"</string>
+    <string name="edit_text">ტექსტის ჩასწორება</string>
+    <string name="enable_wakelock">WakeLock-ის ჩართვა</string>
+    <string name="enable_wifilock">WifiLock-ის ჩართვა</string>
+    <string name="error_activity_not_found_for_apk_installing">Apk-ის დასაყენებლად აპს ვერ ვპოულობ</string>
+    <string name="error_icon_content_description">შეცდომა</string>
+    <string name="exception_notification_service_disabled">შეტყობინებების სერვისი არ მუშაობს, გთხოვთ, ხელახლა ჩართოთ შეტყობინების ნებართვა</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"დამატებით"</string>
+    <string msgid="5974471714631304645" name="expanded">"გაფართოებულია"</string>
+    <string name="exposed_dropdown_menu_content_description">ჩამოსაშლელი მენიუს ჩვენება</string>
+    <string name="icon_content_description">დიალოგის ხატულა</string>
+    <string msgid="6827826412747255547" name="in_progress">"მუშავდება"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"ნაწილობრივ შემოწმებულია"</string>
+    <string name="item_view_role_description">ჩანართი</string>
+    <string name="keyboard_preferences">კლავიატურა</string>
+    <string name="material_clock_toggle_content_description">აირჩიეთ AM ან PM</string>
+    <string name="material_hour_24h_suffix">%1$s საათი</string>
+    <string name="material_hour_selection">აირჩიეთ საათი</string>
+    <string name="material_hour_suffix">%1$s საათი</string>
+    <string name="material_minute_selection">აირჩიეთ წუთები</string>
+    <string name="material_minute_suffix">%1$s წუთი</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">დროის შეყვანისთვის საათის რეჟიმზე გადართვა.</string>
+    <string name="material_timepicker_hour">საათი</string>
+    <string name="material_timepicker_minute">წუთი</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">აირჩიეთ დრო</string>
+    <string name="material_timepicker_text_input_mode_description">დროის შეყვანისთვის ტექსტის შეყვანის რეჟიმზე გადართვა.</string>
+    <string name="mtrl_badge_numberless_content_description">ახალი შეტყობინება</string>
+    <string name="mtrl_chip_close_icon_content_description">%1$s-ის ამოშლა</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">%1$d-ზე მეტი ახალი შეტყობინება</string>
+    <string name="mtrl_picker_a11y_next_month">შემდეგ თვეზე გადასვლა</string>
+    <string name="mtrl_picker_a11y_prev_month">წინა თვეზე გადასვლა</string>
+    <string name="mtrl_picker_announce_current_selection">ამჟამინდელი არჩევანი: %1$s</string>
+    <string name="mtrl_picker_cancel">გაუქმება</string>
+    <string name="mtrl_picker_confirm">კარგი</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">აირჩიეთ თარიღი</string>
+    <string name="mtrl_picker_date_header_unselected">არჩეული თარიღი</string>
+    <string name="mtrl_picker_day_of_week_column_header">დღეების სვეტი: %1$s</string>
+    <string name="mtrl_picker_invalid_format">არასწორი ფორმატი.</string>
+    <string name="mtrl_picker_invalid_format_example">მაგალითი: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">%1$s-ის გამოყენება</string>
+    <string name="mtrl_picker_invalid_range">დიაპაზონი არასწორია.</string>
+    <string name="mtrl_picker_navigate_to_year_description">%1$s წელზე ნავიგაცია</string>
+    <string name="mtrl_picker_out_of_range">დიაპაზონს მიღმა: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">დაწყების თარიღი - %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s - დასრულების თარიღი</string>
+    <string name="mtrl_picker_range_header_selected">%1$s - %2$s</string>
+    <string name="mtrl_picker_range_header_title">აირჩიეთ დიაპაზონი</string>
+    <string name="mtrl_picker_range_header_unselected">დაწყების თარიღი - დასრულების თარიღი</string>
+    <string name="mtrl_picker_save">შენახვა</string>
+    <string name="mtrl_picker_text_input_date_hint">თარიღი</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">დასრულების თარიღი</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">დაწყების თარიღი</string>
+    <string name="mtrl_picker_text_input_day_abbr">დ</string>
+    <string name="mtrl_picker_text_input_month_abbr">წთ</string>
+    <string name="mtrl_picker_text_input_year_abbr">წ</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">კალენდარში შეყვანის რეჟიმზე გადართვა</string>
+    <string name="mtrl_picker_toggle_to_day_selection">შეეხეთ დღის არჩევაზე გადასართავად</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">ტექსტის შეყვანის რეჟიმზე გადართვა</string>
+    <string name="mtrl_picker_toggle_to_year_selection">შეეხეთ წლის არჩევაზე გადასართავად</string>
+    <string name="mtrl_timepicker_cancel">გაუქმება</string>
+    <string name="mtrl_timepicker_confirm">კარგი</string>
+    <string msgid="542007171693138492" name="navigation_menu">"ნავიგაციის მენიუ"</string>
+    <string name="new_window">ახალი ფანჯარა</string>
+    <string name="next_window">შემდეგი ფანჯარა</string>
+    <string name="no_read_phone_state_permissin">მოწყობილობის ინფორმაციის წაკითხვის ნებართვა არ არის</string>
+    <string name="no_write_settings_permissin">სისტემის პარამეტრების შეცვლის ნებართვა არ არის</string>
+    <string msgid="6610465462668679431" name="not_selected">"არ არის არჩეული"</string>
+    <string msgid="6573031135582639649" name="not_set">"არ არის დაყენებული"</string>
+    <string msgid="875452955155264703" name="off">"გამორთული"</string>
+    <string name="ok">რა თქმა უნდა</string>
+    <string msgid="8655164131929253426" name="on">"ჩართული"</string>
+    <string name="password_toggle_content_description">პაროლის ჩვენება</string>
+    <string name="paste">ჩასმა</string>
+    <string name="perm_append_to_path">Terminal Emulator-სათვის ბრძანებების დამატება</string>
+    <string name="perm_prepend_to_path">Terminal Emulator-ის ბრძანებების უგულებელყოფა</string>
+    <string name="perm_run_script">ტერმინალში სასურველი ბრძანებების გაშვება</string>
+    <string name="permdesc_append_to_path">Allows application to provide additional commands (add directories to the PATH) for Terminal Emulator for Android.</string>
+    <string name="permdesc_prepend_to_path">Allows application to override existing commands with its own versions (prepend directories to the PATH) in Terminal Emulator for Android.</string>
+    <string name="permdesc_run_script">Allows application to open new windows in Terminal Emulator for Android and run commands in those windows with all of Terminal Emulator for Android\'s permissions, including access to the Internet and your SD Card.</string>
+    <string msgid="6685851473431805375" name="preference_copied">"„<ns1:g id="SUMMARY">%1$s</ns1:g>“ კოპირებულია გაცვლის ბუფერში."</string>
+    <string name="preferences">გამართვა</string>
+    <string name="prev_window">წინა ფანჯარა</string>
+    <string name="process_exit_message">ტერმინალის სესია დასრულდა</string>
+    <string msgid="5941395253238309765" name="range_end">"დიაპაზონის დასასრული"</string>
+    <string msgid="7097486360902471446" name="range_start">"დიაპაზონის დასაწყისი"</string>
+    <string name="reset">ტერმინალის რესტარტი</string>
+    <string name="reset_toast_notification">ამ ტერმინალის მდგომარეობა საწყისზე დაბრუნდა.</string>
+    <string name="screen_preferences">ეკრანი</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"ძიება"</string>
+    <string name="select_text">ტექსტის მონიშვნა</string>
+    <string msgid="6043586758067023" name="selected">"არჩეული"</string>
+    <string name="send_control_key">საკონტროლო ღილაკის გაგზავნა</string>
+    <string name="send_email">ელ-ფოსტის გაგზავნა</string>
+    <string name="send_fn_key">fn ღილაკის გაგზავნა</string>
+    <string name="service_notify_text">ტერმინალის სესია გაშვებულია</string>
+    <string name="shell_preferences">გარსი</string>
+    <string name="special_keys">სპეციალური ღილაკები</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="summary_actionbar_preference">აირჩიეთ მოქმედების ხაზის ქცევის პარამეტრები(Android 3.0 და ზემოთ).</string>
+    <string name="summary_allow_prepend_path_preference">უნდა იყვნენ თუ არა აპლიკაციები ნებადართული, რომ შეცვალონ გარსის ცვლადი PATH მის დასაწყისში დასტების ჩამატებით.</string>
+    <string name="summary_backaction_preference">აირჩიეთ რას აკეთებს ღილაკი back.</string>
+    <string name="summary_close_window_on_process_exit_preference">უნდა დაიხუროს თუ არა ფანჯარა გარსიდან გამოსვლის დროს.</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="summary_color_preference">აირჩიეთ ტექსტის ფერი.</string>
+    <string name="summary_controlkey_preference">აირჩიეთ ღილაკი control.</string>
+    <string name="summary_cursorblink_preference">აირჩიეთ კურსორის ციმციმის ტიპი.</string>
+    <string name="summary_cursorstyle_preference">აირჩიეთ კურსორის სტილი.</string>
+    <string name="summary_do_path_extensions_preference">უნდა იყვნენ თუ არა აპლიკაციები ნებადართული, რომ შეცვალონ გარსის ცვლადი PATH.</string>
+    <string name="summary_fnkey_preference">აირჩიეთ ღილაკი Fn.</string>
+    <string name="summary_fontsize_preference">აირჩიეთ სიმბოლოს სიმაღლე წერტილებში.</string>
+    <string name="summary_ime_preference">აირჩიეთ შეყვანის მეთოდი პროგრამული კლავიატურისათვის.</string>
+    <string name="summary_initialcommand_preference">გაეგზავნოს გარსს მისი გაშვებისას.</string>
+    <string name="summary_shell_preference">აირჩიეთ გარსის ბრძანების ხაზი.</string>
+    <string name="summary_statusbar_preference">მდგომარეობის ხაზის ჩართვა/გამორთვა.</string>
+    <string name="summary_termtype_preference">ტერმინალის რომელი ტიპი იქნება მიწოდებული გარსისათვის.</string>
+    <string name="summary_utf8_by_default_preference">როდესაც UTF-8 გამოიყენება ნაგულისხმევად.</string>
+    <string name="summary_verify_path_preference">უნდა იყოს თუ არა ამოღებული PATH-დან მიუწვდომელი დასტები.</string>
+    <string msgid="1672349317127674378" name="tab">"ჩანართი"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> პროცენტი."</string>
+    <string name="text_accessibility_service_description">საჭიროა სკრიპტის ოპერაციების ავტომატიზაციისთვის (დაწკაპუნება, ხანგრძლივი დაჭერა, გადაფურცვლა და ა.შ.), თუ გამორთულია, შეიძლება შესრულდეს მხოლოდ სკრიპტები, რომლებიც არ მოიცავს ავტომატურ ოპერაციებს.</string>
+    <string name="text_already_stop_n_scripts">%d გაშვებული სკრიპტი შეჩერდა</string>
+    <string name="text_console">კონსოლი</string>
+    <string name="text_drawer_close">დახურეთ ჩამოსაშლელი მენიუ</string>
+    <string name="text_drawer_open">გახსენით ჩამოსაშლელი მენიუ</string>
+    <string name="text_error">შეცდომა:</string>
+    <string name="text_file_not_exists">ფაილი არ არსებობს</string>
+    <string name="text_no_file_rw_permission">ფაილის წაკითხვისა და ჩაწერის ნებართვა არ არის</string>
+    <string name="text_no_floating_window_permission">მცურავი ფანჯრის ნებართვა არ არის</string>
+    <string name="text_no_running_script">არ არის გაშვებული სკრიპტი</string>
+    <string name="text_path_is_empty">ბილიკი ცარიელია</string>
+    <string name="text_preferences">ტექსტი</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">ამ სკრიპტის გასაშვებად საჭიროა Auto.js ვერსიის ნომერი %d ან უფრო მაღალი</string>
+    <string name="text_requires_sdk_version_to_run_the_script">ეს სკრიპტი მოითხოვს Android-ის ამ ვერსიის გასაშვებად:</string>
+    <string name="text_should_enable_gesture_observing">ჟესტების მონიტორინგი არ არის ჩართული, გთხოვთ, ჩართოთ იგი პროგრამული უზრუნველყოფის პარამეტრებში</string>
+    <string name="text_should_enable_key_observing">გასაღების მონიტორინგი არ არის ჩართული, გთხოვთ, ჩართოთ იგი პროგრამული უზრუნველყოფის პარამეტრებში</string>
+    <string name="text_start_running">ოპერაციის დაწყება</string>
+    <string name="title_actionbar_preference">მოქმედების ხაზი</string>
+    <string name="title_allow_prepend_path_preference">PATH-ის დასაწყისში ჩამატება</string>
+    <string name="title_backaction_preference">ღილაკ Back-ის ქცევა</string>
+    <string name="title_close_window_on_process_exit_preference">ფანჯრის დახურვა გასვლისას</string>
+    <string name="title_color_preference">ფერები</string>
+    <string name="title_controlkey_preference">ღილაკი Control</string>
+    <string name="title_cursorblink_preference">კურსორის ციმციმი</string>
+    <string name="title_cursorstyle_preference">კურსორის სტილი</string>
+    <string name="title_do_path_extensions_preference">PATH-ის გავრცობის ნების დართვა</string>
+    <string name="title_fnkey_preference">ღილაკი Fn</string>
+    <string name="title_fontsize_preference">ფონტის ზომა</string>
+    <string name="title_ime_preference">შეყვანის მეთოდი</string>
+    <string name="title_initialcommand_preference">საწყისი ბრძანება</string>
+    <string name="title_shell_preference">ბრძანების ხაზი</string>
+    <string name="title_statusbar_preference">მდგომარეობის ხაზი</string>
+    <string name="title_termtype_preference">ტერმინალის ტიპი</string>
+    <string name="title_utf8_by_default_preference">UTF-8-ის გამოყენება</string>
+    <string name="title_verify_path_preference">გარსის ცვლად PATH-ის გადამოწმება</string>
+    <string name="toggle_soft_keyboard">პროგრამული კლავიატურის ჩართ./გამორთ.</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"გამორთული"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"ჩართული"</string>
+    <string name="window_list">ფანჯრები</string>
+    <string name="window_title">ფანჯარა %1$d</string>
+</resources>

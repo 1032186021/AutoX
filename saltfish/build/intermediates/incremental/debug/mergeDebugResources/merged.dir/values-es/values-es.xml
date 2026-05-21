@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Defecto</item>  
+    <item>Mostrar una vez al día</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Aleatorio</item>  
+    <item>Noticias</item>  
+    <item>Contacto social</item>  
+    <item>Dibujos animados</item>  
+    <item>Juego</item> 
+  </string-array>
+    <string-array name="control_keys_short_names">
+        <item>T.Ball</item>
+        <item>\@</item>
+        <item>Alt.Izq.</item>
+        <item>Alt.Dcha.</item>
+        <item>Vol.Subir</item>
+        <item>Vol.Bajar</item>
+        <item>Cámara</item>
+        <item>Ninguna</item>
+    </string-array>
+    <string-array name="entries_actionbar_preference">
+        
+        <item>Mostrar</item>
+        <item>Ocultar (Pulsa MENÚ para mostrarla)</item>
+    </string-array>
+    <string-array name="entries_backaction_preference">
+        <item>Cierra todas las ventanas</item>
+        <item>Cierra sólo la ventana actual</item>
+        <item>Sale del terminal, dejándolo en segundo plano</item>
+        <item>Envía ESC al terminal</item>
+        <item>Envía TAB al terminal</item>
+    </string-array>
+    <string-array name="entries_color_preference">
+        <item>Negro en fondo blanco</item>
+        <item>Blanco en fondo negro</item>
+        <item>Blanco en fondo azul</item>
+        <item>Verde en fondo negro</item>
+        <item>Ámbar en fondo negro</item>
+        <item>Rojo en fondo negro</item>
+        <item>Azul en fondo negro</item>
+        <item>Solarized Light</item>
+        <item>Solarized Dark</item>
+        <item>Linux Console</item>
+    </string-array>
+    <string-array name="entries_controlkey_preference">
+        <item>Track ball</item>
+        <item>Tecla \@</item>
+        <item>Tecla Alt izquierda</item>
+        <item>Tecla Alt derecha</item>
+        <item>Tecla de subir volumen</item>
+        <item>Tecla de bajar volumen</item>
+        <item>Tecla de la cámara</item>
+        <item>Ninguna</item>
+    </string-array>
+    <string-array name="entries_cursorblink_preference">
+        <item>Cursor no-parpadeante</item>
+        <item>Cursor parpadeante</item>
+    </string-array>
+    <string-array name="entries_cursorstyle_preference">
+        <item>Rectángulo</item>
+        <item>Subrayado</item>
+        <item>Barra vertical</item>
+    </string-array>
+    <string-array name="entries_fnkey_preference">
+        <item>Track ball</item>
+        <item>Tecla \@</item>
+        <item>Tecla Alt izquierda</item>
+        <item>Tecla Alt derecha</item>
+        <item>Tecla de subir volumen</item>
+        <item>Tecla de bajar volumen</item>
+        <item>Tecla de la cámara</item>
+        <item>Ninguna</item>
+    </string-array>
+    <string-array name="entries_fontsize_preference">
+        <item>4 x 8 píxeles</item>
+        <item>6 pt</item>
+        <item>7 pt</item>
+        <item>8 pt</item>
+        <item>9 pt</item>
+        <item>10 pt</item>
+        <item>12 pt</item>
+        <item>14 pt</item>
+        <item>16 pt</item>
+        <item>20 pt</item>
+        <item>24 pt</item>
+        <item>28 pt</item>
+        <item>32 pt</item>
+        <item>36 pt</item>
+        <item>42 pt</item>
+        <item>48 pt</item>
+        <item>64 pt</item>
+        <item>72 pt</item>
+        <item>96 pt</item>
+        <item>144 pt</item>
+        <item>288 pt</item>
+    </string-array>
+    <string-array name="entries_ime_preference">
+        <item>Basada en carácteres</item>
+        <item>Basada en palabras</item>
+    </string-array>
+    <string-array name="entries_orientation_preference">
+        <item>Automática</item>
+        <item>Horizontal</item>
+        <item>Vertical</item>
+    </string-array>
+    <string-array name="entries_statusbar_preference">
+        <item>Mostrar</item>
+        <item>Ocultar</item>
+    </string-array>
+    <string-array name="fn_keys_short_names">
+        <item>T.Ball</item>
+        <item>\@</item>
+        <item>Alt.Izq.</item>
+        <item>Alt.Dcha.</item>
+        <item>Vol.Subir</item>
+        <item>Vol.Bajar</item>
+        <item>Cámara</item>
+        <item>Ninguna</item>
+    </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Documentación local</item>  
+    <item>Documentación en línea</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Archivo js editable</item>  
+    <item>Binario no editable</item> 
+  </string-array>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d notificación nueva</item>
+    <item quantity="other">%d notificaciones nuevas</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Ir a inicio"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Desplazarse hacia arriba"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Más opciones"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Hecho"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Ver todo"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Seleccionar una aplicación"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"DESACTIVADO"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"ACTIVADO"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt +"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl +"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"Suprimir"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"Intro"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Función +"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta +"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Mayús +"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"Espacio"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym +"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menú +"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Buscar…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Borrar consulta"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Consulta de búsqueda"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Buscar"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Enviar consulta"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Búsqueda por voz"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Compartir con"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Compartir con <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Ocultar"</string>
+    <string name="activity_shortcut_create">"Terminal (acceso directo)"</string>
+    <string name="activity_term_here_title">Terminal aquí</string>
+    <string name="addshortcut_arguments_label">Argumentos\:</string>
+    <string name="addshortcut_button_find_command">Encontrar comando</string>
+    <string name="addshortcut_button_text_icon">Texto del icono</string>
+    <string name="addshortcut_command_hint">comando</string>
+    <string name="addshortcut_command_window_instructions">La ventana de comandos necesita la ruta completa, sin argumentos. Para otros comandos usa la ventana de Argumentos (ej: cd /sdcard).</string>
+    <string name="addshortcut_example_hint">--ejemplo=\""a\"</string>
+    <string name="addshortcut_make_text_icon">HACER ICONO DE TEXTO</string>
+    <string name="addshortcut_navigator_title">ELIJE DESTINO DEL ACCESO DIRECTO</string>
+    <string name="addshortcut_shortcut_label">Etiqueta acceso directo\:</string>
+    <string name="addshortcut_title">Acceso directo a terminal</string>
+    <string name="alt_sends_esc">Tecla Alt como ESC</string>
+    <string name="alt_sends_esc_summary_off">La tecla Alt no funciona como ESC.</string>
+    <string name="alt_sends_esc_summary_on">La tecla Alt funciona como ESC.</string>
+    <string name="application_terminal">Terminal</string>
+    <string name="bottomsheet_action_collapse">Ocultar la hoja inferior</string>
+    <string name="bottomsheet_action_expand">Mostrar la hoja inferior</string>
+    <string name="bottomsheet_action_expand_halfway">Desplegar hasta la mitad</string>
+    <string name="bottomsheet_drag_handle_clicked">Controlador de arrastre tocado dos veces</string>
+    <string name="bottomsheet_drag_handle_content_description">Controlador de arrastre</string>
+    <string name="cancel">Cancelar</string>
+    <string name="character_counter_content_description">Caracteres introducidos: %1$d de %2$d</string>
+    <string name="character_counter_overflowed_content_description">Límite de caracteres superado (%1$d de %2$d)</string>
+    <string name="clear_text_end_icon_content_description">Borrar texto</string>
+    <string msgid="406453423630273620" name="close_drawer">"Cerrar menú de navegación"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Cerrar hoja"</string>
+    <string name="close_window">Cerrar ventana</string>
+    <string msgid="5389587048670450460" name="collapsed">"Contraído"</string>
+    <string name="colorvalue_icon_text_entry_hint">Introduce texto del icono</string>
+    <string name="colorvalue_label_lock_button_column">BLOQUEAR</string>
+    <string name="colorvalue_letter_alpha">α</string>
+    <string name="colorvalue_letter_blue">B</string>
+    <string name="colorvalue_letter_green">G</string>
+    <string name="colorvalue_letter_red">R</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Habilitar</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s no funcionará hasta que no habilites Servicios de Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Habilita Servicios de Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Instalar</string>
+    <string name="common_google_play_services_install_text">%1$s no se ejecutará si los Servicios de Google Play no están instalados en tu dispositivo.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Descargar Servicios de Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Disponibilidad Servicios de Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Error de Servicios de Google Play</string>
+    <string name="common_google_play_services_unknown_issue">La aplicación %1$s tiene problemas con los Servicios de Google Play. Vuelve a intentarlo.</string>
+    <string name="common_google_play_services_unsupported_text">No es posible ejecutar la aplicación %1$s sin los Servicios de Google Play, que no son compatibles con tu dispositivo.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Actualizar</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s no funcionará hasta que no actualices Servicios de Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Actualiza Servicios de Google Play</string>
+    <string name="common_google_play_services_updating_text">%1$s no se ejecutará hasta que finalice la actualización en curso de Servicios de Google Play.</string>
+    <string name="common_google_play_services_wear_update_text">Se necesita una nueva versión de Servicios de Google Play. Se actualizará en breve.</string>
+    <string name="common_open_on_phone">Abrir en teléfono</string>
+    <string name="common_signin_button_text">Iniciar sesión</string>
+    <string name="common_signin_button_text_long">Iniciar sesión con Google</string>
+    <string name="confirm_window_close_message">¿Cerrar esta ventana?</string>
+    <string name="control_key_dialog_control_disabled_text">No hay tecla definida para Ctrl.</string>
+    <string name="control_key_dialog_control_text">CTRLKEY Espacio : Control-@ (NUL)\nCTRLKEY A..Z : Control-A..Z\nCTRLKEY 5 : Control-]\nCTRLKEY 6 : Control-^\nCTRLKEY 7 : Control-_\nCTRLKEY 9 : F11\nCTRLKEY 0 : F12</string>
+    <string name="control_key_dialog_fn_disabled_text">No hay tecla definida para FN.</string>
+    <string name="control_key_dialog_fn_text">FNKEY 1..9 : F1-F9\nFNKEY 0 : F10\nFNKEY W : Up\nFNKEY A : Left\nFNKEY S : Down\nFNKEY D : Right\nFNKEY P : AvPágina\nFNKEY N : RetPágina\nFNKEY T : Tab\nFNKEY L : | (tubería)\nFNKEY U : _ (subrayado)\nFNKEY E : Control-[ (ESC)\nFNKEY X : Suprimir\nFNKEY I : Insertar\nFNKEY H : Inicio\nFNKEY F : Fin\nFNKEY . : Control-\\\n</string>
+    <string name="control_key_dialog_title">Teclas FN y Ctrl</string>
+    <string msgid="6083905920877235314" name="copy">"Copiar"</string>
+    <string name="copy_all">Copiar todo</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Entrada no válida"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Ventana emergente"</string>
+    <string msgid="4057925834421392736" name="dialog">"Cuadro de diálogo"</string>
+    <string name="dialog_title_actionbar_preference">Barra de tareas</string>
+    <string name="dialog_title_backaction_preference">Acción del botón ATRÁS</string>
+    <string name="dialog_title_color_preference">Color del texto</string>
+    <string name="dialog_title_controlkey_preference">Tecla Ctrl</string>
+    <string name="dialog_title_cursorblink_preference">Parpadeo del cursor</string>
+    <string name="dialog_title_cursorstyle_preference">Diseño del cursor</string>
+    <string name="dialog_title_fnkey_preference">Tecla FN</string>
+    <string name="dialog_title_fontsize_preference">Tamaño de fuente</string>
+    <string name="dialog_title_ime_preference">Método de introducción</string>
+    <string name="dialog_title_initialcommand_preference">Comando inicial</string>
+    <string name="dialog_title_orientation_preference">Comportamiento de orientación de pantalla</string>
+    <string name="dialog_title_shell_preference">Shell</string>
+    <string name="dialog_title_statusbar_preference">Barra de estado</string>
+    <string name="dialog_title_termtype_preference">Tipo de terminal</string>
+    <string name="disable_wakelock">Desactivar WakeLock</string>
+    <string name="disable_wifilock">Desactivar WifiLock</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Menú desplegable"</string>
+    <string name="edit_text">Editar texto</string>
+    <string name="email_transcript_chooser_title">Enviar correo usando:</string>
+    <string name="email_transcript_no_email_activity_found">No hay aplicaciones de email disponibles.</string>
+    <string name="email_transcript_subject">Enviar correo electrónico sobre Terminal</string>
+    <string name="enable_wakelock">Activar WakeLock</string>
+    <string name="enable_wifilock">Activar WifiLock</string>
+    <string name="error_activity_not_found_for_apk_installing">No puedo encontrar la aplicación para instalar apk</string>
+    <string name="error_icon_content_description">Error</string>
+    <string name="exception_notification_service_disabled">El servicio de notificación no se está ejecutando, vuelva a habilitar el permiso de notificación</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Ajustes avanzados"</string>
+    <string msgid="5974471714631304645" name="expanded">"Desplegado"</string>
+    <string name="exposed_dropdown_menu_content_description">Mostrar menú desplegable</string>
+    <string name="fsnavigator_change_theme">Cambiar tema</string>
+    <string name="fsnavigator_no_external_storage">Almacenamiento externo no disponible</string>
+    <string name="fsnavigator_optional_enter_path">O intruduce ruta aquí.</string>
+    <string name="fsnavigator_title">EXPLORADOR DE ARCHIVOS</string>
+    <string name="help">Ayuda</string>
+    <string name="icon_content_description">Icono del cuadro de diálogo</string>
+    <string msgid="6827826412747255547" name="in_progress">"En curso"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Marcado parcialmente"</string>
+    <string name="item_view_role_description">Pestaña</string>
+    <string name="keyboard_preferences">Teclado</string>
+    <string name="material_clock_toggle_content_description">Selecciona AM o PM</string>
+    <string name="material_hour_24h_suffix">%1$s horas</string>
+    <string name="material_hour_selection">Seleccionar hora</string>
+    <string name="material_hour_suffix">%1$s en punto</string>
+    <string name="material_minute_selection">Seleccionar minutos</string>
+    <string name="material_minute_suffix">%1$s minutos</string>
+    <string name="material_timepicker_am">A.M.</string>
+    <string name="material_timepicker_clock_mode_description">Cambia al modo de reloj para escribir la hora.</string>
+    <string name="material_timepicker_hour">Hora</string>
+    <string name="material_timepicker_minute">Minuto</string>
+    <string name="material_timepicker_pm">P.M.</string>
+    <string name="material_timepicker_select_time">Seleccionar la hora</string>
+    <string name="material_timepicker_text_input_mode_description">Cambia al modo de introducción de texto para escribir la hora.</string>
+    <string name="mtrl_badge_numberless_content_description">Notificación nueva</string>
+    <string name="mtrl_chip_close_icon_content_description">Retirar %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Más de %1$d notificaciones nuevas</string>
+    <string name="mtrl_picker_a11y_next_month">Cambiar al mes siguiente</string>
+    <string name="mtrl_picker_a11y_prev_month">Cambiar al mes anterior</string>
+    <string name="mtrl_picker_announce_current_selection">Selección actual: %1$s</string>
+    <string name="mtrl_picker_cancel">Cancelar</string>
+    <string name="mtrl_picker_confirm">Aceptar</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Selecciona una fecha</string>
+    <string name="mtrl_picker_date_header_unselected">Fecha seleccionada</string>
+    <string name="mtrl_picker_day_of_week_column_header">Columna de días: %1$s</string>
+    <string name="mtrl_picker_invalid_format">Formato no válido.</string>
+    <string name="mtrl_picker_invalid_format_example">Ejemplo: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Usar: %1$s</string>
+    <string name="mtrl_picker_invalid_range">El periodo no es válido.</string>
+    <string name="mtrl_picker_navigate_to_year_description">Ir al año %1$s</string>
+    <string name="mtrl_picker_out_of_range">Fuera del periodo válido: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Fecha de inicio–%1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s–Fecha de finalización</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">Selecciona un periodo</string>
+    <string name="mtrl_picker_range_header_unselected">Fecha de inicio–Fecha de finalización</string>
+    <string name="mtrl_picker_save">Guardar</string>
+    <string name="mtrl_picker_text_input_date_hint">Fecha</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Fecha de finalización</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Fecha de inicio</string>
+    <string name="mtrl_picker_text_input_day_abbr">d</string>
+    <string name="mtrl_picker_text_input_month_abbr">m</string>
+    <string name="mtrl_picker_text_input_year_abbr">a</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Cambiar al modo de introducción Calendario</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Toca para seleccionar un día</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Cambiar al modo de introducción Texto</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Toca para seleccionar un año</string>
+    <string name="mtrl_timepicker_cancel">Cancelar</string>
+    <string name="mtrl_timepicker_confirm">Aceptar</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Menú de navegación"</string>
+    <string name="new_window">Nueva ventana</string>
+    <string name="next_window">Ventana posterior</string>
+    <string name="no_read_phone_state_permissin">Sin permiso para leer la información del dispositivo</string>
+    <string name="no_write_settings_permissin">Sin permiso para modificar la configuración del sistema</string>
+    <string msgid="6610465462668679431" name="not_selected">"No seleccionado"</string>
+    <string msgid="6573031135582639649" name="not_set">"Sin establecer"</string>
+    <string msgid="875452955155264703" name="off">"Desactivado"</string>
+    <string name="ok">Por supuesto</string>
+    <string msgid="8655164131929253426" name="on">"Activado"</string>
+    <string name="password_toggle_content_description">Mostrar contraseña</string>
+    <string name="paste">Pegar</string>
+    <string name="perm_append_to_path">Añadir comandos al Terminal</string>
+    <string name="perm_prepend_to_path">Sobreescribir comandos del Terminal</string>
+    <string name="perm_run_script">Permitir que la aplicación ejecute comandos arbitrarios</string>
+    <string name="permdesc_append_to_path">Otras aplicaciones pueden añadir nuevos comandos al PATH.</string>
+    <string name="permdesc_prepend_to_path">Otras aplicaciones pueden sobreescribir comandos ya existentes del PATH.</string>
+    <string name="permdesc_run_script">Permitir a las aplicaciones abrir nuevas ventanas de terminal con todos los permisos concedidos, incluso los de acceso a Internet y a la tarjeta SD.</string>
+    <string msgid="6685851473431805375" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" se ha copiado en el portapapeles."</string>
+    <string name="preferences">Preferencias</string>
+    <string name="prev_window">Ventana anterior</string>
+    <string name="process_exit_message">Sesión de Terminal finalizada</string>
+    <string msgid="5941395253238309765" name="range_end">"Fin del intervalo"</string>
+    <string msgid="7097486360902471446" name="range_start">"Inicio del intervalo"</string>
+    <string name="reset">Reiniciar consola</string>
+    <string name="reset_toast_notification">Ventana de terminal reiniciada.</string>
+    <string name="screen_preferences">Pantalla</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Buscar"</string>
+    <string name="select_text">Seleccionar texto</string>
+    <string msgid="6043586758067023" name="selected">"Seleccionado"</string>
+    <string name="send_control_key">Tecla asignada a Ctrl</string>
+    <string name="send_email">Enviar email</string>
+    <string name="send_fn_key">Tecla asignada a FN</string>
+    <string name="service_notify_text">Sesión de terminal en ejecución</string>
+    <string name="shell_preferences">Shell</string>
+    <string name="special_keys">Teclas especiales</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="summary_actionbar_preference">Elije el comportamiente de la barra de tareas (Android 3.0+).</string>
+    <string name="summary_allow_prepend_path_preference">Otras aplicaciones pueden sobreescribir entradas ya existentes del PATH</string>
+    <string name="summary_backaction_preference">Selecciona la acción al pulsar el botón ATRÁS.</string>
+    <string name="summary_close_window_on_process_exit_preference">Elegir si la ventana se cerrará al salir de ella.</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="summary_color_preference">Elije el color del texto.</string>
+    <string name="summary_controlkey_preference">Elije la tecla Ctrl.</string>
+    <string name="summary_cursorblink_preference">Elije el parpadeo del cursor.</string>
+    <string name="summary_cursorstyle_preference">Selecciona el diseño del cursor.</string>
+    <string name="summary_do_path_extensions_preference">Se permite a otras aplicaciones añadir entradas al PATH.</string>
+    <string name="summary_fnkey_preference">Elije la tecla FN.</string>
+    <string name="summary_fontsize_preference">Elije el tamaño de la fuente.</string>
+    <string name="summary_home_path_preference">Ruta a una carpeta con permisos de escritura para usar como HOME.</string>
+    <string name="summary_ime_preference">Elige el método de introducción.</string>
+    <string name="summary_initialcommand_preference">Comando que se envía a la consola al iniciarla.</string>
+    <string name="summary_mouse_tracking_preference">Cuando los eventos de pulsación y desplazamiento deben mandarse como secuencias de escape al terminal.</string>
+    <string name="summary_orientation_preference">Elije el comportamiento de la orientación de pantalla.</string>
+    <string name="summary_shell_preference">Especifique el shell para la línea de comandos.</string>
+    <string name="summary_statusbar_preference">Ver/ocultar barra de estado.</string>
+    <string name="summary_termtype_preference">Que tipo de terminal se indica al shell.</string>
+    <string name="summary_utf8_by_default_preference">Activa por defecto la codificación UTF-8</string>
+    <string name="summary_verify_path_preference">Los directorios inaccesibles serán eliminados de PATH.</string>
+    <string msgid="1672349317127674378" name="tab">"Pestaña"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> por cien."</string>
+    <string name="text_accessibility_service_description">Requerido para automatizar operaciones de secuencias de comandos (clic, pulsación prolongada, deslizamiento, etc.), si está deshabilitado, solo se pueden ejecutar secuencias de comandos que no impliquen operaciones automáticas.</string>
+    <string name="text_already_stop_n_scripts">%d scripts en ejecución detenidos</string>
+    <string name="text_console">Consola</string>
+    <string name="text_drawer_close">Cerrar el menú desplegable</string>
+    <string name="text_drawer_open">Abre el menú desplegable</string>
+    <string name="text_error">Error:</string>
+    <string name="text_file_not_exists">El archivo no existe</string>
+    <string name="text_no_file_rw_permission">Sin permisos de lectura y escritura de archivos</string>
+    <string name="text_no_floating_window_permission">Sin permiso de ventana flotante</string>
+    <string name="text_no_running_script">Sin guión en ejecución</string>
+    <string name="text_path_is_empty">El camino esta vacio</string>
+    <string name="text_preferences">Texto</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Este script requiere el número de versión de Auto.js %d o superior para ejecutarse</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Este script requiere esta versión de Android para ejecutarse:</string>
+    <string name="text_should_enable_gesture_observing">El monitoreo de gestos no está habilitado, habilítelo en la configuración del software</string>
+    <string name="text_should_enable_key_observing">La supervisión de claves no está habilitada, habilítela en la configuración del software</string>
+    <string name="text_start_running">Iniciar operación</string>
+    <string name="title_actionbar_preference">Barra de tareas</string>
+    <string name="title_allow_prepend_path_preference">Permitir anteponer adiciones</string>
+    <string name="title_backaction_preference">Acción del botón ATRÁS</string>
+    <string name="title_close_window_on_process_exit_preference">Cerrar ventana al salir</string>
+    <string name="title_color_preference">Colores</string>
+    <string name="title_controlkey_preference">Tecla Ctrl</string>
+    <string name="title_cursorblink_preference">Parpadeo del cursor</string>
+    <string name="title_cursorstyle_preference">Diseño del cursor</string>
+    <string name="title_do_path_extensions_preference">Permitir adiciones</string>
+    <string name="title_fnkey_preference">Tecla FN</string>
+    <string name="title_fontsize_preference">Tamaño de fuente</string>
+    <string name="title_home_path_preference">Carpeta HOME</string>
+    <string name="title_ime_preference">Método de introducción</string>
+    <string name="title_initialcommand_preference">Comando inicial</string>
+    <string name="title_mouse_tracking_preference">Enviar eventos de ratón</string>
+    <string name="title_orientation_preference">Orientación de pantalla</string>
+    <string name="title_shell_preference">Lineas de comandos</string>
+    <string name="title_statusbar_preference">Barra de estado</string>
+    <string name="title_termtype_preference">Tipo de terminal</string>
+    <string name="title_use_keyboard_shortcuts">Usar Atajos de Teclado</string>
+    <string name="title_utf8_by_default_preference">UTF-8 por defecto</string>
+    <string name="title_verify_path_preference">Verificar entradas de PATH</string>
+    <string name="toggle_soft_keyboard">Ver/ocultar teclado</string>
+    <string name="use_keyboard_shortcuts_summary_off">Atajos de teclado desactivados.</string>
+    <string name="use_keyboard_shortcuts_summary_on">Ctrl-Tab: cambiar ventana, Ctrl-Shift-N: nueva ventana, Ctrl-Shift-V: pegar.</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"DESACTIVADA"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"ACTIVADO"</string>
+    <string name="window_list">Ventanas</string>
+    <string name="window_title">Ventana %1$d</string>
+</resources>

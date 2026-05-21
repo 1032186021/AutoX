@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Fɔlɔ</item>  
+    <item>A jira siɲɛ kelen tile kɔnɔ</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Kunfɛ</item>  
+    <item>Kunnafoniw</item>  
+    <item>Mɔgɔw ni ɲɔgɔn cɛ jɛɲɔgɔnya</item>  
+    <item>Dessin animé</item>  
+    <item>Tulon</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Sigida sɛbɛnw</item>  
+    <item>Sɛbɛnw bɛ sɔrɔ ɛntɛrinɛti kan</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Js file min bɛ se ka ladilan</item>  
+    <item>Binary min tɛ se ka ladilan</item> 
+  </string-array>
+    <string name="cancel">Ka dankari</string>
+    <string name="error_activity_not_found_for_apk_installing">Se tɛ app sɔrɔ ka apk installer</string>
+    <string name="exception_notification_service_disabled">Ladɔnniyali baarakɛyɔrɔ tɛ baara la, aw bɛ se ka kunnafonidi yamaruya daminɛ kokura</string>
+    <string name="no_read_phone_state_permissin">Izini tɛ yen ka minɛnw kunnafoniw kalan</string>
+    <string name="no_write_settings_permissin">Izini tɛ yen ka sitɛmu sigicogo caman sɛmɛntiya</string>
+    <string name="ok">Jaati</string>
+    <string name="text_accessibility_service_description">A wajibiyalen don ka sɛbɛnnikɛcogo baara kɛ otomatiki la (klik, digi janya, sɔgɔli, a ɲɔgɔnnaw), ni a ma baara kɛ, sɛbɛnni minnu tɛ otomatiki baarakɛcogo la, olu dɔrɔn de bɛ se ka kɛ.</string>
+    <string name="text_already_stop_n_scripts">%d boli sɛbɛnniw jɔra</string>
+    <string name="text_console">Konsolɛ</string>
+    <string name="text_drawer_close">Meniw min bɛ duguma, o da tugu</string>
+    <string name="text_drawer_open">Meniw min bɛ duguma, o da wuli</string>
+    <string name="text_error">Hàkɛ:</string>
+    <string name="text_file_not_exists">Filen tɛ yen</string>
+    <string name="text_no_file_rw_permission">Filen kalanni ni sɛbɛnni yamaruya tɛ</string>
+    <string name="text_no_floating_window_permission">Fenɛtiri min bɛ panpan, o tɛ sɔn</string>
+    <string name="text_no_running_script">Script tɛ boli</string>
+    <string name="text_path_is_empty">Sira lankolon don</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Nin sɛbɛnni in bɛ Auto.js bɔko nimɔrɔ %d walima a sanfɛta de wajibiya walasa ka baara kɛ</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Nin script in bɛ nin Android version in wajibiya walasa a ka baara kɛ:</string>
+    <string name="text_should_enable_gesture_observing">Gesture monitoring tɛ baara kɛ, aw bɛ se k’a daminɛ porogaramuw sigicogo la</string>
+    <string name="text_should_enable_key_observing">Key monitoring tɛ baara kɛ, aw bɛ se k’a daminɛ porogaramuw labɛncogo la</string>
+    <string name="text_start_running">Baara daminɛ</string>
+</resources>

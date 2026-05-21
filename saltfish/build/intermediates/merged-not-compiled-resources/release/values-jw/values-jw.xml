@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Gawan</item>  
+    <item>Tampilake sapisan dina</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Acak</item>  
+    <item>Warta</item>  
+    <item>Kontak sosial</item>  
+    <item>Kartun</item>  
+    <item>Game</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Dokumentasi lokal</item>  
+    <item>Dokumentasi online</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>File js sing bisa diowahi</item>  
+    <item>Binar sing ora bisa diowahi</item> 
+  </string-array>
+    <string name="cancel">Batal</string>
+    <string name="error_activity_not_found_for_apk_installing">Ora bisa nemokake app kanggo nginstal apk</string>
+    <string name="exception_notification_service_disabled">Layanan kabar ora mlaku, mangga aktifake maneh ijin kabar</string>
+    <string name="no_read_phone_state_permissin">Ora ana ijin kanggo maca informasi piranti</string>
+    <string name="no_write_settings_permissin">Ora ana ijin kanggo ngowahi setelan sistem</string>
+    <string name="ok">Mesthi</string>
+    <string name="text_accessibility_service_description">Dibutuhake kanggo ngotomatisasi operasi skrip (klik, penet dawa, geser, lsp), yen dipateni, mung skrip sing ora kalebu operasi otomatis sing bisa dieksekusi.</string>
+    <string name="text_already_stop_n_scripts">%d skrip sing mlaku mandheg</string>
+    <string name="text_console">Konsol</string>
+    <string name="text_drawer_close">Nutup menu gulung mudhun</string>
+    <string name="text_drawer_open">Bukak menu gulung mudhun</string>
+    <string name="text_error">Salah:</string>
+    <string name="text_file_not_exists">File ora ana</string>
+    <string name="text_no_file_rw_permission">Ora ana ijin maca lan nulis file</string>
+    <string name="text_no_floating_window_permission">Ora ana ijin jendhela ngambang</string>
+    <string name="text_no_running_script">Ora mlaku script</string>
+    <string name="text_path_is_empty">Dalane kosong</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Skrip iki mbutuhake nomer versi Auto.js %d utawa luwih dhuwur kanggo mbukak</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Skrip iki mbutuhake versi Android iki kanggo mbukak:</string>
+    <string name="text_should_enable_gesture_observing">Ngawasi gerakan ora diaktifake, mangga aktifake ing setelan piranti lunak</string>
+    <string name="text_should_enable_key_observing">Ngawasi tombol ora diaktifake, mangga aktifake ing setelan piranti lunak</string>
+    <string name="text_start_running">Miwiti operasi</string>
+</resources>

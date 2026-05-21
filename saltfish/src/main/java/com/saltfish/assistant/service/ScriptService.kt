@@ -71,6 +71,14 @@ class ScriptService : Service() {
                     }
                 }
             }
+            // Wire DeviceManager callbacks
+            app.deviceManager.onActivationRequired = {
+                scheduler.pause()
+            }
+            app.deviceManager.onActivationResolved = {
+                scheduler.resume()
+            }
+
             deviceMonitor.start()
             app.deviceManager.start()
         }

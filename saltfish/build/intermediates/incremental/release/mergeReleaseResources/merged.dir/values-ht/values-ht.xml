@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Default</item>  
+    <item>Montre yon fwa pa jou</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>O aza</item>  
+    <item>Nouvèl</item>  
+    <item>Kontak sosyal</item>  
+    <item>Desen ki pi ba</item>  
+    <item>Jwèt</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Dokiman lokal yo</item>  
+    <item>Dokiman sou entènèt</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Dosye js editable</item>  
+    <item>Binè ki pa ka modifye</item> 
+  </string-array>
+    <string name="cancel">Anile</string>
+    <string name="error_activity_not_found_for_apk_installing">Pa ka jwenn aplikasyon pou enstale apk</string>
+    <string name="exception_notification_service_disabled">Sèvis notifikasyon pa fonksyone, tanpri re-aktive pèmisyon notifikasyon</string>
+    <string name="no_read_phone_state_permissin">Pa gen pèmisyon pou li enfòmasyon sou aparèy la</string>
+    <string name="no_write_settings_permissin">Pa gen pèmisyon pou modifye paramèt sistèm lan</string>
+    <string name="ok">Asire w</string>
+    <string name="text_accessibility_service_description">Obligatwa pou otomatize operasyon script (klike, peze long, glise, elatriye), si enfim, sèlman scripts ki pa enplike operasyon otomatik yo ka egzekite.</string>
+    <string name="text_already_stop_n_scripts">%d kouri script sispann</string>
+    <string name="text_console">Konsole</string>
+    <string name="text_drawer_close">Fèmen meni an desann</string>
+    <string name="text_drawer_open">Louvri meni an drop-down</string>
+    <string name="text_error">Erè:</string>
+    <string name="text_file_not_exists">Dosye pa egziste</string>
+    <string name="text_no_file_rw_permission">Pa gen otorizasyon pou li ak ekri dosye</string>
+    <string name="text_no_floating_window_permission">Pa gen pèmisyon fenèt k ap flote</string>
+    <string name="text_no_running_script">Pa gen script kouri</string>
+    <string name="text_path_is_empty">Chemen an vid</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Script sa a egzije nimewo vèsyon Auto.js %d oswa pi wo pou kouri</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Script sa a egzije vèsyon android sa a pou kouri:</string>
+    <string name="text_should_enable_gesture_observing">Siveyans jès pa pèmèt, tanpri pèmèt li nan anviwònman lojisyèl</string>
+    <string name="text_should_enable_key_observing">Siveyans kle pa pèmèt, tanpri pèmèt li nan paramèt lojisyèl yo</string>
+    <string name="text_start_running">Kòmanse operasyon</string>
+</resources>

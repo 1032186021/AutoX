@@ -73,7 +73,7 @@ class DeviceManager(private val app: SaltfishApp) {
     suspend fun register(secret: String): SaltfishDeviceEntity? {
         setState(DeviceState.Registering)
         return try {
-            val result = app.deviceRepository.registerWithSecret(secret)
+            val result = app.deviceRepository.register(secret)
             if (result != null) {
                 _device = result
                 setState(DeviceState.Online)
@@ -91,11 +91,15 @@ class DeviceManager(private val app: SaltfishApp) {
     suspend fun renew(secret: String): Boolean {
         setState(DeviceState.Renewing)
         return try {
-            val success = app.deviceRepository.renewDevice(secret)
-            if (success) {
-                sync()
+            val result = app.deviceRepository.renew(secret)
+            if (result != null) {
+                _device = result
+                app.preferencesManager.deviceId = result.id.toString()
+                checkExpiry()
+                true
+            } else {
+                false
             }
-            success
         } catch (e: Exception) {
             checkExpiry()
             false
@@ -104,9 +108,11 @@ class DeviceManager(private val app: SaltfishApp) {
 
     suspend fun sync() {
         try {
-            val info = app.deviceRepository.getDeviceInfo()
+            val info = app.deviceRepository.getInfo()
             if (info != null) {
                 _device = info
+                app.preferencesManager.deviceId = info.id.toString()
+
                 checkExpiry()
             }
         } catch (_: Exception) {}
@@ -152,8 +158,7 @@ class DeviceManager(private val app: SaltfishApp) {
 
     private fun parseExpiryTime(time: String): Long? {
         return try {
-            val normalized = time.replace(" ", "T")
-            EXPIRY_FORMAT.parse(normalized)?.time
+            EXPIRY_FORMAT.parse(time)?.time
         } catch (_: Exception) { null }
     }
 
@@ -208,11 +213,16 @@ class DeviceManager(private val app: SaltfishApp) {
 
     // Region: WebSocket Command Handling
 
+    // Callbacks for UI integration
+    var onActivationRequired: (() -> Unit)? = null
+    var onActivationResolved: (() -> Unit)? = null
+
     fun handleServerCommand(cmd: String) {
         when (cmd) {
             "Client_Expire" -> {
                 setState(DeviceState.Expired)
                 stopTimers()
+                onActivationRequired?.invoke()
             }
             "Client_Sync" -> {
                 scope.launch {

@@ -82,6 +82,14 @@ fun MainScaffold(rootNavController: NavController) {
 
 @Composable
 private fun SaltfishBottomBar(currentRoute: String, onNavigate: (String) -> Unit) {
+    val navItemColors = NavigationBarItemDefaults.colors(
+        selectedIconColor = MaterialTheme.colorScheme.primary,
+        selectedTextColor = MaterialTheme.colorScheme.primary,
+        unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
+        unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
+        indicatorColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f)
+    )
+
     NavigationBar(
         containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.85f),
         tonalElevation = 0.dp
@@ -91,52 +99,28 @@ private fun SaltfishBottomBar(currentRoute: String, onNavigate: (String) -> Unit
             onClick = { onNavigate(Screen.Home.route) },
             icon = { Icon(Icons.Default.Home, contentDescription = null) },
             label = { Text("首页") },
-            colors = NavigationBarItemDefaults.colors(
-                selectedIconColor = MaterialTheme.colorScheme.primary,
-                selectedTextColor = MaterialTheme.colorScheme.primary,
-                unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                indicatorColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f)
-            )
+            colors = navItemColors
         )
         NavigationBarItem(
             selected = currentRoute == Screen.Automation.route,
             onClick = { onNavigate(Screen.Automation.route) },
             icon = { Icon(Icons.Default.PlayArrow, contentDescription = null) },
             label = { Text("自动化") },
-            colors = NavigationBarItemDefaults.colors(
-                selectedIconColor = MaterialTheme.colorScheme.primary,
-                selectedTextColor = MaterialTheme.colorScheme.primary,
-                unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                indicatorColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f)
-            )
+            colors = navItemColors
         )
         NavigationBarItem(
             selected = currentRoute == Screen.Task.route,
             onClick = { onNavigate(Screen.Task.route) },
             icon = { Icon(Icons.Default.List, contentDescription = null) },
             label = { Text("任务队列") },
-            colors = NavigationBarItemDefaults.colors(
-                selectedIconColor = MaterialTheme.colorScheme.primary,
-                selectedTextColor = MaterialTheme.colorScheme.primary,
-                unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                indicatorColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f)
-            )
+            colors = navItemColors
         )
         NavigationBarItem(
             selected = currentRoute == Screen.UserCenter.route,
             onClick = { onNavigate(Screen.UserCenter.route) },
             icon = { Icon(Icons.Default.AccountCircle, contentDescription = null) },
             label = { Text("用户中心") },
-            colors = NavigationBarItemDefaults.colors(
-                selectedIconColor = MaterialTheme.colorScheme.primary,
-                selectedTextColor = MaterialTheme.colorScheme.primary,
-                unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
-                indicatorColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f)
-            )
+            colors = navItemColors
         )
     }
 }

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="ad_showing_mode_keys"> 
+    <item>За замовчуванням</item>  
+    <item>Показувати раз на день</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Випадковий</item>  
+    <item>Новини</item>  
+    <item>Соціальний контакт</item>  
+    <item>Мультфільм</item>  
+    <item>Гра</item> 
+  </string-array>
+    <string-array name="control_keys_short_names">
+        <item>Куля Jog</item>
+        <item>Клавіша @</item>
+        <item>Лівий Alt</item>
+        <item>Правий Alt</item>
+        <item>Гучність вверх</item>
+        <item>Гучність вниз</item>
+        <item>Клавіша камери</item>
+        <item>Нема</item>
+    </string-array>
+    <string-array name="entries_actionbar_preference">
+        <item>Завжди показувати бар дії</item>
+        <item>Сховати дії бару (торкніться верху екрану або клавіші Меню, щоб показати)</item>
+    </string-array>
+    <string-array name="entries_backaction_preference">
+        <item>Закрити всі вікна терміналу</item>
+        <item>Закрити тільки це вікно терміналу</item>
+        <item>Активне закриття, решти запущених сеансів</item>
+        <item>Послати ESC в термінал</item>
+        <item>Послати TAB в термінал</item>
+    </string-array>
+    <string-array name="entries_color_preference">
+        <item>Чорний на білому</item>
+        <item>Білий на чорному</item>
+        <item>Білий на синьому</item>
+        <item>Зелений на чорному</item>
+        <item>Жовтий на чорному</item>
+        <item>Червоний на чорному</item>
+        <item>Solarized Light</item>
+        <item>Solarized Dark</item>
+        <item>Linux Console</item>
+    </string-array>
+    <string-array name="entries_controlkey_preference">
+        <item>Куля Jog</item>
+        <item>Клавіша @</item>
+        <item>Лівий Alt</item>
+        <item>Правий Alt</item>
+        <item>Гучність вверх</item>
+        <item>Гучність вниз</item>
+        <item>Клавіша камери</item>
+        <item>Нема</item>
+    </string-array>
+    <string-array name="entries_cursorblink_preference">
+        <item>Не-миготливий курсор</item>
+        <item>Миготливий курсор</item>
+    </string-array>
+    <string-array name="entries_cursorstyle_preference">
+        <item>Прямокутник</item>
+        <item>Підкреслення</item>
+        <item>Вертикальний бар</item>
+    </string-array>
+    <string-array name="entries_fnkey_preference">
+        <item>Куля Jog</item>
+        <item>Клавіша @</item>
+        <item>Лівий Alt</item>
+        <item>Правий Alt</item>
+        <item>Гучність вверх</item>
+        <item>Гучність вниз</item>
+        <item>Клавіша камери</item>
+        <item>Нема</item>
+    </string-array>
+    <string-array name="entries_fontsize_preference">
+        <item>4 x 8 пікселів</item>
+        <item>6 пікселів</item>
+        <item>7 пікселів</item>
+        <item>8 пікселів</item>
+        <item>9 пікселів</item>
+        <item>10 пікселів</item>
+        <item>12 пікселів</item>
+        <item>14 пікселів</item>
+        <item>16 пікселів</item>
+        <item>20 пікселів</item>
+        <item>24 пікселів</item>
+        <item>28 пікселів</item>
+        <item>32 пікселів</item>
+        <item>36 пікселів</item>
+        <item>42 пікселів</item>
+        <item>48 пікселів</item>
+        <item>64 пікселів</item>
+        <item>72 пікселів</item>
+        <item>96 пікселів</item>
+        <item>144 пікселів</item>
+        <item>288 пікселів</item>
+    </string-array>
+    <string-array name="entries_ime_preference">
+        <item>За знаками</item>
+        <item>За словами</item>
+    </string-array>
+    <string-array name="entries_statusbar_preference">
+        <item>Показувати</item>
+        <item>Приховувати</item>
+    </string-array>
+    <string-array name="fn_keys_short_names">
+        <item>Куля Jog</item>
+        <item>Клавіша @</item>
+        <item>Лівий Alt</item>
+        <item>Правий Alt</item>
+        <item>Гучність вверх</item>
+        <item>Гучність вниз</item>
+        <item>Клавіша камери</item>
+        <item>Нема</item>
+    </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Локальна документація</item>  
+    <item>Онлайн документація</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Редагований файл js</item>  
+    <item>Нередагований двійковий файл</item> 
+  </string-array>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d нове сповіщення</item>
+    <item quantity="few">%d нові сповіщення</item>
+    <item quantity="many">%d нових сповіщень</item>
+    <item quantity="other">%d нового сповіщення</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Перейти на головну"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Перейти вгору"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Більше опцій"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Готово"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Показати всі"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Вибрати програму"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"ЗНИЖКА"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"УВІМК."</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"пробіл"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Введіть пошуковий запит…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Очистити запит"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Пошуковий запит"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Пошук"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Наіслати запит"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Голосовий пошук"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Поділитися:"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Поділитися через додаток <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Згорнути"</string>
+    <string name="alt_sends_esc">Клавіша Alt посилає ESC</string>
+    <string name="alt_sends_esc_summary_off">Клавіша Alt не посилає ESC.</string>
+    <string name="alt_sends_esc_summary_on">Клавіша Alt посилає ESC.</string>
+    <string name="application_terminal">Емулятор Терміналу</string>
+    <string name="bottomsheet_action_collapse">Згорнути нижній екран</string>
+    <string name="bottomsheet_action_expand">Розгорнути нижній екран</string>
+    <string name="bottomsheet_action_expand_halfway">Розгорнути нижню половину</string>
+    <string name="bottomsheet_drag_handle_clicked">Маркер переміщення активовано подвійним дотиком</string>
+    <string name="bottomsheet_drag_handle_content_description">Маркер переміщення</string>
+    <string name="cancel">Скасувати</string>
+    <string name="character_counter_content_description">Введено символів: %1$d з %2$d</string>
+    <string name="character_counter_overflowed_content_description">Перевищено ліміт символів: %1$d з %2$d</string>
+    <string name="clear_text_end_icon_content_description">Видалити текст</string>
+    <string msgid="406453423630273620" name="close_drawer">"Закрити меню навігації"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Закрити аркуш"</string>
+    <string name="close_window">Закрити вікно</string>
+    <string msgid="5389587048670450460" name="collapsed">"Згорнуто"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Увімкнути</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Додаток %1$s не працюватиме, якщо не ввімкнути сервіси Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Увімкнути сервіси Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Установити</string>
+    <string name="common_google_play_services_install_text">Додаток %1$s не працюватиме без сервісів Google Play, яких немає на вашому пристрої.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Установити сервіси Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Доступність сервісів Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Помилка сервісів Google Play</string>
+    <string name="common_google_play_services_unknown_issue">У додатку %1$s виникла проблема із сервісами Google Play. Повторіть спробу.</string>
+    <string name="common_google_play_services_unsupported_text">Додаток %1$s не працюватиме без сервісів Google Play, які не підтримуються на вашому пристрої.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Оновити</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Додаток %1$s не працюватиме, якщо не оновити сервіси Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Оновіть сервіси Google Play</string>
+    <string name="common_google_play_services_updating_text">Додаток %1$s не працюватиме без сервісів Google Play, які зараз оновлюються.</string>
+    <string name="common_google_play_services_wear_update_text">Потрібна нова версія сервісів Google Play. Вони невдовзі оновляться.</string>
+    <string name="common_open_on_phone">Відкрити на телефоні</string>
+    <string name="common_signin_button_text">Увійти</string>
+    <string name="common_signin_button_text_long">Увійти в облік. запис Google</string>
+    <string name="confirm_window_close_message">Закрити це вікно?</string>
+    <string name="control_key_dialog_control_disabled_text">Нема установок керуючих клавіш.</string>
+    <string name="control_key_dialog_control_text">CTRLKEY Space : Control-@ (NUL)
+CTRLKEY A..Z : Control-A..Z
+CTRLKEY 5 : Control-]
+CTRLKEY 6 : Control-^
+CTRLKEY 7 : Control-_
+CTRLKEY 9 : F11
+CTRLKEY 0 : F12</string>
+    <string name="control_key_dialog_fn_disabled_text">Нема установок функціональних клавіш.</string>
+    <string name="control_key_dialog_fn_text">FNKEY 1..9 : F1-F9
+FNKEY 0 : F10
+FNKEY W : Up
+FNKEY A : Left
+FNKEY S : Down
+FNKEY D : Right
+FNKEY P : PageUp
+FNKEY N : PageDown
+FNKEY T : Tab
+FNKEY L : | (pipe)
+FNKEY U : _ (underscore)
+FNKEY E : Control-[ (ESC)
+FNKEY X : Delete
+FNKEY I : Insert
+FNKEY H : Home
+FNKEY F : End
+FNKEY . : Control-\\
+</string>
+    <string name="control_key_dialog_title">Керуючі та Функціональні Клавіші</string>
+    <string msgid="6083905920877235314" name="copy">"Скопіювати"</string>
+    <string name="copy_all">Копіювати все</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Введено недійсні дані"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Спливаюче вікно"</string>
+    <string msgid="4057925834421392736" name="dialog">"Вікно"</string>
+    <string name="dialog_title_actionbar_preference">Поведінка бару дії</string>
+    <string name="dialog_title_backaction_preference">Поведінка кнопки Назад</string>
+    <string name="dialog_title_color_preference">Колір тексту</string>
+    <string name="dialog_title_controlkey_preference">Клавіша Control</string>
+    <string name="dialog_title_fnkey_preference">Клавіша Fn</string>
+    <string name="dialog_title_fontsize_preference">Розмір шрифту</string>
+    <string name="dialog_title_ime_preference">Спосіб введення</string>
+    <string name="dialog_title_initialcommand_preference">Команди запуску</string>
+    <string name="dialog_title_shell_preference">Оболонка</string>
+    <string name="dialog_title_statusbar_preference">Статус бар</string>
+    <string name="dialog_title_termtype_preference">Тип терміналу</string>
+    <string name="disable_wakelock">Вимкнути WakeLock</string>
+    <string name="disable_wifilock">Вимкнути WifiLock</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Спадне меню"</string>
+    <string name="edit_text">Змінити</string>
+    <string name="email_transcript_chooser_title">Поштове розшифрування за допомогою:</string>
+    <string name="email_transcript_no_email_activity_found">Не можу вибрати поштову діяльність для відправки розшифрування.</string>
+    <string name="email_transcript_subject">Розшифрування для Емулятора Терміналу Android</string>
+    <string name="enable_wakelock">Ввімкнути WakeLock</string>
+    <string name="enable_wifilock">Ввімкнути WifiLock</string>
+    <string name="error_activity_not_found_for_apk_installing">Не вдається знайти програму для встановлення apk</string>
+    <string name="error_icon_content_description">Помилка</string>
+    <string name="exception_notification_service_disabled">Служба сповіщень не працює, увімкніть знову дозвіл на сповіщення</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Додатково"</string>
+    <string msgid="5974471714631304645" name="expanded">"Розгорнуто"</string>
+    <string name="exposed_dropdown_menu_content_description">Показати спадне меню</string>
+    <string name="icon_content_description">Значок вікна</string>
+    <string msgid="6827826412747255547" name="in_progress">"Виконується"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Частково вибрано"</string>
+    <string name="item_view_role_description">Вкладка</string>
+    <string name="keyboard_preferences">Клавіатура</string>
+    <string name="material_clock_toggle_content_description">Виберіть ДП чи ПП</string>
+    <string name="material_hour_24h_suffix">%1$s год</string>
+    <string name="material_hour_selection">Вибрати годину</string>
+    <string name="material_hour_suffix">%1$s год</string>
+    <string name="material_minute_selection">Виберіть хвилини</string>
+    <string name="material_minute_suffix">%1$s хв</string>
+    <string name="material_timepicker_am">дп</string>
+    <string name="material_timepicker_clock_mode_description">Перейти в режим годинника, щоб ввести час.</string>
+    <string name="material_timepicker_hour">Година</string>
+    <string name="material_timepicker_minute">Хвилина</string>
+    <string name="material_timepicker_pm">пп</string>
+    <string name="material_timepicker_select_time">Виберіть час</string>
+    <string name="material_timepicker_text_input_mode_description">Перейти в текстовий режим, щоб ввести час.</string>
+    <string name="mtrl_badge_numberless_content_description">Нове сповіщення</string>
+    <string name="mtrl_chip_close_icon_content_description">Видалити %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Нових сповіщень більше ніж %1$d</string>
+    <string name="mtrl_picker_a11y_next_month">Перейти до наступного місяця</string>
+    <string name="mtrl_picker_a11y_prev_month">Перейти до попереднього місяця</string>
+    <string name="mtrl_picker_announce_current_selection">Поточний вибір: %1$s</string>
+    <string name="mtrl_picker_cancel">Скасувати</string>
+    <string name="mtrl_picker_confirm">OK</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Виберіть дату</string>
+    <string name="mtrl_picker_date_header_unselected">Вибрана дата</string>
+    <string name="mtrl_picker_day_of_week_column_header">Стовпець із днями: %1$s</string>
+    <string name="mtrl_picker_invalid_format">Недійсний формат.</string>
+    <string name="mtrl_picker_invalid_format_example">Приклад: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Використовувати: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Недійсний діапазон.</string>
+    <string name="mtrl_picker_navigate_to_year_description">Перейти до %1$s року</string>
+    <string name="mtrl_picker_out_of_range">За межами діапазону: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Дата початку – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – дата завершення</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">Виберіть діапазон дат</string>
+    <string name="mtrl_picker_range_header_unselected">Дата початку – дата завершення</string>
+    <string name="mtrl_picker_save">Зберегти</string>
+    <string name="mtrl_picker_text_input_date_hint">Дата</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Дата завершення</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Дата початку</string>
+    <string name="mtrl_picker_text_input_day_abbr">д</string>
+    <string name="mtrl_picker_text_input_month_abbr">м</string>
+    <string name="mtrl_picker_text_input_year_abbr">р</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Перейти в режим введення в календарі</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Натисніть, щоб вибрати день</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Перейти в режим введення тексту</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Натисніть, щоб вибрати рік</string>
+    <string name="mtrl_timepicker_cancel">Скасувати</string>
+    <string name="mtrl_timepicker_confirm">OK</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Меню навігації"</string>
+    <string name="new_window">Нове вікно</string>
+    <string name="next_window">Наступне вікно</string>
+    <string name="no_read_phone_state_permissin">Немає дозволу на читання інформації про пристрій</string>
+    <string name="no_write_settings_permissin">Немає дозволу змінювати налаштування системи</string>
+    <string msgid="6610465462668679431" name="not_selected">"Не вибрано"</string>
+    <string msgid="6573031135582639649" name="not_set">"Не налаштовано"</string>
+    <string msgid="875452955155264703" name="off">"Вимкнено"</string>
+    <string name="ok">Звичайно</string>
+    <string msgid="8655164131929253426" name="on">"Увімкнено"</string>
+    <string name="password_toggle_content_description">Показувати пароль</string>
+    <string name="paste">Вставити</string>
+    <string name="perm_append_to_path">Додавання команд в Емулятор Терміналу</string>
+    <string name="perm_prepend_to_path">Перевизначення команд в Емуляторі Терміналу</string>
+    <string name="perm_run_script">Виконання довільних команд в Емуляторі Терміналу</string>
+    <string name="permdesc_append_to_path">Програма зможе забезпечити додаткові команди (додати каталоги в ШЛЯХ) для емулятора терміналу Android.</string>
+    <string name="permdesc_prepend_to_path">Дозволяє програмі перевизначити існуючі команди з власною версією (додайте на початку каталогів ШЛЯХ) в Емуляторі Терміналу Android.</string>
+    <string name="permdesc_run_script">Дозволяє програмі відкриття нових вікон в Емуляторі Терміналу Android та запуск команд в цих вікнах з усіма дозволами Емулятора Терміналу Android, в тому числі доступ до Інтернету та SD-карти.</string>
+    <string msgid="6685851473431805375" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\": скопійовано в буфер обміну."</string>
+    <string name="preferences">Налаштування</string>
+    <string name="prev_window">Попереднє вікно</string>
+    <string name="process_exit_message">Термінальний сеанс завершений</string>
+    <string msgid="5941395253238309765" name="range_end">"Кінець діапазону"</string>
+    <string msgid="7097486360902471446" name="range_start">"Початок діапазону"</string>
+    <string name="reset">Скинути термінал</string>
+    <string name="reset_toast_notification">"Термінальний стан цього вікна було скинуто."</string>
+    <string name="screen_preferences">Екран</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Пошук"</string>
+    <string name="select_text">Вибрати текст</string>
+    <string msgid="6043586758067023" name="selected">"Вибрано"</string>
+    <string name="send_control_key">Відіслати кнопкою Control</string>
+    <string name="send_email">Відіслати Email</string>
+    <string name="send_fn_key">Відіслати кнопкою Fn</string>
+    <string name="service_notify_text">Термінальний сеанс запущений</string>
+    <string name="shell_preferences">Командна оболонка</string>
+    <string name="special_keys">Спеціальні клавіші</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="summary_actionbar_preference">Виберіть поведінку бару дії (Android 3.0 і вище).</string>
+    <string name="summary_allow_prepend_path_preference">Дозволити іншим програмам анулювати існуючі команди (додавання до початку ШЛЯХУ).</string>
+    <string name="summary_backaction_preference">Вибір дії при натисканні кнопки назад.</string>
+    <string name="summary_close_window_on_process_exit_preference">Вікно закриється якщо вийти з оболонки.</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="summary_color_preference">Виберіть колір тексту.</string>
+    <string name="summary_controlkey_preference">Виберіть що буде клавішею Control.</string>
+    <string name="summary_do_path_extensions_preference">Дозволити іншим програмам забезпечувати додаткові команди (додавання до ШЛЯХУ).</string>
+    <string name="summary_fnkey_preference">Виберіть що буде клавішею Fn.</string>
+    <string name="summary_fontsize_preference">Виберіть розмір шрифту.</string>
+    <string name="summary_ime_preference">Виберіть спосіб введення для екранної клавіатури.</string>
+    <string name="summary_initialcommand_preference">Передаються облонці при запуску терміналу.</string>
+    <string name="summary_shell_preference">Вкажіть рядок звернення до командної оболонки.</string>
+    <string name="summary_statusbar_preference">Показати/Приховати статус бар.</string>
+    <string name="summary_termtype_preference">Вибір типу терміналу, для використання в оболонці.</string>
+    <string name="summary_utf8_by_default_preference">Застосувати режим UTF-8 за замовчуванням.</string>
+    <string name="summary_verify_path_preference">Видаляти недоступні директорії з ШЛЯХУ.</string>
+    <string msgid="1672349317127674378" name="tab">"Вкладка"</string>
+    <string msgid="5946805113151406391" name="template_percent">"Відсотків: <ns1:g id="PERCENTAGE">%1$d</ns1:g>."</string>
+    <string name="text_accessibility_service_description">Потрібен для автоматизації операцій сценарію (клацання, тривале натискання, проведення пальцем тощо). Якщо вимкнено, можна виконувати лише сценарії, які не передбачають автоматичних операцій.</string>
+    <string name="text_already_stop_n_scripts">%d запущених сценаріїв зупинено</string>
+    <string name="text_console">Консоль</string>
+    <string name="text_drawer_close">Закрийте спадне меню</string>
+    <string name="text_drawer_open">Відкрийте спадне меню</string>
+    <string name="text_error">Помилка:</string>
+    <string name="text_file_not_exists">Файл не існує</string>
+    <string name="text_no_file_rw_permission">Немає дозволів на читання та запис файлів</string>
+    <string name="text_no_floating_window_permission">Немає дозволу на плаваюче вікно</string>
+    <string name="text_no_running_script">Немає запущеного сценарію</string>
+    <string name="text_path_is_empty">Шлях порожній</string>
+    <string name="text_preferences">Текст</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Для запуску цього сценарію потрібен номер версії Auto.js %d або вище</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Для роботи цього сценарію потрібна така версія Android:</string>
+    <string name="text_should_enable_gesture_observing">Моніторинг жестів не ввімкнено, увімкніть його в налаштуваннях програмного забезпечення</string>
+    <string name="text_should_enable_key_observing">Моніторинг ключів не ввімкнено, увімкніть його в налаштуваннях програмного забезпечення</string>
+    <string name="text_start_running">Почати операцію</string>
+    <string name="title_actionbar_preference">Бар дії</string>
+    <string name="title_allow_prepend_path_preference">Допускати ШЛЯХ додавання</string>
+    <string name="title_backaction_preference">Поведінка кнопки Назад</string>
+    <string name="title_close_window_on_process_exit_preference">Закриття вікна при виході</string>
+    <string name="title_color_preference">Кольори</string>
+    <string name="title_controlkey_preference">Клавіша Control</string>
+    <string name="title_do_path_extensions_preference">Допустимі дозволи ШЛЯХУ</string>
+    <string name="title_fnkey_preference">Клавіша Fn</string>
+    <string name="title_fontsize_preference">Розмір шрифту</string>
+    <string name="title_ime_preference">Спосіб введення</string>
+    <string name="title_initialcommand_preference">Команди запуску</string>
+    <string name="title_shell_preference">Командний рядок</string>
+    <string name="title_statusbar_preference">Статус бар</string>
+    <string name="title_termtype_preference">Тип терміналу</string>
+    <string name="title_utf8_by_default_preference">За замовчуванням UTF-8</string>
+    <string name="title_verify_path_preference">Перевіряти ШЛЯХ даних</string>
+    <string name="toggle_soft_keyboard">Екранна клавіатура</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"ВИМКНЕНО"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"УВІМКНЕНО"</string>
+    <string name="window_list">Вікна</string>
+    <string name="window_title">Вікно %1$d</string>
+</resources>

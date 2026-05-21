@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Ndabara</item>  
+    <item>Gosi otu ugboro n\'ụbọchị</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Random</item>  
+    <item>Ozi</item>  
+    <item>Kọntaktị mmekọrịta</item>  
+    <item>Katuunu</item>  
+    <item>Egwuregwu</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Akwụkwọ mpaghara</item>  
+    <item>Akwụkwọ ntanetị</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Js faịlụ edezi</item>  
+    <item>Ọnụọgụ abụọ anaghị edezi</item> 
+  </string-array>
+    <string name="cancel">Kagbuo</string>
+    <string name="error_activity_not_found_for_apk_installing">Enweghị ike ịchọta ngwa iji wụnye apk</string>
+    <string name="exception_notification_service_disabled">Ọrụ ngosi anaghị arụ ọrụ, biko gbanyegharịa ikike ngosi</string>
+    <string name="no_read_phone_state_permissin">Enweghị ikike ịgụ ozi ngwaọrụ</string>
+    <string name="no_write_settings_permissin">Enweghị ikike ịgbanwe ntọala sistemụ</string>
+    <string name="ok">O doro anya</string>
+    <string name="text_accessibility_service_description">Achọrọ iji rụọ ọrụ script arụ ọrụ (pịa, ogologo pịa, swipe, wdg), ọ bụrụ na enwere nkwarụ, naanị script na-emetụtaghị arụmọrụ akpaaka nwere ike igbu ya.</string>
+    <string name="text_already_stop_n_scripts">%d na-agba ọsọ scripts kwụsịrị</string>
+    <string name="text_console">Console</string>
+    <string name="text_drawer_close">Mechie menu ndọda</string>
+    <string name="text_drawer_open">Mepee menu ndọda</string>
+    <string name="text_error">Ndudue:</string>
+    <string name="text_file_not_exists">Faịlụ adịghị</string>
+    <string name="text_no_file_rw_permission">Enweghị ikike ịgụ na ide faịlụ</string>
+    <string name="text_no_floating_window_permission">Enweghị ikike windo na-ese n\'elu mmiri</string>
+    <string name="text_no_running_script">Enweghị edemede na-agba ọsọ</string>
+    <string name="text_path_is_empty">Ụzọ tọgbọ chakoo</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Edemede a chọrọ nọmba ụdị Auto.js %d ma ọ bụ karịa ka ọ na-agba</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Edemede a chọrọ ụdị Android a ka ọ na-agba:</string>
+    <string name="text_should_enable_gesture_observing">Agbanyeghi nleba anya mmegharị anya, biko mee ya na ntọala ngwanrọ</string>
+    <string name="text_should_enable_key_observing">Agbanyeghi nleba anya igodo, biko mee ya na ntọala ngwanrọ</string>
+    <string name="text_start_running">Malite ọrụ</string>
+</resources>

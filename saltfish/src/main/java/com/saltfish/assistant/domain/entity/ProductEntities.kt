@@ -1,0 +1,52 @@
+package com.saltfish.assistant.domain.entity
+
+data class SaltfishProductEntity(
+    val id: Long = 0,
+    val createTime: String? = null,
+    val updateTime: String? = null,
+    val name: String? = null,
+    val description: Any? = null,
+    val images: Any? = null,
+    val videos: Any? = null,
+    val realshotImages: Any? = null,
+    val mainImages: Any? = null,
+    val detailImages: Any? = null,
+    val comments: Any? = null,
+    val tags: Any? = null,
+    val purchasePrice: Double? = null,
+    val sellingPrice: Double = 0.0,
+    val commission: Double = 0.0,
+    val stock: Int = 0,
+    val url: String? = null,
+    val remark: String? = null,
+    val newLevel: Int = 0,
+    val categoryId: Long? = null,
+    val brandName: String? = null,
+    val sourceCategoryName: String? = null,
+    val displayAttributes: Any? = null,
+    val userId: Long? = null,
+    val supplierId: String? = null,
+    val supplierName: String? = null,
+    val supplierAvatar: String? = null,
+    val sourceId: String? = null,
+    val sourcePlatform: String? = null,
+    val isShare: Int = 0,
+    val wantCount: Int = 0,
+    val originalName: String? = null,
+    val originalDescription: String? = null,
+    val modelName: String? = null,
+    val skus: Any? = null,
+    val attributes: Any? = null
+)
+
+data class PromoteCopywritingEntity(
+    val id: Long = 0,
+    val createTime: String? = null,
+    val updateTime: String? = null,
+    val name: String? = null,
+    val content: String? = null,
+    val cache: Any? = null,
+    val projectId: Long? = null,
+    val type: String? = null,
+    val userId: Long? = null
+)

@@ -70,6 +70,9 @@ dependencies {
     debugImplementation(libs.compose.ui.tooling)
     implementation(libs.compose.foundation)
     implementation(libs.compose.foundation.layout)
+    implementation("androidx.compose.material:material-icons-extended:${compose_version}")
+    implementation(libs.accompanist.pager)
+    implementation(libs.accompanist.pager.indicators)
     implementation(libs.activity.compose)
 
     // Lifecycle

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Hlawhchhamna</item>  
+    <item>Ni khatah vawi khat entir rawh</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Tihbik nei lo</item>  
+    <item>Chanchinthar</item>  
+    <item>Khawtlang nena inzawmna nei</item>  
+    <item>Cartoon a ni</item>  
+    <item>Infiamna</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Tualchhung documentation siam a ni</item>  
+    <item>Online hmanga document siam a ni</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Edit theih js file a ni</item>  
+    <item>Editable theih loh binary</item> 
+  </string-array>
+    <string name="cancel">Titawp</string>
+    <string name="error_activity_not_found_for_apk_installing">Apk install tur app a hmu thei lo</string>
+    <string name="exception_notification_service_disabled">Notification service a kal lo a, notification phalna kha enable leh rawh</string>
+    <string name="no_read_phone_state_permissin">Device information chhiar phalna a awm lo</string>
+    <string name="no_write_settings_permissin">System settings siam danglam phalna a awm lo</string>
+    <string name="ok">Ngei ngei</string>
+    <string name="text_accessibility_service_description">Script operation (click, long press, swipe, etc.) automate tur a ngai a, disable a nih chuan automatic operation tel lo script chauh tih theih a ni.</string>
+    <string name="text_already_stop_n_scripts">%d script kalpui mek chu a tawp ta</string>
+    <string name="text_console">Console hmanga siam a ni</string>
+    <string name="text_drawer_close">Drop down menu chu khar rawh</string>
+    <string name="text_drawer_open">Drop down menu chu hawng la</string>
+    <string name="text_error">Tihsual:</string>
+    <string name="text_file_not_exists">File a awm lo</string>
+    <string name="text_no_file_rw_permission">File chhiar leh ziah phalna a awm lo</string>
+    <string name="text_no_floating_window_permission">Floating window phalna a awm lo</string>
+    <string name="text_no_running_script">Script kal lai a awm lo</string>
+    <string name="text_path_is_empty">Kawng a ruak a ni</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">He script hi a kal theih nan Auto.js version number %d emaw a aia sang emaw a ngai a ni</string>
+    <string name="text_requires_sdk_version_to_run_the_script">He script hi a kal theih nan he Android version hi a mamawh a ni:</string>
+    <string name="text_should_enable_gesture_observing">Gesture monitoring hi enable a ni lo a, software setting ah khan enable rawh</string>
+    <string name="text_should_enable_key_observing">Key monitoring hi enable a ni lo a, software settings ah khan enable rawh</string>
+    <string name="text_start_running">Hnathawh tan a ni</string>
+</resources>

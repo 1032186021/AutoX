@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.saltfish.assistant.saltfish-mergeDebugResources-90:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\zhiyo\\.gradle\\caches\\transforms-3\\e9198f1c4bfa4c075d3e1bd3bb71fc18\\transformed\\appcompat-1.5.0\\res\\values-watch-v20\\values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}

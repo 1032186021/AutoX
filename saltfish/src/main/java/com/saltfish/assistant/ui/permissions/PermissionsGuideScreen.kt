@@ -23,6 +23,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
 import kotlinx.coroutines.delay
 
 data class PermissionItem(
@@ -39,27 +42,50 @@ data class PermissionItem(
 @Composable
 fun PermissionsGuideScreen(onComplete: () -> Unit) {
     val context = LocalContext.current
-    var currentStep by remember { mutableStateOf(0) }
-    var grantedStates by remember { mutableStateOf(List(permissions.size) { false }) }
 
-    LaunchedEffect(currentStep) {
-        grantedStates = permissions.map { it.checkGranted(context) }
+    // 获取未授权的权限列表（必需权限）
+    val allPermissions = remember { permissions }
+    val missingPermissions = remember { allPermissions.filter { !it.checkGranted(context) } }
+
+    // 全部已授权，直接返回
+    LaunchedEffect(Unit) {
+        if (missingPermissions.isEmpty()) {
+            onComplete()
+        }
     }
+
+    // 全部已授权，不渲染任何 UI
+    if (missingPermissions.isEmpty()) return
+
+    var currentStep by remember { mutableStateOf(0) }
+    var grantedStates by remember { mutableStateOf(missingPermissions.map { it.checkGranted(context) }) }
 
     val refreshTrigger = remember { mutableStateOf(0) }
     LaunchedEffect(refreshTrigger.value) {
         delay(500)
-        grantedStates = permissions.map { it.checkGranted(context) }
+        grantedStates = missingPermissions.map { it.checkGranted(context) }
     }
 
-    val step = permissions.getOrNull(currentStep) ?: return
+    // 从设置页返回时自动刷新权限状态
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                refreshTrigger.value++
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+
+    val step = missingPermissions.getOrNull(currentStep) ?: return
 
     Scaffold(
         topBar = {
-            if (currentStep < permissions.size) {
+            if (currentStep < missingPermissions.size) {
                 CenterAlignedTopAppBar(
                     title = {
-                        Text("权限引导 (${currentStep + 1}/${permissions.size})")
+                        Text("权限引导 (${currentStep + 1}/${missingPermissions.size})")
                     },
                     colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                         containerColor = MaterialTheme.colorScheme.background
@@ -80,7 +106,7 @@ fun PermissionsGuideScreen(onComplete: () -> Unit) {
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.Center
             ) {
-                permissions.indices.forEach { index ->
+                missingPermissions.indices.forEach { index ->
                     Box(
                         modifier = Modifier
                             .padding(horizontal = 6.dp)
@@ -194,7 +220,7 @@ fun PermissionsGuideScreen(onComplete: () -> Unit) {
                     }
                 }
 
-                if (currentStep < permissions.size - 1) {
+                if (currentStep < missingPermissions.size - 1) {
                     val canProceed = isGranted || !step.isRequired
                     Button(
                         onClick = { currentStep++ },
@@ -207,15 +233,11 @@ fun PermissionsGuideScreen(onComplete: () -> Unit) {
                         Icon(Icons.Default.KeyboardArrowRight, contentDescription = null, modifier = Modifier.size(20.dp))
                     }
                 } else {
-                    val allDone = permissions.indices.all { i ->
-                        !permissions[i].isRequired || grantedStates[i]
+                    val allDone = missingPermissions.indices.all { i ->
+                        !missingPermissions[i].isRequired || grantedStates[i]
                     }
                     Button(
-                        onClick = {
-                            val app = context.applicationContext as com.saltfish.assistant.SaltfishApp
-                            app.preferencesManager.isFirstLaunch = false
-                            onComplete()
-                        },
+                        onClick = { onComplete() },
                         enabled = allDone,
                         modifier = Modifier.weight(1f).height(48.dp),
                         shape = RoundedCornerShape(24.dp),

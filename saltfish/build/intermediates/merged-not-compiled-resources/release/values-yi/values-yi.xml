@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>פעליקייַט</item>  
+    <item>ווייַזן אַמאָל אַ טאָג</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>טראַפ</item>  
+    <item>נייַעס</item>  
+    <item>געזעלשאַפטלעך קאָנטאַקט</item>  
+    <item>קאַרטון</item>  
+    <item>שפּיל</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>היגע דאַקיומענטיישאַן</item>  
+    <item>אָנליין דאַקיומענטיישאַן</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>עדיטאַבלע js טעקע</item>  
+    <item>ונעדיטאַבלע ביינערי</item> 
+  </string-array>
+    <string name="cancel">באָטל מאַכן</string>
+    <string name="error_activity_not_found_for_apk_installing">קענען ניט געפֿינען אַפּ צו ינסטאַלירן אַפּק</string>
+    <string name="exception_notification_service_disabled">אָנזאָג דינסט איז נישט פליסנדיק, ביטע שייַעך-געבן אָנזאָג דערלויבעניש</string>
+    <string name="no_read_phone_state_permissin">קיין דערלויבעניש צו לייענען מיטל אינפֿאָרמאַציע</string>
+    <string name="no_write_settings_permissin">קיין דערלויבעניש צו מאָדיפיצירן סיסטעם סעטטינגס</string>
+    <string name="ok">זיכער</string>
+    <string name="text_accessibility_service_description">פארלאנגט צו אָטאַמייט שריפט אַפּעריישאַנז (דריקט, לאַנג דריקן, לאַקכענען, אאז\"ו ו), אויב פאַרקריפּלט, בלויז סקריפּס וואָס טאָן ניט אַרייַנציען אָטאַמאַטיק אַפּעריישאַנז קענען זיין עקסאַקיוטאַד.</string>
+    <string name="text_already_stop_n_scripts">%d פליסנדיק סקריפּס פארשטאפט</string>
+    <string name="text_console">קאַנסאָול</string>
+    <string name="text_drawer_close">פאַרמאַכן די פאַלן אַראָפּ מעניו</string>
+    <string name="text_drawer_open">עפענען די פאַלן אַראָפּ מעניו</string>
+    <string name="text_error">טעות:</string>
+    <string name="text_file_not_exists">טעקע טוט נישט עקסיסטירן</string>
+    <string name="text_no_file_rw_permission">קיין טעקע לייענען און שרייַבן פּערמישאַנז</string>
+    <string name="text_no_floating_window_permission">קיין פלאָוטינג פֿענצטער דערלויבעניש</string>
+    <string name="text_no_running_script">קיין פליסנדיק שריפט</string>
+    <string name="text_path_is_empty">דרך איז ליידיק</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">דעם שריפט ריקווייערז Auto.js ווערסיע נומער %d אָדער העכער צו לויפן</string>
+    <string name="text_requires_sdk_version_to_run_the_script">דעם שריפט ריקווייערז דעם אַנדרויד ווערסיע צו לויפן:</string>
+    <string name="text_should_enable_gesture_observing">האַווייַע מאָניטאָרינג איז נישט ענייבאַלד, ביטע געבן עס אין ווייכווארג סעטטינגס</string>
+    <string name="text_should_enable_key_observing">שליסל מאָניטאָרינג איז נישט ענייבאַלד, ביטע געבן עס אין די ווייכווארג סעטטינגס</string>
+    <string name="text_start_running">אָנהייב אָפּעראַציע</string>
+</resources>

@@ -1,0 +1,215 @@
+<h2>首页布局 — 三种设计方向</h2>
+<p class="subtitle">所有方案都采用：沉浸式全屏 + 底部4Tab导航 + 顶部Logo/标题/日志按钮</p>
+
+<div class="section">
+  <h3>布局结构说明</h3>
+  <div class="mockup">
+    <div class="mockup-header">通用框架结构</div>
+    <div class="mockup-body" style="background:#1C1B1F;border-radius:16px;padding:0;overflow:hidden">
+      <!-- Status bar -->
+      <div style="background:transparent;padding:8px 20px;display:flex;justify-content:space-between;font-size:12px;color:#CDBDDE">
+        <span>09:41</span><span>🔋 🔔</span>
+      </div>
+      <!-- Top bar -->
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:4px 16px 12px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div style="width:36px;height:36px;background:linear-gradient(135deg,#6750A4,#D0BCFF);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px">🐟</div>
+          <div>
+            <div style="color:#E6E1E5;font-weight:600;font-size:16px">咸鱼助手</div>
+            <div style="color:#CDBDDE;font-size:11px">智能自动化平台</div>
+          </div>
+        </div>
+        <div style="width:36px;height:36px;background:rgba(103,80,164,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#D0BCFF;font-size:16px">📋</div>
+      </div>
+      <!-- Nav bar -->
+      <div style="display:flex;background:rgba(103,80,164,0.08);border-top:1px solid rgba(202,196,208,0.1);padding:8px 0">
+        <div style="flex:1;text-align:center;color:#D0BCFF;font-size:11px;padding:4px">
+          <div style="font-size:18px">🏠</div>首页
+        </div>
+        <div style="flex:1;text-align:center;color:#938F99;font-size:11px;padding:4px">
+          <div style="font-size:18px">⚡</div>自动化
+        </div>
+        <div style="flex:1;text-align:center;color:#938F99;font-size:11px;padding:4px">
+          <div style="font-size:18px">📋</div>任务队列
+        </div>
+        <div style="flex:1;text-align:center;color:#938F99;font-size:11px;padding:4px">
+          <div style="font-size:18px">👤</div>用户中心
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cards">
+  <div class="card" data-choice="style-a" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">A — 现代仪表盘风格</div>
+        <div class="mockup-body" style="background:#1C1B1F;border-radius:12px;padding:16px">
+          <!-- Dashboard cards -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px">
+            <div style="background:linear-gradient(135deg,#6750A4,#7C67C7);border-radius:14px;padding:14px">
+              <div style="color:#EADDFF;font-size:10px;margin-bottom:4px">服务器状态</div>
+              <div style="color:white;font-size:20px;font-weight:700">● 已连接</div>
+            </div>
+            <div style="background:#2B2830;border-radius:14px;padding:14px">
+              <div style="color:#938F99;font-size:10px;margin-bottom:4px">当前任务</div>
+              <div style="color:#E6E1E5;font-size:20px;font-weight:700">空闲</div>
+            </div>
+            <div style="background:#2B2830;border-radius:14px;padding:14px">
+              <div style="color:#938F99;font-size:10px;margin-bottom:4px">适配器</div>
+              <div style="color:#E6E1E5;font-size:18px;font-weight:700">6 个可用</div>
+            </div>
+            <div style="background:#2B2830;border-radius:14px;padding:14px">
+              <div style="color:#938F99;font-size:10px;margin-bottom:4px">版本</div>
+              <div style="color:#E6E1E5;font-size:18px;font-weight:700">v1.0.0</div>
+            </div>
+          </div>
+          <!-- Permission chips -->
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">
+            <span style="background:rgba(76,175,80,0.15);color:#81C784;padding:6px 12px;border-radius:20px;font-size:10px">✓ 无障碍</span>
+            <span style="background:rgba(76,175,80,0.15);color:#81C784;padding:6px 12px;border-radius:20px;font-size:10px">✓ 悬浮窗</span>
+            <span style="background:rgba(244,67,54,0.15);color:#E57373;padding:6px 12px;border-radius:20px;font-size:10px">✗ 电池优化</span>
+          </div>
+          <!-- Action button -->
+          <div style="background:#6750A4;border-radius:24px;padding:14px;text-align:center;color:white;font-weight:600;font-size:13px">连接服务器</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>现代仪表盘</h3>
+      <p>卡片网格 + 渐变色卡片，状态一目了然。适合工具类应用，信息密度高但不杂乱。</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul><li>信息密度高</li><li>视觉层次清晰</li><li>开发简单</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>可能显得普通</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="style-b" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">B — 列表分组风格</div>
+        <div class="mockup-body" style="background:#1C1B1F;border-radius:12px;padding:16px">
+          <!-- Section 1: Status -->
+          <div style="color:#938F99;font-size:10px;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px;padding:0 4px">运行状态</div>
+          <div style="background:#2B2830;border-radius:14px;padding:0;margin-bottom:14px;overflow:hidden">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid rgba(202,196,208,0.06)">
+              <div style="display:flex;align-items:center;gap:12px">
+                <div style="width:32px;height:32px;background:rgba(76,175,80,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px">🟢</div>
+                <div>
+                  <div style="color:#E6E1E5;font-size:13px">服务器连接</div>
+                  <div style="color:#938F99;font-size:10px">tool-admin.yunibobo.com</div>
+                </div>
+              </div>
+              <span style="background:rgba(76,175,80,0.15);color:#81C784;padding:4px 10px;border-radius:12px;font-size:10px">已连接</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <div style="width:32px;height:32px;background:rgba(33,150,243,0.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px">⏳</div>
+                <div>
+                  <div style="color:#E6E1E5;font-size:13px">当前任务</div>
+                  <div style="color:#938F99;font-size:10px">无运行中任务</div>
+                </div>
+              </div>
+              <span style="background:rgba(158,158,158,0.15);color:#9E9E9E;padding:4px 10px;border-radius:12px;font-size:10px">空闲</span>
+            </div>
+          </div>
+          <!-- Section 2: Permissions -->
+          <div style="color:#938F99;font-size:10px;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px;padding:0 4px">权限管理</div>
+          <div style="background:#2B2830;border-radius:14px;padding:0;margin-bottom:14px;overflow:hidden">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid rgba(202,196,208,0.06)">
+              <div style="display:flex;align-items:center;gap:12px">
+                <div style="width:32px;height:32px;background:rgba(76,175,80,0.12);border-radius:50%"></div>
+                <div style="color:#E6E1E5;font-size:13px">无障碍服务</div>
+              </div>
+              <div style="color:#81C784;font-size:14px">✓</div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <div style="width:32px;height:32px;background:rgba(244,67,54,0.12);border-radius:50%"></div>
+                <div style="color:#E6E1E5;font-size:13px">悬浮窗权限</div>
+              </div>
+              <div style="color:#E57373;font-size:14px">✗</div>
+            </div>
+          </div>
+          <!-- Connect button -->
+          <div style="background:#6750A4;border-radius:24px;padding:14px;text-align:center;color:white;font-weight:600;font-size:13px">连接服务器</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>列表分组</h3>
+      <p>Section Header + 圆角分组列表，接近 iOS 设置页风格。结构清晰，适合展示状态和配置项。</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul><li>结构层次分明</li><li>M3 ListItem 组件原生支持</li><li>可扩展性好</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>信息密度略低</li><li>首页可能不够丰富</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="style-c" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="mockup">
+        <div class="mockup-header">C — 混合布局（推荐）</div>
+        <div class="mockup-body" style="background:#1C1B1F;border-radius:12px;padding:16px">
+          <!-- Hero stats -->
+          <div style="background:linear-gradient(135deg,#1D192B,#2B2540);border-radius:16px;padding:16px;margin-bottom:14px;border:1px solid rgba(103,80,164,0.15)">
+            <div style="display:flex;justify-content:space-between;margin-bottom:12px">
+              <div>
+                <div style="color:#938F99;font-size:9px;text-transform:uppercase;letter-spacing:1px">服务器</div>
+                <div style="color:#81C784;font-size:15px;font-weight:600;margin-top:2px">已连接</div>
+              </div>
+              <div style="width:1px;background:rgba(202,196,208,0.1)"></div>
+              <div>
+                <div style="color:#938F99;font-size:9px;text-transform:uppercase;letter-spacing:1px">任务状态</div>
+                <div style="color:#E6E1E5;font-size:15px;font-weight:600;margin-top:2px">空闲</div>
+              </div>
+              <div style="width:1px;background:rgba(202,196,208,0.1)"></div>
+              <div>
+                <div style="color:#938F99;font-size:9px;text-transform:uppercase;letter-spacing:1px">适配器</div>
+                <div style="color:#D0BCFF;font-size:15px;font-weight:600;margin-top:2px">6 个</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:4px">
+              <div style="flex:1;height:4px;background:#81C784;border-radius:2px"></div>
+              <div style="flex:1;height:4px;background:rgba(202,196,208,0.1);border-radius:2px"></div>
+              <div style="flex:1;height:4px;background:rgba(202,196,208,0.1);border-radius:2px"></div>
+            </div>
+          </div>
+          <!-- Permission section -->
+          <div style="color:#938F99;font-size:10px;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px;padding:0 4px">系统权限</div>
+          <div style="background:#2B2830;border-radius:14px;padding:0;margin-bottom:14px;overflow:hidden">
+            <div style="display:flex;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(202,196,208,0.06);justify-content:space-between">
+              <div style="display:flex;align-items:center;gap:10px">
+                <div style="width:28px;height:28px;border-radius:50%;background:rgba(76,175,80,0.15);display:flex;align-items:center;justify-content:center;font-size:12px">♿</div>
+                <span style="color:#E6E1E5;font-size:12px">无障碍服务</span>
+              </div>
+              <div style="width:36px;height:20px;background:#81C784;border-radius:10px;position:relative"><div style="width:16px;height:16px;background:white;border-radius:50%;position:absolute;right:2px;top:2px"></div></div>
+            </div>
+            <div style="display:flex;align-items:center;padding:12px 16px;justify-content:space-between">
+              <div style="display:flex;align-items:center;gap:10px">
+                <div style="width:28px;height:28px;border-radius:50%;background:rgba(255,152,0,0.15);display:flex;align-items:center;justify-content:center;font-size:12px">🪟</div>
+                <span style="color:#E6E1E5;font-size:12px">悬浮窗权限</span>
+              </div>
+              <div style="color:#E57373;font-size:12px;font-weight:500">去开启 →</div>
+            </div>
+          </div>
+          <!-- FAB-style connect -->
+          <div style="background:#6750A4;border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 20px rgba(103,80,164,0.3)">
+            <span style="font-size:16px">⚡</span>
+            <span style="color:white;font-weight:600;font-size:13px">连接服务器</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>混合布局 ⭐ 推荐</h3>
+      <p>顶部 Hero 卡片展示核心状态（含进度条），中间列表管理权限，底部醒目 CTA。M3 风格最强，层次最丰富。</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul><li>视觉层次最丰富</li><li>信息密度适中</li><li>M3 风格突出</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>开发量稍多</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Уобичајено</item>  
+    <item>Покажите једном дневно</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Насумично</item>  
+    <item>Вести</item>  
+    <item>Друштвени контакт</item>  
+    <item>Цртани филм</item>  
+    <item>Игра</item> 
+  </string-array>
+    <string-array name="control_keys_short_names">
+        <item>Куглица</item>
+        <item>\@</item>
+        <item>Леви-Алт</item>
+        <item>Десни-Алт</item>
+        <item>Звук-Горе</item>
+        <item>Звук-Доле</item>
+        <item>Камера</item>
+        <item>Ниједан</item>
+    </string-array>
+    <string-array name="entries_actionbar_preference">
+        
+        <item>Увек прикажи траку радњи</item>
+        <item>Сакриј траку радњи (за приказ додирните врх екрана или Мени тастер)</item>
+    </string-array>
+    <string-array name="entries_backaction_preference">
+        <item>Затвара све прозоре терминала</item>
+        <item>Затвара само овај прозор терминала</item>
+        <item>Затвара активност, оставља сесије покренуте</item>
+        <item>Шаље ESC терминалу</item>
+        <item>Шаље TAB терминалу</item>
+    </string-array>
+    <string-array name="entries_color_preference">
+        <item>Црни текст на белом</item>
+        <item>Бели текст на црном</item>
+        <item>Бели текст на плавом</item>
+        <item>Зелени текст на црном</item>
+        <item>Јантарни текст на црном</item>
+        <item>Црвени текст на црном</item>
+        <item>Холо плави текст на црном</item>
+        <item>Светла соларизована</item>
+        <item>Тамна соларизована</item>
+        <item>Линукс конзола</item>
+    </string-array>
+    <string-array name="entries_controlkey_preference">
+        <item>Џог куглица</item>
+        <item>\@ тастер</item>
+        <item>Леви Алт тастер</item>
+        <item>Десни Алт тастер</item>
+        <item>Звук Горе тастер</item>
+        <item>Звук Доле тастер</item>
+        <item>Камера тастер</item>
+        <item>Ниједан</item>
+    </string-array>
+    <string-array name="entries_cursorblink_preference">
+        <item>Статични курсор</item>
+        <item>Трепћући курсор</item>
+    </string-array>
+    <string-array name="entries_cursorstyle_preference">
+        <item>Правоугаоник</item>
+        <item>Подвлака</item>
+        <item>Вертикална трака</item>
+    </string-array>
+    <string-array name="entries_fnkey_preference">
+        <item>Џог куглица</item>
+        <item>\@ тастер</item>
+        <item>Леви Алт тастер</item>
+        <item>Десни Алт тастер</item>
+        <item>Звук Горе тастер</item>
+        <item>Звук Доле тастер</item>
+        <item>Камера тастер</item>
+        <item>Ниједан</item>
+    </string-array>
+    <string-array name="entries_fontsize_preference">
+        <item>4 x 8 px</item>
+        <item>6 pt</item>
+        <item>7 pt</item>
+        <item>8 pt</item>
+        <item>9 pt</item>
+        <item>10 pt</item>
+        <item>12 pt</item>
+        <item>14 pt</item>
+        <item>16 pt</item>
+        <item>20 pt</item>
+        <item>24 pt</item>
+        <item>28 pt</item>
+        <item>32 pt</item>
+        <item>36 pt</item>
+        <item>42 pt</item>
+        <item>48 pt</item>
+        <item>64 pt</item>
+        <item>72 pt</item>
+        <item>96 pt</item>
+        <item>144 pt</item>
+        <item>288 pt</item>
+    </string-array>
+    <string-array name="entries_ime_preference">
+        <item>Заснована на знаковима</item>
+        <item>Заснована на речима</item>
+    </string-array>
+    <string-array name="entries_orientation_preference">
+        <item>Аутоматски</item>
+        <item>Пејзаж</item>
+        <item>Портрет</item>
+    </string-array>
+    <string-array name="entries_statusbar_preference">
+        <item>Прикажи траку стања</item>
+        <item>Сакриј траку стања</item>
+    </string-array>
+    <string-array name="fn_keys_short_names">
+        <item>Куглица</item>
+        <item>\@</item>
+        <item>Леви-Алт</item>
+        <item>Десни-Алт</item>
+        <item>Звук-Горе</item>
+        <item>Звук-Доле</item>
+        <item>Камера</item>
+        <item>Ниједан</item>
+    </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Локална документација</item>  
+    <item>Онлајн документација</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Јс датотека која се може уређивати</item>  
+    <item>Неуређивање бинарни</item> 
+  </string-array>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d ново обавештење</item>
+    <item quantity="few">%d нова обавештења</item>
+    <item quantity="other">%d нових обавештења</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Идите на почетну"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Идите нагоре"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Још опција"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Готово"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Прикажи све"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Изаберите апликацију"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"ИСКЉУЧЕНО"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"УКЉУЧЕНО"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"delete"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"тастер за размак"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Претражите…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Обришите упит"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Претражите упит"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Претражите"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Пошаљите упит"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Гласовна претрага"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Делите помоћу"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Делите помоћу апликације <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Скупи"</string>
+    <string name="activity_shortcut_create">"Терминалска пречица"</string>
+    <string name="activity_term_here_title">Терминал овде</string>
+    <string name="addshortcut_arguments_label">Аргументи\:</string>
+    <string name="addshortcut_button_find_command">Нађи наредбу</string>
+    <string name="addshortcut_button_text_icon">Текстуална икона</string>
+    <string name="addshortcut_command_hint">наредба</string>
+    <string name="addshortcut_command_window_instructions">Окно наредбе захтева пуну путању, без аргумената. За остале наредбе користите окно аргумената (нпр: cd /sdcard).</string>
+    <string name="addshortcut_example_hint">--пример=\""a\"</string>
+    <string name="addshortcut_make_text_icon">ТЕКСТУАЛНА ИКОНА</string>
+    <string name="addshortcut_navigator_title">ИЗБОР МЕТЕ ПРЕЧИЦЕ</string>
+    <string name="addshortcut_shortcut_label">Етикета пречице\:</string>
+    <string name="addshortcut_title">Пречица терминала</string>
+    <string name="alt_sends_esc">Алт тастер шаље ESC</string>
+    <string name="alt_sends_esc_summary_off">Алт тастер не шаље ESC.</string>
+    <string name="alt_sends_esc_summary_on">Алт тастер шаље ESC.</string>
+    <string name="application_terminal">Емулатор терминала</string>
+    <string name="bottomsheet_action_collapse">Скупите доњу табелу</string>
+    <string name="bottomsheet_action_expand">Проширите доњу табелу</string>
+    <string name="bottomsheet_action_expand_halfway">Проширите до пола</string>
+    <string name="bottomsheet_drag_handle_clicked">Идентификатор за превлачење је двапут додирнут</string>
+    <string name="bottomsheet_drag_handle_content_description">Ручица за превлачење</string>
+    <string name="cancel">Поништити, отказати</string>
+    <string name="character_counter_content_description">Унети знакови: %1$d од %2$d</string>
+    <string name="character_counter_overflowed_content_description">Прекорачено је ограничење броја знакова: %1$d од %2$d</string>
+    <string name="clear_text_end_icon_content_description">Обриши текст</string>
+    <string msgid="406453423630273620" name="close_drawer">"Затвори мени за навигацију"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Затворите табелу"</string>
+    <string name="close_window">Затвори прозор</string>
+    <string msgid="5389587048670450460" name="collapsed">"Скупљено је"</string>
+    <string name="colorvalue_icon_text_entry_hint">Унесите текст иконе</string>
+    <string name="colorvalue_label_lock_button_column">ЗАКЉУЧАЈ</string>
+    <string name="colorvalue_letter_alpha">α</string>
+    <string name="colorvalue_letter_blue">Б</string>
+    <string name="colorvalue_letter_green">Г</string>
+    <string name="colorvalue_letter_red">Р</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Омогући</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s неће функционисати ако не омогућите Google Play услуге.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Омогућите Google Play услуге</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Инсталирај</string>
+    <string name="common_google_play_services_install_text">%1$s не може да се покрене без Google Play услуга, које нису инсталиране на уређају.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Преузмите Google Play услуге</string>
+    <string name="common_google_play_services_notification_channel_name">Доступност Google Play услуга</string>
+    <string name="common_google_play_services_notification_ticker">Грешка Google Play услуга</string>
+    <string name="common_google_play_services_unknown_issue">%1$s има проблема са Google Play услугама. Пробајте поново.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s не може да се покрене без Google Play услуга, које уређај не подржава.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Ажурирај</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s не може да се покрене ако не ажурирате Google Play услуге.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Ажурирајте Google Play услуге</string>
+    <string name="common_google_play_services_updating_text">%1$s не може да се покрене без Google Play услуга, које се тренутно ажурирају.</string>
+    <string name="common_google_play_services_wear_update_text">Потребна је нова верзија Google Play услуга. Ускоро ће се ажурирати.</string>
+    <string name="common_open_on_phone">Отвори на телефону</string>
+    <string name="common_signin_button_text">Пријави ме</string>
+    <string name="common_signin_button_text_long">Пријави ме на Google</string>
+    <string name="confirm_window_close_message">Затворити овај прозор?</string>
+    <string name="control_key_dialog_control_disabled_text">Контролни тастер није постављен.</string>
+    <string name="control_key_dialog_control_text">CTRLKEY Размак : Control-@ (NUL)\nCTRLKEY A..Z : Control-A..Z\nCTRLKEY 5 : Control-]\nCTRLKEY 6 : Control-^\nCTRLKEY 7 : Control-_\nCTRLKEY 9 : F11\nCTRLKEY 0 : F12</string>
+    <string name="control_key_dialog_fn_disabled_text">Функцијски тастер није постављен.</string>
+    <string name="control_key_dialog_fn_text">FNKEY 1..9 : F1-F9\nFNKEY 0 : F10\nFNKEY W : Горе\nFNKEY A : Лево\nFNKEY S : Доле\nFNKEY D : Десно\nFNKEY P : СтрГоре\nFNKEY N : СтрДоле\nFNKEY T : Таб\nFNKEY L : | (цев)\nFNKEY U : _ (подвлака)\nFNKEY E : Control-[ (ESC)\nFNKEY X : Обриши\nFNKEY I : Уметни\nFNKEY H : Почетак\nFNKEY F : Крај\nFNKEY . : Control-\\\n</string>
+    <string name="control_key_dialog_title">Контролни и функцијски тастери</string>
+    <string msgid="6083905920877235314" name="copy">"Копирај"</string>
+    <string name="copy_all">Копирај све</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Унос је неважећи"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Искачући прозор"</string>
+    <string msgid="4057925834421392736" name="dialog">"Дијалог"</string>
+    <string name="dialog_title_actionbar_preference">Понашање траке радњи</string>
+    <string name="dialog_title_backaction_preference">Понашање дугмета за назад</string>
+    <string name="dialog_title_color_preference">Боја текста</string>
+    <string name="dialog_title_controlkey_preference">Контрол тастер</string>
+    <string name="dialog_title_cursorblink_preference">Трептање курсора</string>
+    <string name="dialog_title_cursorstyle_preference">Стил курсора</string>
+    <string name="dialog_title_fnkey_preference">Фн тастер</string>
+    <string name="dialog_title_fontsize_preference">Величина фонта</string>
+    <string name="dialog_title_ime_preference">Метода уноса</string>
+    <string name="dialog_title_initialcommand_preference">Почетна наредба</string>
+    <string name="dialog_title_orientation_preference">Оријентација екрана</string>
+    <string name="dialog_title_shell_preference">Шкољка</string>
+    <string name="dialog_title_statusbar_preference">Трака стања</string>
+    <string name="dialog_title_termtype_preference">Тип терминала</string>
+    <string name="disable_wakelock">Отпусти блокаду буђења</string>
+    <string name="disable_wifilock">Отпусти блокаду бежичног</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Падајући мени"</string>
+    <string name="edit_text">Уреди текст</string>
+    <string name="email_transcript_chooser_title">Пошаљи препис користећи:</string>
+    <string name="email_transcript_no_email_activity_found">Не могу да изаберем активност е-поште за слање преписа.</string>
+    <string name="email_transcript_subject">Препис са Емулатора Терминала за Андроид</string>
+    <string name="enable_wakelock">Узми блокаду буђења</string>
+    <string name="enable_wifilock">Узми блокаду бежичног</string>
+    <string name="error_activity_not_found_for_apk_installing">Не могу да пронађем апликацију за инсталирање апк-а</string>
+    <string name="error_icon_content_description">Грешка</string>
+    <string name="exception_notification_service_disabled">Услуга обавештења не ради, поново омогућите дозволу за обавештења</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Напредно"</string>
+    <string msgid="5974471714631304645" name="expanded">"Проширено је"</string>
+    <string name="exposed_dropdown_menu_content_description">Прикажи падајући мени</string>
+    <string name="fsnavigator_change_theme">Промени тему</string>
+    <string name="fsnavigator_no_external_storage">Спољашње складиште није доступно</string>
+    <string name="fsnavigator_optional_enter_path">Или унесите путању овде.</string>
+    <string name="fsnavigator_title">ИЗБОР ФАЈЛА</string>
+    <string name="help">Помоћ</string>
+    <string name="icon_content_description">Икона дијалога</string>
+    <string msgid="6827826412747255547" name="in_progress">"У току"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Делимично означено"</string>
+    <string name="item_view_role_description">Картица</string>
+    <string name="keyboard_preferences">Тастатура</string>
+    <string name="material_clock_toggle_content_description">Изаберите пре подне или по подне</string>
+    <string name="material_hour_24h_suffix">%1$s с</string>
+    <string name="material_hour_selection">Изаберите сат</string>
+    <string name="material_hour_suffix">%1$s с</string>
+    <string name="material_minute_selection">Изаберите минуте</string>
+    <string name="material_minute_suffix">%1$s мин</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">Пређите у режим сата ради уноса времена.</string>
+    <string name="material_timepicker_hour">Сат</string>
+    <string name="material_timepicker_minute">Минут</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">Изаберите време</string>
+    <string name="material_timepicker_text_input_mode_description">Пређите у режим уноса текста ради уноса времена.</string>
+    <string name="mtrl_badge_numberless_content_description">Ново обавештење</string>
+    <string name="mtrl_chip_close_icon_content_description">Уклоните %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Нових обавештења: више од %1$d</string>
+    <string name="mtrl_picker_a11y_next_month">Пређите на следећи месец</string>
+    <string name="mtrl_picker_a11y_prev_month">Пређите на претходни месец</string>
+    <string name="mtrl_picker_announce_current_selection">Актуелни избор: %1$s</string>
+    <string name="mtrl_picker_cancel">Откажи</string>
+    <string name="mtrl_picker_confirm">Потврди</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Изаберите датум</string>
+    <string name="mtrl_picker_date_header_unselected">Изабрани датум</string>
+    <string name="mtrl_picker_day_of_week_column_header">Колона са данима: %1$s</string>
+    <string name="mtrl_picker_invalid_format">Формат је неважећи.</string>
+    <string name="mtrl_picker_invalid_format_example">Пример: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Користите: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Неважећи период.</string>
+    <string name="mtrl_picker_navigate_to_year_description">Идите на годину %1$s</string>
+    <string name="mtrl_picker_out_of_range">Изван периода: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Датум почетка – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – Датум завршетка</string>
+    <string name="mtrl_picker_range_header_selected">%1$s–%2$s</string>
+    <string name="mtrl_picker_range_header_title">Изаберите период</string>
+    <string name="mtrl_picker_range_header_unselected">Датум почетка – Датум завршетка</string>
+    <string name="mtrl_picker_save">Сачувај</string>
+    <string name="mtrl_picker_text_input_date_hint">Датум</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Датум завршетка</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Датум почетка</string>
+    <string name="mtrl_picker_text_input_day_abbr">д</string>
+    <string name="mtrl_picker_text_input_month_abbr">м</string>
+    <string name="mtrl_picker_text_input_year_abbr">г</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Пређите на режим уноса у Календару</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Додирните да бисте прешли на избор дана</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Пређите на режим уноса текста</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Додирните да бисте прешли на избор године</string>
+    <string name="mtrl_timepicker_cancel">Откажи</string>
+    <string name="mtrl_timepicker_confirm">Потврди</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Мени за навигацију"</string>
+    <string name="new_window">Нови прозор</string>
+    <string name="next_window">След. прозор</string>
+    <string name="no_read_phone_state_permissin">Немате дозволу за читање информација о уређају</string>
+    <string name="no_write_settings_permissin">Немате дозволу за измену системских поставки</string>
+    <string msgid="6610465462668679431" name="not_selected">"Није изабрано"</string>
+    <string msgid="6573031135582639649" name="not_set">"Није подешено"</string>
+    <string msgid="875452955155264703" name="off">"Искључено"</string>
+    <string name="ok">Наравно</string>
+    <string msgid="8655164131929253426" name="on">"Укључено"</string>
+    <string name="password_toggle_content_description">Прикажи лозинку</string>
+    <string name="paste">Налепи</string>
+    <string name="perm_append_to_path">Додавање наредби у Емулатор Терминала</string>
+    <string name="perm_prepend_to_path">Премошћавање наредби у Емулатору Терминала</string>
+    <string name="perm_run_script">Покретање произвољних наредби у Емулатору Терминала</string>
+    <string name="permdesc_append_to_path">Дозвољава апликацији да пружи додатне наредбе (додавање директоријума у PATH) за Емулатор Терминала за Андроид.</string>
+    <string name="permdesc_prepend_to_path">Дозвољава апликацији да премости постојеће наредбе својим (префиксује директоријуме у PATH) у Емулатору Терминала за Андроид.</string>
+    <string name="permdesc_run_script">Омогућава апликацији да отвара нове прозоре у Емулатору Терминала за Андроид и покреће наредбе у тим прозорима са свим дозволама Емулатора Терминала, укључујући приступ интернету и вашој СД картици.</string>
+    <string msgid="6685851473431805375" name="preference_copied">"Резиме „<ns1:g id="SUMMARY">%1$s</ns1:g>“ је копиран у привремену меморију."</string>
+    <string name="preferences">Поставке</string>
+    <string name="prev_window">Прет. прозор</string>
+    <string name="process_exit_message">Сесија терминала је завршена</string>
+    <string msgid="5941395253238309765" name="range_end">"Крај опсега"</string>
+    <string msgid="7097486360902471446" name="range_start">"Почетак опсега"</string>
+    <string name="reset">Поново постави терм</string>
+    <string name="reset_toast_notification">Стање терминала овог прозора је поново постављено.</string>
+    <string name="screen_preferences">Екран</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Претражите"</string>
+    <string name="select_text">Изабери текст</string>
+    <string msgid="6043586758067023" name="selected">"Изабрано"</string>
+    <string name="send_control_key">Пошаљи Цтрл унос</string>
+    <string name="send_email">Пошаљи е-поштом</string>
+    <string name="send_fn_key">Пошаљи Фн унос</string>
+    <string name="service_notify_text">Сесија терминала је у току</string>
+    <string name="shell_preferences">Шкољка</string>
+    <string name="special_keys">Посебни тастери</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="summary_actionbar_preference">Одредите понашање траке радњи (Андроид 3.0 и новији).</string>
+    <string name="summary_allow_prepend_path_preference">Да ли осталим апликацијама дозволити премошћавање постојеће наредбе (да додају на почетку PATH).</string>
+    <string name="summary_backaction_preference">Шта ће да деси притиском на дугме за назад.</string>
+    <string name="summary_close_window_on_process_exit_preference">Да ли да прозор буде затворен по излазу из његове шкољке.</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="summary_color_preference">Изаберите боју текста.</string>
+    <string name="summary_controlkey_preference">Изаберите контрол (Цтрл) тастер.</string>
+    <string name="summary_cursorblink_preference">Одредите трептање курсора.</string>
+    <string name="summary_cursorstyle_preference">Изаберите стил курсора.</string>
+    <string name="summary_do_path_extensions_preference">Да ли осталим апликацијама дозволити додавање додатне наредбе (да додају у PATH).</string>
+    <string name="summary_fnkey_preference">Изаберите функцијски (Фн) тастер.</string>
+    <string name="summary_fontsize_preference">Одредите величину фонта у тачкама.</string>
+    <string name="summary_home_path_preference">Путања до уписиве фасцикле која ће бити коришћена као HOME.</string>
+    <string name="summary_ime_preference">Изаберите методу уноса за софтверску тастатуру.</string>
+    <string name="summary_initialcommand_preference">Наредба послата шкољки по покретању.</string>
+    <string name="summary_mouse_tracking_preference">Слање додира и клизања терминалу као секвенце излаза.</string>
+    <string name="summary_orientation_preference">Одредите понашање оријентације екрана.</string>
+    <string name="summary_shell_preference">Одредите командну линију шкољке.</string>
+    <string name="summary_statusbar_preference">Прикажи/сакриј траку стања.</string>
+    <string name="summary_termtype_preference">Који тип терминала да буде пријављен шкољки.</string>
+    <string name="summary_utf8_by_default_preference">Да ли је УТФ-8 режим подразумевано омогућен.</string>
+    <string name="summary_verify_path_preference">Да ли да недоступни директоријуми буду уклољени из PATH.</string>
+    <string msgid="1672349317127674378" name="tab">"Картица"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> посто."</string>
+    <string name="text_accessibility_service_description">Неопходан за аутоматизацију операција са скриптама (клик, дуги притисак, превлачење, итд.), ако је онемогућено, могу се извршити само скрипте које не укључују аутоматске операције.</string>
+    <string name="text_already_stop_n_scripts">%d покренута скрипта је заустављена</string>
+    <string name="text_console">Конзола</string>
+    <string name="text_drawer_close">Затворите падајући мени</string>
+    <string name="text_drawer_open">Отворите падајући мени</string>
+    <string name="text_error">Грешка:</string>
+    <string name="text_file_not_exists">Фајл не постоји</string>
+    <string name="text_no_file_rw_permission">Нема дозвола за читање и писање датотека</string>
+    <string name="text_no_floating_window_permission">Нема дозволе за плутајући прозор</string>
+    <string name="text_no_running_script">Нема покренуте скрипте</string>
+    <string name="text_path_is_empty">Пут је празан</string>
+    <string name="text_preferences">Текст</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">За покретање ове скрипте је потребан Ауто.јс број верзије %d или новији</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Ова скрипта захтева ову верзију Андроида за покретање:</string>
+    <string name="text_should_enable_gesture_observing">Праћење покрета није омогућено, омогућите га у подешавањима софтвера</string>
+    <string name="text_should_enable_key_observing">Надгледање кључа није омогућено, омогућите га у подешавањима софтвера</string>
+    <string name="text_start_running">Започети рад</string>
+    <string name="title_actionbar_preference">Трака радњи</string>
+    <string name="title_allow_prepend_path_preference">Дозволи PATH префиксе</string>
+    <string name="title_backaction_preference">Понашање дугмета за назад</string>
+    <string name="title_close_window_on_process_exit_preference">Затвори прозор по излазу</string>
+    <string name="title_color_preference">Боје</string>
+    <string name="title_controlkey_preference">Контрол тастер</string>
+    <string name="title_cursorblink_preference">Трептање курсора</string>
+    <string name="title_cursorstyle_preference">Стил курсора</string>
+    <string name="title_do_path_extensions_preference">Дозволи PATH проширења</string>
+    <string name="title_fnkey_preference">Фн тастер</string>
+    <string name="title_fontsize_preference">Величина фонта</string>
+    <string name="title_home_path_preference">Домаћа фасцикла</string>
+    <string name="title_ime_preference">Метода уноса</string>
+    <string name="title_initialcommand_preference">Почетна наредба</string>
+    <string name="title_mouse_tracking_preference">Шаљи догађаје миша</string>
+    <string name="title_orientation_preference">Оријентација екрана</string>
+    <string name="title_shell_preference">Командна линија</string>
+    <string name="title_statusbar_preference">Трака стања</string>
+    <string name="title_termtype_preference">Тип терминала</string>
+    <string name="title_use_keyboard_shortcuts">Користи пречице тастатуре</string>
+    <string name="title_utf8_by_default_preference">Подразумевај УТФ-8</string>
+    <string name="title_verify_path_preference">Овери PATH уносе</string>
+    <string name="toggle_soft_keyboard">Пребаци софтверску тастатуру</string>
+    <string name="use_keyboard_shortcuts_summary_off">Пречице тастатуре су онемогућене.</string>
+    <string name="use_keyboard_shortcuts_summary_on">Ctrl-Tab: пребаци прозор, Ctrl-Shift-N: нови прозор, Ctrl-Shift-V: налепи.</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"ИСКЉУЧЕНО"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"УКЉУЧЕНО"</string>
+    <string name="window_list">Прозори</string>
+    <string name="window_title">Прозор %1$d</string>
+</resources>

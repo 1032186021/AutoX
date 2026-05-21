@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Default</item>  
+    <item>Ipakita kausa sa usa ka adlaw</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Random</item>  
+    <item>Balita</item>  
+    <item>Sosyal nga kontak</item>  
+    <item>Cartoon</item>  
+    <item>Dula</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Lokal nga dokumentasyon</item>  
+    <item>Online nga dokumentasyon</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Ma-edit nga js file</item>  
+    <item>Dili ma-edit nga binary</item> 
+  </string-array>
+    <string name="cancel">Pagkanselar</string>
+    <string name="error_activity_not_found_for_apk_installing">Dili makit-an ang app aron ma-install ang apk</string>
+    <string name="exception_notification_service_disabled">Wala nagdagan ang serbisyo sa pagpahibalo, palihug i-enable pag-usab ang pagtugot sa pagpahibalo</string>
+    <string name="no_read_phone_state_permissin">Walay pagtugot sa pagbasa sa impormasyon sa device</string>
+    <string name="no_write_settings_permissin">Walay pagtugot sa pag-usab sa mga setting sa sistema</string>
+    <string name="ok">Sigurado</string>
+    <string name="text_accessibility_service_description">Gikinahanglan nga i-automate ang mga operasyon sa script (pag-klik, dugay nga pagpindot, pag-swipe, ug uban pa), kung mabaldado, ang mga script lamang nga wala mag-apil sa mga awtomatikong operasyon ang mahimo.</string>
+    <string name="text_already_stop_n_scripts">%d nga nagdagan nga mga script mihunong</string>
+    <string name="text_console">Console</string>
+    <string name="text_drawer_close">Isira ang drop down menu</string>
+    <string name="text_drawer_open">Ablihi ang drop down menu</string>
+    <string name="text_error">Sayop:</string>
+    <string name="text_file_not_exists">Wala ang file</string>
+    <string name="text_no_file_rw_permission">Walay permiso sa pagbasa ug pagsulat sa file</string>
+    <string name="text_no_floating_window_permission">Walay floating window permiso</string>
+    <string name="text_no_running_script">Walay running script</string>
+    <string name="text_path_is_empty">Walay sulod ang dalan</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Kini nga script nagkinahanglan sa Auto.js version number %d o mas taas pa aron modagan</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Kini nga script nagkinahanglan niini nga Android nga bersyon sa pagdagan:</string>
+    <string name="text_should_enable_gesture_observing">Ang pagmonitor sa gesture wala gipagana, palihug i-enable kini sa mga setting sa software</string>
+    <string name="text_should_enable_key_observing">Ang yawe nga pag-monitor wala gipagana, palihug i-enable kini sa mga setting sa software</string>
+    <string name="text_start_running">Pagsugod sa operasyon</string>
+</resources>

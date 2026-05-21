@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Predvolená</item>  
+    <item>Ukážte raz denne</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Náhodný</item>  
+    <item>Správy</item>  
+    <item>Sociálny kontakt</item>  
+    <item>Karikatúra</item>  
+    <item>Hra</item> 
+  </string-array>
+    <string-array name="control_keys_short_names">
+    <item>Gulička</item>
+    <item>\@</item>
+    <item>Ľavý Alt</item>
+    <item>Pravý Alt</item>
+    <item>Hlasitosť+</item>
+    <item>Hlasitosť-</item>
+    <item>Fotoaparát</item>
+    <item>Žiadny</item>
+  </string-array>
+    <string-array name="entries_actionbar_preference">
+      <item>Vždy zobraziť panel akcií</item>
+      <item>Skryť panel akcií (pre zobrazenie sa dotknite vrchu obrazovky alebo tlačidla Ponuka)</item>
+  </string-array>
+    <string-array name="entries_backaction_preference">
+      <item>Zavrieť všetky okná terminálu</item>
+      <item>Zavrieť iba aktuálne okno terminálu</item>
+      <item>Zavrieť aktivitu, ponechať reláciu bežiacou</item>
+      <item>Odoslať ESC do terminálu</item>
+      <item>Odoslať TAB do terminálu</item>
+  </string-array>
+    <string-array name="entries_color_preference">
+    <item>Čierny text na bbielom</item>
+    <item>Biely text na čiernom</item>
+    <item>Biely text na modrom</item>
+    <item>Zelený text na čiernom</item>
+    <item>Jantárový text na čiernom</item>
+    <item>Červený text na čiernom</item>
+    <item>Holo modrý text na čiernom</item>
+    <item>Solarizovaná svetlá</item>
+    <item>Solarizovaná tmavá</item>
+    <item>Linuxová konzola</item>
+  </string-array>
+    <string-array name="entries_controlkey_preference">
+    <item>Gulička</item>
+    <item>Kláves \@</item>
+    <item>Kláves Ľavý Alt</item>
+    <item>Kláves Pravý Alt</item>
+    <item>Kláves Hlasitosť+</item>
+    <item>Kláves Hlasitosť-</item>
+    <item>Kláves Fotoaparát</item>
+    <item>Žiadny</item>
+  </string-array>
+    <string-array name="entries_cursorblink_preference">
+    <item>Neblikajúci kurzor</item>
+    <item>Blikajúci kurzor</item>
+  </string-array>
+    <string-array name="entries_cursorstyle_preference">
+    <item>Obdĺžnikový</item>
+    <item>Podčiarknutý</item>
+    <item>Zvislá čiara</item>
+  </string-array>
+    <string-array name="entries_fnkey_preference">
+    <item>Gulička</item>
+    <item>Kláves \@</item>
+    <item>Kláves Ľavý Alt</item>
+    <item>Kláves Pravý Alt</item>
+    <item>Kláves Hlasitosť+</item>
+    <item>Kláves Hlasitosť-</item>
+    <item>Kláves Fotoaparát</item>
+    <item>Žiadny</item>
+  </string-array>
+    <string-array name="entries_fontsize_preference">
+    <item>4 x 8 pixelov</item>
+    <item>6 bodov</item>
+    <item>7 bodov</item>
+    <item>8 bodov</item>
+    <item>9 bodov</item>
+    <item>10 bodov</item>
+    <item>12 bodov</item>
+    <item>14 bodov</item>
+    <item>16 bodov</item>
+    <item>20 bodov</item>
+    <item>24 bodov</item>
+    <item>28 bodov</item>
+    <item>32 bodov</item>
+    <item>36 bodov</item>
+    <item>42 bodov</item>
+    <item>48 bodov</item>
+    <item>64 bodov</item>
+    <item>72 bodov</item>
+    <item>96 bodov</item>
+    <item>144 bodov</item>
+    <item>288 bodov</item>
+  </string-array>
+    <string-array name="entries_ime_preference">
+    <item>Po znakoch</item>
+    <item>Po slovách</item>
+  </string-array>
+    <string-array name="entries_orientation_preference">
+        <item>Automatická</item>
+        <item>Na šírku</item>
+        <item>Na výšku</item>
+  </string-array>
+    <string-array name="entries_statusbar_preference">
+    <item>Zobraziť stavový riadok</item>
+    <item>Skryť stavový riadok</item>
+  </string-array>
+    <string-array name="fn_keys_short_names">
+    <item>Gulička</item>
+    <item>\@</item>
+    <item>Ľavý Alt</item>
+    <item>Pravý Alt</item>
+    <item>Hlasitosť+</item>
+    <item>Hlasitosť-</item>
+    <item>Fotoaparát</item>
+    <item>Žiadny</item>
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Miestna dokumentácia</item>  
+    <item>Online dokumentáciu</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Upraviteľný súbor js</item>  
+    <item>Neupraviteľný binárny súbor</item> 
+  </string-array>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d nové upozornenie</item>
+    <item quantity="few">%d nové upozornenia</item>
+    <item quantity="many">%d new notifications</item>
+    <item quantity="other">%d nových upozornení</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Prejsť na plochu"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Prejsť nahor"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Ďalšie možnosti"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Hotovo"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Zobraziť všetky"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Vybrať aplikáciu"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"VYP."</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"ZAP."</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"odstrániť"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"medzerník"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Menu+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Vyhľadať…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Vymazať dopyt"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Vyhľadávací dopyt"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Hľadať"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Odoslať dopyt"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Hlasové vyhľadávanie"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Zdieľať s"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Zdieľať s aplikáciou <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Zbaliť"</string>
+    <string name="activity_shortcut_create">Skratka terminálu</string>
+    <string name="activity_term_here_title">Otvoriť terminál</string>
+    <string name="addshortcut_arguments_label">Argumenty\:</string>
+    <string name="addshortcut_button_find_command">Nájsť príkaz</string>
+    <string name="addshortcut_button_text_icon">Text ikony</string>
+    <string name="addshortcut_command_hint">príkaz</string>
+    <string name="addshortcut_command_window_instructions">Príkazové okno vyžaduje celé umiestnenie, žiadne argumenty. Pre ostatné príkazy použite okno pre argumenty (napríklad: cd /sdcard).</string>
+    <string name="addshortcut_example_hint">--príklad=\""a\"</string>
+    <string name="addshortcut_make_text_icon">Vytvoriť text ikony</string>
+    <string name="addshortcut_navigator_title">VYBERTE CIEĽ SKRATKY</string>
+    <string name="addshortcut_shortcut_label">Názov skratky\:</string>
+    <string name="addshortcut_title">Skratka terminálu</string>
+    <string name="alt_sends_esc">Posielať ESC pomocou klávesu Alt</string>
+    <string name="alt_sends_esc_summary_off">Kláves Alt neposiela ESC.</string>
+    <string name="alt_sends_esc_summary_on">Kláves Alt posiela ESC.</string>
+    <string name="application_terminal">Emulátor terminálu</string>
+    <string name="bottomsheet_action_collapse">Zbaliť dolný hárok</string>
+    <string name="bottomsheet_action_expand">Rozbaliť dolný hárok</string>
+    <string name="bottomsheet_action_expand_halfway">Rozbaliť napoly</string>
+    <string name="bottomsheet_drag_handle_clicked">Dvojité klepnutie na presúvadlo</string>
+    <string name="bottomsheet_drag_handle_content_description">Presúvadlo</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="character_counter_content_description">Zadané znaky: %1$d z %2$d</string>
+    <string name="character_counter_overflowed_content_description">Bol prekročený povolený počet znakov (%1$d z %2$d)</string>
+    <string name="clear_text_end_icon_content_description">Vymazať text</string>
+    <string msgid="406453423630273620" name="close_drawer">"Zavrieť navigačnú ponuku"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Zavrieť hárok"</string>
+    <string name="close_window">Zavrieť okno</string>
+    <string msgid="5389587048670450460" name="collapsed">"Zbalené"</string>
+    <string name="colorvalue_icon_text_entry_hint">Zadajte text ikony</string>
+    <string name="colorvalue_label_lock_button_column">Zamknúť</string>
+    <string name="colorvalue_letter_alpha">α</string>
+    <string name="colorvalue_letter_blue">M</string>
+    <string name="colorvalue_letter_green">Z</string>
+    <string name="colorvalue_letter_red">Č</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Povoliť</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">Aplikácia %1$s bude fungovať až po povolení služieb Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Povoliť služby Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Inštalovať</string>
+    <string name="common_google_play_services_install_text">Na spustenie aplikácie %1$s sa vyžadujú služby Google Play, ktoré na zariadení nemáte.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Inštalovať služby Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">Dostupnosť služieb Google Play</string>
+    <string name="common_google_play_services_notification_ticker">Chyba služieb Google Play</string>
+    <string name="common_google_play_services_unknown_issue">Aplikácia %1$s má problémy so službami Google Play. Skúste to znova.</string>
+    <string name="common_google_play_services_unsupported_text">Aplikáciu %1$s nebude možné spustiť bez služieb Google Play, ktoré vaše zariadenie nepodporuje.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Aktualizovať</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">Aplikáciu %1$s bude možné spustiť až po aktualizácii služieb Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Aktualizácia služieb Google Play</string>
+    <string name="common_google_play_services_updating_text">Na spustenie aplikácie %1$s sa vyžadujú služby Google Play, ktoré sa momentálne aktualizujú.</string>
+    <string name="common_google_play_services_wear_update_text">Vyžaduje sa nová verzia služieb Google Play. Aktualizujú sa automaticky v najbližšom čase.</string>
+    <string name="common_open_on_phone">Otvoriť v telefóne</string>
+    <string name="common_signin_button_text">Prihlásiť sa</string>
+    <string name="common_signin_button_text_long">Prihlásiť sa do účtu Google</string>
+    <string name="confirm_window_close_message">Zavrieť toto okno?</string>
+    <string name="control_key_dialog_control_disabled_text">Ovládacie klávesy nie sú nastavené.</string>
+    <string name="control_key_dialog_control_text">CTRLKEY medzera : Ctrl-@ (NUL)\nCTRLKEY A..Z : Ctrl-A..Z\nCTRLKEY 5 : Ctrl-]\nCTRLKEY 6 : Ctrl-^\nCTRLKEY 7 : Ctrl-_\nCTRLKEY 9 : F11\nCTRLKEY 0 : F12</string>
+    <string name="control_key_dialog_fn_disabled_text">Funkčné klávesy nie sú nastavené.</string>
+    <string name="control_key_dialog_fn_text">FNKEY 1..9 : F1-F9\nFNKEY 0 : F10\nFNKEY W : hore\nFNKEY A : vľavo\nFNKEY S : dole\nFNKEY D : vpravo\nFNKEY P : stránka hore\nFNKEY N : stránka dole\nFNKEY T : tabulátor\nFNKEY L : | (zvislá čiara)\nFNKEY U : _ (podčiarkovník)\nFNKEY E : Ctrl-[ (ESC)\nFNKEY X : vymazať\nFNKEY I : vložiť\nFNKEY H : domov\nFNKEY F : koniec\nFNKEY . : Ctrl-\\\n</string>
+    <string name="control_key_dialog_title">Ovládacie a funkčné klávesy</string>
+    <string msgid="6083905920877235314" name="copy">"Kopírovať"</string>
+    <string name="copy_all">Kopírovať všetko</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Neplatný vstup"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Vyskakovacie okno"</string>
+    <string msgid="4057925834421392736" name="dialog">"Dialógové okno"</string>
+    <string name="dialog_title_actionbar_preference">Správanie panela akcií</string>
+    <string name="dialog_title_backaction_preference">Správanie tlačidla Späť</string>
+    <string name="dialog_title_color_preference">Farba textu</string>
+    <string name="dialog_title_controlkey_preference">Ovládací kláves</string>
+    <string name="dialog_title_cursorblink_preference">Blikanie kurzoru</string>
+    <string name="dialog_title_cursorstyle_preference">Štýl kurzoru</string>
+    <string name="dialog_title_fnkey_preference">Funkčný kláves</string>
+    <string name="dialog_title_fontsize_preference">Veľkosť fontu</string>
+    <string name="dialog_title_ime_preference">Metóda vstupu</string>
+    <string name="dialog_title_initialcommand_preference">Počiatočný príkaz</string>
+    <string name="dialog_title_orientation_preference">Správanie orientácie obrazovky</string>
+    <string name="dialog_title_shell_preference">Konzola</string>
+    <string name="dialog_title_statusbar_preference">Stavový riadok</string>
+    <string name="dialog_title_termtype_preference">Typ terminálu</string>
+    <string name="disable_wakelock">Povoliť uspanie</string>
+    <string name="disable_wifilock">Povoliť odpojenie Wi-Fi</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Rozbaľovacia ponuka"</string>
+    <string name="edit_text">Upraviť text</string>
+    <string name="email_transcript_chooser_title">Poslať prepis prostredníctvom</string>
+    <string name="email_transcript_no_email_activity_found">Nie je možné vybrať e-mailovú aktivitu na poslanie prepisu.</string>
+    <string name="email_transcript_subject">Prepis z Emulátora terminálu pre Android</string>
+    <string name="enable_wakelock">Zabrániť uspaniu</string>
+    <string name="enable_wifilock">Zabrániť odpojeniu Wi-Fi</string>
+    <string name="error_activity_not_found_for_apk_installing">Nemožno nájsť aplikáciu na inštaláciu apk</string>
+    <string name="error_icon_content_description">Chyba</string>
+    <string name="exception_notification_service_disabled">Služba upozornení nie je spustená, znova povoľte povolenie na upozornenia</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Rozšírené"</string>
+    <string msgid="5974471714631304645" name="expanded">"Rozbalené"</string>
+    <string name="exposed_dropdown_menu_content_description">Zobraziť rozbaľovaciu ponuku</string>
+    <string name="fsnavigator_change_theme">Zmeniť tému</string>
+    <string name="fsnavigator_no_external_storage">Nedostupný externý ukladací priestor</string>
+    <string name="fsnavigator_optional_enter_path">Alebo zadajte umiestnenie sem.</string>
+    <string name="fsnavigator_title">VYBERTE SÚBOR</string>
+    <string name="help">Pomocník</string>
+    <string name="icon_content_description">Ikona dialógového okna</string>
+    <string msgid="6827826412747255547" name="in_progress">"Prebieha"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Čiastočne začiarknuté"</string>
+    <string name="item_view_role_description">Tabulátor</string>
+    <string name="keyboard_preferences">Klávesnica</string>
+    <string name="material_clock_toggle_content_description">Vyberte AM alebo PM</string>
+    <string name="material_hour_24h_suffix">%1$s hodín</string>
+    <string name="material_hour_selection">Vybrať hodinu</string>
+    <string name="material_hour_suffix">%1$s</string>
+    <string name="material_minute_selection">Vyberte minúty</string>
+    <string name="material_minute_suffix">%1$s min</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">Ak chcete zadať čas, prepnite na režim hodín.</string>
+    <string name="material_timepicker_hour">Hodina</string>
+    <string name="material_timepicker_minute">Minúta</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">Vyberte čas</string>
+    <string name="material_timepicker_text_input_mode_description">Ak chcete zadať čas, prepnite na textový režim vstupu</string>
+    <string name="mtrl_badge_numberless_content_description">Nové upozornenie</string>
+    <string name="mtrl_chip_close_icon_content_description">Odstrániť položku %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Viac než %1$d nových upozornení</string>
+    <string name="mtrl_picker_a11y_next_month">Ďalší mesiac</string>
+    <string name="mtrl_picker_a11y_prev_month">Predchádzajúci mesiac</string>
+    <string name="mtrl_picker_announce_current_selection">Aktuálny výber: %1$s</string>
+    <string name="mtrl_picker_cancel">Zrušiť</string>
+    <string name="mtrl_picker_confirm">OK</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Vyberte dátum</string>
+    <string name="mtrl_picker_date_header_unselected">Vybraný dátum</string>
+    <string name="mtrl_picker_day_of_week_column_header">Stĺpec dní: %1$s</string>
+    <string name="mtrl_picker_invalid_format">Neplatný formát.</string>
+    <string name="mtrl_picker_invalid_format_example">Príklad: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Použite: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Neplatný rozsah.</string>
+    <string name="mtrl_picker_navigate_to_year_description">Prejsť na rok %1$s</string>
+    <string name="mtrl_picker_out_of_range">Mimo rozsahu: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Dátum začatia – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – dátum ukončenia</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">Vyberte rozsah</string>
+    <string name="mtrl_picker_range_header_unselected">Dátum začatia – dátum ukončenia</string>
+    <string name="mtrl_picker_save">Uložiť</string>
+    <string name="mtrl_picker_text_input_date_hint">Dátum</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Dátum ukončenia</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Dátum začatia</string>
+    <string name="mtrl_picker_text_input_day_abbr">d</string>
+    <string name="mtrl_picker_text_input_month_abbr">m</string>
+    <string name="mtrl_picker_text_input_year_abbr">r</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Prepnúť na kalendárový režim vstupu</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Klepnutím prepnete na výber dňa</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Prepnúť na textový režim vstupu</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Klepnutím prepnete na výber roka</string>
+    <string name="mtrl_timepicker_cancel">Zrušiť</string>
+    <string name="mtrl_timepicker_confirm">OK</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigačná ponuka"</string>
+    <string name="new_window">Nové okno</string>
+    <string name="next_window">Predchádzajúce okno</string>
+    <string name="no_read_phone_state_permissin">Žiadne povolenie na čítanie informácií o zariadení</string>
+    <string name="no_write_settings_permissin">Žiadne povolenie na úpravu systémových nastavení</string>
+    <string msgid="6610465462668679431" name="not_selected">"Nevybrané"</string>
+    <string msgid="6573031135582639649" name="not_set">"Nenastavené"</string>
+    <string msgid="875452955155264703" name="off">"Vypnuté"</string>
+    <string name="ok">Samozrejme</string>
+    <string msgid="8655164131929253426" name="on">"Zapnuté"</string>
+    <string name="password_toggle_content_description">Zobraziť heslo</string>
+    <string name="paste">Prilepiť</string>
+    <string name="perm_append_to_path">Pridať príkazy do Emulátora terminálu Android</string>
+    <string name="perm_prepend_to_path">Prepísať príkazy v Emulátori terminálu Android</string>
+    <string name="perm_run_script">Spustiť ľubovoľné príkazy</string>
+    <string name="permdesc_append_to_path">Umožňuje aplikáciám poskytnúť ďalšie príkazy (pridať priečinky do PATH) v Emulátori terminálu pre Android.</string>
+    <string name="permdesc_prepend_to_path">Umožňuje aplikáciám prepísať existujúce príkazy so svojimi vlastnými verziami (podradiť priečinky v PATH) v Emulátori terminálu pre Android.</string>
+    <string name="permdesc_run_script">Umožniť aplikáciám otvoriť nové okno v Emulátori terminálu pre Android a spustiť príkazy v tomto okne so všetkými povoleniami terminálu a to vrátane prístupu na Internet a ku karte SD.</string>
+    <string msgid="6685851473431805375" name="preference_copied">"Položka <ns1:g id="SUMMARY">%1$s</ns1:g> bola skopírovaná do schránky."</string>
+    <string name="preferences">Nastavenia</string>
+    <string name="prev_window">Dalšie okno</string>
+    <string name="process_exit_message">Terminálová relácia bola ukončená</string>
+    <string msgid="5941395253238309765" name="range_end">"Koniec rozsahu"</string>
+    <string msgid="7097486360902471446" name="range_start">"Začiatok rozsahu"</string>
+    <string name="reset">Obnoviť terminál</string>
+    <string name="reset_toast_notification">Stav terminálu pre toto okno bol obnovený.</string>
+    <string name="screen_preferences">Obrazovka</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Hľadať"</string>
+    <string name="select_text">Vybrať text</string>
+    <string msgid="6043586758067023" name="selected">"Vybrané"</string>
+    <string name="send_control_key">Poslať ovládací kláves</string>
+    <string name="send_email">Poslať e-mailom</string>
+    <string name="send_fn_key">Poslať funkčný kláves</string>
+    <string name="service_notify_text">Terminálová relácia je spustená</string>
+    <string name="shell_preferences">Konzola</string>
+    <string name="special_keys">Špeciálne klávesy</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="summary_actionbar_preference">Vybrať správanie panela akcií (Android 3.0 a vyšší).</string>
+    <string name="summary_allow_prepend_path_preference">Umožniť ostatným aplikáciám prepísať existujúce príkazy (pridať na začiatok PATH).</string>
+    <string name="summary_backaction_preference">Vybrať správanie tlačidla Späť.</string>
+    <string name="summary_close_window_on_process_exit_preference">Po ukončení konzoly zavrieť okno.</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="summary_color_preference">Vybrať farbu textu.</string>
+    <string name="summary_controlkey_preference">Vybrať ovládací kláves.</string>
+    <string name="summary_cursorblink_preference">Vybrať blikanie kurzoru.</string>
+    <string name="summary_cursorstyle_preference">Vybrať štýl kurzoru.</string>
+    <string name="summary_do_path_extensions_preference">Umožniť ostatným aplikáciám poskytnúť ďalšie príkazy (pridať do PATH).</string>
+    <string name="summary_fnkey_preference">Vybrať funkčný kláves.</string>
+    <string name="summary_fontsize_preference">Vybrať výšku znaku v bodoch.</string>
+    <string name="summary_home_path_preference">Umiestnenie zapisovateľného priečinka, ktorý bude použitý ako domovský.</string>
+    <string name="summary_ime_preference">Vybrať metódu zadávania pre softvérovú klávesnicu.</string>
+    <string name="summary_initialcommand_preference">Poslať do konzoly po spustení.</string>
+    <string name="summary_mouse_tracking_preference">Posielať udalosti kliknutia a posunu ako sekvencie ESCAPE do terminálu.</string>
+    <string name="summary_orientation_preference">Vybrať správanie orientácie obrazovky.</string>
+    <string name="summary_shell_preference">Vybrať príkaz pre konzolu.</string>
+    <string name="summary_statusbar_preference">Zobraziť/skryť stavový riadok.</string>
+    <string name="summary_termtype_preference">Typ terminálu pre nahlásenie do konzoly.</string>
+    <string name="summary_utf8_by_default_preference">Režim UTF-8 je predvolene povolený.</string>
+    <string name="summary_verify_path_preference">Odstrániť neprístupné priečinky z PATH.</string>
+    <string msgid="1672349317127674378" name="tab">"Karta"</string>
+    <string name="text_accessibility_service_description">Vyžaduje sa na automatizáciu operácií skriptov (kliknutie, dlhé stlačenie, potiahnutie atď.), ak je zakázané, možno spustiť iba skripty, ktoré nezahŕňajú automatické operácie.</string>
+    <string name="text_already_stop_n_scripts">%d spustených skriptov bolo zastavených</string>
+    <string name="text_console">Konzoly</string>
+    <string name="text_drawer_close">Zatvorte rozbaľovaciu ponuku</string>
+    <string name="text_drawer_open">Otvorte rozbaľovaciu ponuku</string>
+    <string name="text_error">Chyba:</string>
+    <string name="text_file_not_exists">Súbor neexistuje</string>
+    <string name="text_no_file_rw_permission">Žiadne povolenia na čítanie a zápis súborov</string>
+    <string name="text_no_floating_window_permission">Žiadne povolenie plávajúceho okna</string>
+    <string name="text_no_running_script">Žiadny spustený skript</string>
+    <string name="text_path_is_empty">Cesta je prázdna</string>
+    <string name="text_preferences">Text</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Tento skript vyžaduje na spustenie verziu Auto.js %d alebo vyššiu</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Tento skript vyžaduje na spustenie túto verziu systému Android:</string>
+    <string name="text_should_enable_gesture_observing">Monitorovanie gest nie je povolené, povoľte ho v nastaveniach softvéru</string>
+    <string name="text_should_enable_key_observing">Monitorovanie kľúčov nie je povolené, povoľte ho v nastaveniach softvéru</string>
+    <string name="text_start_running">Spustiť prevádzku</string>
+    <string name="title_actionbar_preference">Panel akcií</string>
+    <string name="title_allow_prepend_path_preference">Povoliť podradenie PATH</string>
+    <string name="title_backaction_preference">Správanie tlačidla Späť</string>
+    <string name="title_close_window_on_process_exit_preference">Zavrieť okno po ukončení</string>
+    <string name="title_color_preference">Farby</string>
+    <string name="title_controlkey_preference">Ovládací kláves</string>
+    <string name="title_cursorblink_preference">Blikanie kurzoru</string>
+    <string name="title_cursorstyle_preference">Štýl kurzoru</string>
+    <string name="title_do_path_extensions_preference">Povoliť rozšírenia PATH</string>
+    <string name="title_fnkey_preference">Funkčný kláves</string>
+    <string name="title_fontsize_preference">Veľkosť písma</string>
+    <string name="title_home_path_preference">Domovský priečinok</string>
+    <string name="title_ime_preference">Metóda vstupu</string>
+    <string name="title_initialcommand_preference">Počiatočný príkaz</string>
+    <string name="title_mouse_tracking_preference">Posielať udalosti myši</string>
+    <string name="title_orientation_preference">Orientácia obrazovky</string>
+    <string name="title_shell_preference">Príkazový riadok</string>
+    <string name="title_statusbar_preference">Stavový riadok</string>
+    <string name="title_termtype_preference">Typ terminálu</string>
+    <string name="title_use_keyboard_shortcuts">Používať klávesové skratky</string>
+    <string name="title_utf8_by_default_preference">Predvolene do UTF-8</string>
+    <string name="title_verify_path_preference">Overiť položky v PATH</string>
+    <string name="toggle_soft_keyboard">Prepnúť softvérovú klávesnicu</string>
+    <string name="use_keyboard_shortcuts_summary_off">Klávesové skratky sú zakázané.</string>
+    <string name="use_keyboard_shortcuts_summary_on">Ctrl-Tab: prepnúť okno, Ctrl-Shift-N: nové okno, Ctrl-Shift-V: prilepiť.</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"Vypnuté"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"Zapnuté"</string>
+    <string name="window_list">Okná</string>
+    <string name="window_title">Okno %1$d</string>
+</resources>

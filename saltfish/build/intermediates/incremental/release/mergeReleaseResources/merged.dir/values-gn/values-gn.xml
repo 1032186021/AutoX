@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Upevakuére</item>  
+    <item>Ehechauka peteĩ jey peteĩ árape</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Ijykegua</item>  
+    <item>Marandu</item>  
+    <item>Contacto social rehegua</item>  
+    <item>Dibujos animados rehegua</item>  
+    <item>Ñembosarái</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Kuatiakuéra tetãmegua rehegua</item>  
+    <item>Kuatiahaipyre internet rupive</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Vore js editable rehegua</item>  
+    <item>Binario ineditable rehegua</item> 
+  </string-array>
+    <string name="cancel">Heja</string>
+    <string name="error_activity_not_found_for_apk_installing">Ndikatúi ojuhu app oinstala haguã apk</string>
+    <string name="exception_notification_service_disabled">Servicio de notificación ndojejapói, emboguata jey permiso momarandu rehegua</string>
+    <string name="no_read_phone_state_permissin">Ndaipóri permiso ojelee hag̃ua dispositivo marandu</string>
+    <string name="no_write_settings_permissin">Ndaipóri permiso oñemoambue hag̃ua sistema ñemboheko</string>
+    <string name="ok">Upeichaite</string>
+    <string name="text_accessibility_service_description">Oñeikotevẽ ojejapo hag̃ua ijeheguiete umi tembiaporã script rehegua (emboguejy, ojepyso puku, ojepyso hag̃ua, ha mbaꞌe), oñemboykéramo, umi script ndoikéiva tembiaporã ijeheguiete añoite ikatu ojejapo.</string>
+    <string name="text_already_stop_n_scripts">%d oñemboguatáva umi script ojejoko</string>
+    <string name="text_console">Consola rehegua</string>
+    <string name="text_drawer_close">Oñemboty pe menú desplegable</string>
+    <string name="text_drawer_open">Eipe’a pe menú desplegable</string>
+    <string name="text_error">Jejavy:</string>
+    <string name="text_file_not_exists">Archivo ndoikói</string>
+    <string name="text_no_file_rw_permission">Ndaipóri vore omoñe’ẽ ha jehai permiso</string>
+    <string name="text_no_floating_window_permission">Ndaipóri permiso ventána otyryrýva</string>
+    <string name="text_no_running_script">Ndaipóri script oñemboguatáva</string>
+    <string name="text_path_is_empty">Tape oî nandi</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Ko script oikotevẽ Auto.js versión papapy %d térã ijyvatevéva oñemboguata hag̃ua</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Ko script oikotevẽ ko versión Android oñemboguata hag̃ua:</string>
+    <string name="text_should_enable_gesture_observing">Noñembohapéi gesto jesareko, emboguata software ñembohekorãme</string>
+    <string name="text_should_enable_key_observing">Noñembohapéi clave jesareko, emboguata software ñembohekorãme</string>
+    <string name="text_start_running">Oñepyrũ omba’apo</string>
+</resources>

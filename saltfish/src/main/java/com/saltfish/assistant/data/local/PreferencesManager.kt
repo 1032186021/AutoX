@@ -68,6 +68,22 @@ class PreferencesManager(context: Context) {
         get() = prefs.getString("user_info_json", null)
         set(value) = prefs.edit { putString("user_info_json", value) }
 
+    var deviceJson: String?
+        get() = prefs.getString("device_json", null)
+        set(value) = prefs.edit { putString("device_json", value) }
+
+    var accountJson: String?
+        get() = prefs.getString("account_json", null)
+        set(value) = prefs.edit { putString("account_json", value) }
+
+    var cloudConfigJson: String?
+        get() = prefs.getString("cloud_config_json", null)
+        set(value) = prefs.edit { putString("cloud_config_json", value) }
+
+    /** 获取 deviceId 为 Long 类型，用于实体赋值 */
+    val deviceIdLong: Long?
+        get() = prefs.getString("device_id", null)?.toLongOrNull()
+
     fun isLoggedIn(): Boolean = token != null
 
     fun logout() {
@@ -76,6 +92,9 @@ class PreferencesManager(context: Context) {
             remove("refresh_token")
             remove("nick_name")
             remove("user_info_json")
+            remove("device_json")
+            remove("account_json")
+            remove("cloud_config_json")
         }
     }
 

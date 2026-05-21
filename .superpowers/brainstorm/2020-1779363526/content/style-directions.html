@@ -1,0 +1,188 @@
+<h2>选择视觉方向</h2>
+<p class="subtitle">咸鱼助手是技术型自动化工具，用户偏硬核。当前 Material 默认风格太"普通"，需要辨识度</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>暗黑工业风</h3>
+      <p>深色背景 + 高对比 accent 色 + 等宽字体 + 微妙噪点纹理。适合硬核工具气质，低调专业</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>轻量毛玻璃</h3>
+      <p>半透明卡片 + 柔和渐变背景 + 圆角 + 细微阴影层次。现代、清爽但不失功能性</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>赛博科技风</h3>
+      <p>霓虹 accent + 暗色终端感 + 几何装饰线 + 发光效果。极客感最强，辨识度极高</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:24px">
+  <h3>方向预览</h3>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+
+  <!-- Direction A: Dark Industrial -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)" style="cursor:pointer">
+    <div class="card-image" style="min-height:320px;background:#0D0D0D;padding:12px;overflow:hidden;position:relative">
+      <!-- Noise texture hint -->
+      <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%, rgba(255,140,0,0.08), transparent 70%)"></div>
+      <!-- Status bar -->
+      <div style="display:flex;justify-content:space-between;padding:4px 8px;font-family:monospace;font-size:9px;color:#666">9:41<div>●●●</div></div>
+      <!-- Top bar -->
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:8px;border-bottom:1px solid #1a1a1a">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="width:28px;height:28px;background:#FF8C00;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:14px">🐟</div>
+          <div>
+            <div style="font-size:12px;font-weight:700;color:#E0E0E0;font-family:monospace">saltfish</div>
+            <div style="font-size:8px;color:#FF8C00;font-family:monospace">v2.4.1</div>
+          </div>
+        </div>
+        <div style="width:24px;height:24px;border:1px solid #333;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#666">☰</div>
+      </div>
+      <!-- Cards -->
+      <div style="padding:10px">
+        <div style="background:#141414;border:1px solid #1E1E1E;border-radius:6px;padding:10px;margin-bottom:8px">
+          <div style="display:flex;gap:16px;font-family:monospace">
+            <div style="text-align:center"><div style="font-size:9px;color:#555">SERVER</div><div style="font-size:14px;color:#4CAF50;font-weight:700">ONLINE</div></div>
+            <div style="text-align:center"><div style="font-size:9px;color:#555">TASK</div><div style="font-size:14px;color:#AAA;font-weight:700">IDLE</div></div>
+            <div style="text-align:center"><div style="font-size:9px;color:#555">ADAPTERS</div><div style="font-size:14px;color:#FF8C00;font-weight:700">6</div></div>
+          </div>
+          <div style="height:2px;background:#1E1E1E;border-radius:1px;margin-top:8px"><div style="width:100%;height:100%;background:#4CAF50;border-radius:1px"></div></div>
+        </div>
+        <div style="background:#141414;border:1px solid #1E1E1E;border-radius:6px;padding:10px;margin-bottom:8px">
+          <div style="font-size:8px;color:#555;font-family:monospace;margin-bottom:4px">PERMISSIONS</div>
+          <div style="font-size:10px;color:#CCC;font-family:monospace;display:flex;justify-content:space-between"><span>accs</span><span style="color:#4CAF50">✓</span></div>
+          <div style="font-size:10px;color:#CCC;font-family:monospace;display:flex;justify-content:space-between"><span>float</span><span style="color:#F44336;font-size:8px">→ open</span></div>
+        </div>
+        <div style="background:#141414;border:1px solid #FF8C00;border-radius:4px;padding:8px;text-align:center;font-family:monospace;font-size:11px;font-weight:700;color:#FF8C00;letter-spacing:1px">▶ CONNECT</div>
+      </div>
+      <!-- Bottom nav -->
+      <div style="display:flex;justify-content:space-around;padding:8px;border-top:1px solid #1a1a1a;position:absolute;bottom:0;left:0;right:0;background:#0D0D0D">
+        <div style="text-align:center"><div style="font-size:12px;color:#FF8C00">◇</div><div style="font-size:7px;color:#FF8C00;font-family:monospace">HOME</div></div>
+        <div style="text-align:center"><div style="font-size:12px;color:#555">▶</div><div style="font-size:7px;color:#555;font-family:monospace">AUTO</div></div>
+        <div style="text-align:center"><div style="font-size:12px;color:#555">≡</div><div style="font-size:7px;color:#555;font-family:monospace">TASKS</div></div>
+        <div style="text-align:center"><div style="font-size:12px;color:#555">◎</div><div style="font-size:7px;color:#555;font-family:monospace">USER</div></div>
+      </div>
+      <div style="position:absolute;bottom:50px;right:8px;font-size:7px;color:#333;font-family:monospace">A</div>
+    </div>
+    <div class="card-body">
+      <h3>A · 暗黑工业风</h3>
+      <p>深色底 + 高对比 accent + 等宽字体 + 噪点纹理。硬核工具气质</p>
+    </div>
+  </div>
+
+  <!-- Direction B: Light Glassmorphism -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)" style="cursor:pointer">
+    <div class="card-image" style="min-height:320px;background:linear-gradient(135deg, #667eea15, #764ba215);padding:12px;overflow:hidden;position:relative">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(240,245,255,0.9))"></div>
+      <!-- Status bar -->
+      <div style="position:relative;display:flex;justify-content:space-between;padding:4px 8px;font-size:9px;color:#999">9:41<div>●●●</div></div>
+      <!-- Top bar -->
+      <div style="position:relative;display:flex;align-items:center;justify-content:space-between;padding:8px">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="width:30px;height:30px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px">🐟</div>
+          <div><div style="font-size:13px;font-weight:600;color:#333">咸鱼助手</div><div style="font-size:8px;color:#888">智能自动化平台</div></div>
+        </div>
+        <div style="width:26px;height:26px;background:rgba(255,255,255,0.8);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#666;backdrop-filter:blur(10px)">⬡</div>
+      </div>
+      <!-- Cards -->
+      <div style="position:relative;padding:10px">
+        <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(20px);border-radius:14px;padding:12px;margin-bottom:8px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+          <div style="display:flex;gap:12px">
+            <div style="flex:1;text-align:center"><div style="font-size:8px;color:#999">服务器</div><div style="font-size:15px;font-weight:700;color:#667eea">已连接</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:8px;color:#999">任务</div><div style="font-size:15px;font-weight:600;color:#555">空闲</div></div>
+            <div style="flex:1;text-align:center"><div style="font-size:8px;color:#999">适配器</div><div style="font-size:15px;font-weight:700;color:#764ba2">6 个</div></div>
+          </div>
+          <div style="height:3px;background:#eee;border-radius:2px;margin-top:8px"><div style="width:100%;height:100%;background:linear-gradient(90deg,#667eea,#764ba2);border-radius:2px"></div></div>
+        </div>
+        <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(20px);border-radius:14px;padding:10px;margin-bottom:8px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+          <div style="font-size:9px;color:#999;margin-bottom:4px;font-weight:500">系统权限</div>
+          <div style="font-size:10px;color:#444;display:flex;justify-content:space-between"><span>无障碍服务</span><span style="color:#4CAF50;font-weight:600">已开启</span></div>
+          <div style="font-size:10px;color:#444;display:flex;justify-content:space-between;margin-top:4px"><span>悬浮窗权限</span><span style="color:#F44336;font-weight:500">去开启 →</span></div>
+        </div>
+        <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:12px;padding:10px;text-align:center;color:#fff;font-size:12px;font-weight:600;box-shadow:0 4px 16px rgba(102,126,234,0.3)">连接服务器</div>
+      </div>
+      <!-- Bottom nav -->
+      <div style="position:relative;display:flex;justify-content:space-around;padding:8px;background:rgba(255,255,255,0.8);backdrop-filter:blur(20px);border-radius:16px;margin-top:4px;box-shadow:0 -1px 8px rgba(0,0,0,0.04)">
+        <div style="text-align:center"><div style="font-size:12px">🏠</div><div style="font-size:7px;color:#667eea;font-weight:600">首页</div></div>
+        <div style="text-align:center"><div style="font-size:12px">▶️</div><div style="font-size:7px;color:#aaa">自动化</div></div>
+        <div style="text-align:center"><div style="font-size:12px">📋</div><div style="font-size:7px;color:#aaa">任务</div></div>
+        <div style="text-align:center"><div style="font-size:12px">👤</div><div style="font-size:7px;color:#aaa">我的</div></div>
+      </div>
+      <div style="position:absolute;bottom:50px;right:8px;font-size:7px;color:#bbb">B</div>
+    </div>
+    <div class="card-body">
+      <h3>B · 轻量毛玻璃</h3>
+      <p>半透明卡片 + 柔和渐变 + 微阴影。现代清爽，视觉舒适</p>
+    </div>
+  </div>
+
+  <!-- Direction C: Cyberpunk -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)" style="cursor:pointer">
+    <div class="card-image" style="min-height:320px;background:#0A0E1A;padding:12px;overflow:hidden;position:relative">
+      <div style="position:absolute;inset:0;background:
+        radial-gradient(circle at 50% 30%, rgba(0,255,255,0.06), transparent 60%),
+        linear-gradient(180deg, #0A0E1A, #0D1525)
+      "></div>
+      <!-- Scanlines hint -->
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px)"></div>
+      <!-- Top bar -->
+      <div style="position:relative;display:flex;align-items:center;justify-content:space-between;padding:8px;border-bottom:1px solid rgba(0,255,255,0.1)">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="width:28px;height:28px;background:#0A0E1A;border:1.5px solid #00FFAA;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:14px">🐟</div>
+          <div>
+            <div style="font-size:12px;font-weight:700;color:#00FFAA;font-family:monospace;letter-spacing:1px">SALTFISH</div>
+            <div style="font-size:7px;color:#0FF;font-family:monospace;opacity:0.6">NODE_v2.4.1</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:2px;font-size:7px;color:#0FF;font-family:monospace">
+          <span style="width:4px;height:4px;background:#00FFAA;border-radius:50%;display:inline-block;animation:pulse"></span>
+          LIVE
+        </div>
+      </div>
+      <!-- Cards -->
+      <div style="position:relative;padding:10px">
+        <div style="background:rgba(0,255,170,0.05);border:1px solid rgba(0,255,170,0.15);border-radius:2px;padding:10px;margin-bottom:8px;position:relative">
+          <div style="position:absolute;top:0;left:0;width:4px;height:100%;background:#00FFAA"></div>
+          <div style="display:flex;gap:12px;margin-left:8px">
+            <div style="text-align:center"><div style="font-size:7px;color:#0FF;font-family:monospace;opacity:0.6">SERVER</div><div style="font-size:13px;color:#00FFAA;font-family:monospace;font-weight:700">ONLINE</div></div>
+            <div style="text-align:center"><div style="font-size:7px;color:#0FF;font-family:monospace;opacity:0.6">TASK</div><div style="font-size:13px;color:#AAA;font-family:monospace">IDLE</div></div>
+            <div style="text-align:center"><div style="font-size:7px;color:#0FF;font-family:monospace;opacity:0.6">ADAPTERS</div><div style="font-size:13px;color:#FF00FF;font-family:monospace;font-weight:700">6</div></div>
+          </div>
+          <div style="height:1px;background:rgba(255,255,255,0.05);margin-top:6px;margin-left:8px"><div style="width:100%;height:100%;background:#00FFAA;box-shadow:0 0 4px #00FFAA"></div></div>
+        </div>
+        <div style="background:rgba(0,0,0,0.3);border:1px solid rgba(255,255,255,0.06);border-radius:2px;padding:8px;margin-bottom:8px">
+          <div style="font-size:7px;color:#0FF;font-family:monospace;opacity:0.6;margin-bottom:4px">SYS.PERMISSIONS</div>
+          <div style="font-size:9px;color:#CCC;font-family:monospace;display:flex;justify-content:space-between"><span>accessibility</span><span style="color:#00FFAA">[GRANTED]</span></div>
+          <div style="font-size:9px;color:#CCC;font-family:monospace;display:flex;justify-content:space-between"><span>float_window</span><span style="color:#FF3366">[DENIED]</span></div>
+        </div>
+        <div style="background:rgba(0,255,170,0.1);border:1px solid #00FFAA;border-radius:2px;padding:8px;text-align:center;font-family:monospace;font-size:10px;font-weight:700;color:#00FFAA;letter-spacing:1px;box-shadow:0 0 10px rgba(0,255,170,0.15)">
+          ⚡ CONNECT
+        </div>
+      </div>
+      <!-- Bottom nav -->
+      <div style="position:relative;display:flex;justify-content:space-around;padding:8px;border-top:1px solid rgba(0,255,255,0.1)">
+        <div style="text-align:center"><div style="font-size:11px;color:#00FFAA">◈</div><div style="font-size:6px;color:#00FFAA;font-family:monospace">HOME</div></div>
+        <div style="text-align:center"><div style="font-size:11px;color:#444">▶</div><div style="font-size:6px;color:#555;font-family:monospace">AUTO</div></div>
+        <div style="text-align:center"><div style="font-size:11px;color:#444">▣</div><div style="font-size:6px;color:#555;font-family:monospace">TASKS</div></div>
+        <div style="text-align:center"><div style="font-size:11px;color:#444">◎</div><div style="font-size:6px;color:#555;font-family:monospace">USER</div></div>
+      </div>
+      <div style="position:absolute;bottom:50px;right:8px;font-size:7px;color:#0FF;font-family:monospace">C</div>
+    </div>
+    <div class="card-body">
+      <h3>C · 赛博科技风</h3>
+      <p>霓虹 accent + 扫描线 + 发光效果。极客感最强，辨识度极高</p>
+    </div>
+  </div>
+
+</div>

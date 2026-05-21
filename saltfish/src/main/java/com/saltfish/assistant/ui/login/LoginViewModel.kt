@@ -5,6 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.JsonObject
 import com.saltfish.assistant.SaltfishApp
+import com.saltfish.assistant.data.remote.ApiResult
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -57,18 +58,18 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
 
     fun loadCaptcha() {
         viewModelScope.launch {
-            try {
-                val response = app.apiClient.api.getCaptcha()
-                val data = response.getAsJsonObject("data")
-                val id = data?.get("captchaId")?.asString
-                val base64 = data?.get("data")?.asString
-                _uiState.value = _uiState.value.copy(
-                    captchaId = id,
-                    captchaBase64 = base64,
-                    showCaptcha = true
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(errorMessage = "获取验证码失败")
+            when (val result = app.apiClient.safeApiCall { app.apiClient.auth.getCaptcha() }) {
+                is ApiResult.Success -> {
+                    val captcha = result.data
+                    _uiState.value = _uiState.value.copy(
+                        captchaId = captcha.captchaId,
+                        captchaBase64 = captcha.data,
+                        showCaptcha = true
+                    )
+                }
+                is ApiResult.Error -> {
+                    _uiState.value = _uiState.value.copy(errorMessage = "获取验证码失败")
+                }
             }
         }
     }
@@ -90,33 +91,28 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
 
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, errorMessage = null)
-            try {
-                val body = JsonObject().apply {
-                    addProperty("username", state.username)
-                    addProperty("password", state.password)
-                    if (state.showCaptcha) {
-                        addProperty("verifyCode", state.captcha)
-                        addProperty("captchaId", state.captchaId)
-                    }
+
+            val body = JsonObject().apply {
+                addProperty("username", state.username)
+                addProperty("password", state.password)
+                if (state.showCaptcha) {
+                    addProperty("verifyCode", state.captcha)
+                    addProperty("captchaId", state.captchaId)
                 }
+            }
 
-                val response = if (state.showCaptcha) {
-                    app.apiClient.api.loginWithCaptcha(body)
-                } else {
-                    app.apiClient.api.login(body)
-                }
+            val result = if (state.showCaptcha) {
+                app.apiClient.safeApiCall { app.apiClient.auth.loginWithCaptcha(body) }
+            } else {
+                app.apiClient.safeApiCall { app.apiClient.auth.login(body) }
+            }
 
-                val code = response.get("code")?.asInt ?: -1
-                if (code == 1000) {
-                    val data = response.getAsJsonObject("data")
-                    val token = data?.get("token")?.asString
-                    val refreshToken = data?.get("refreshToken")?.asString
-                    val expire = data?.get("expire")?.asLong ?: 0L
-                    val refreshExpire = data?.get("refreshExpire")?.asLong ?: 0L
-
+            when (result) {
+                is ApiResult.Success -> {
+                    val auth = result.data
                     val prefs = app.preferencesManager
-                    prefs.token = token
-                    prefs.refreshToken = refreshToken
+                    prefs.token = auth.token
+                    prefs.refreshToken = auth.refreshToken
 
                     if (state.rememberAccount) {
                         prefs.username = state.username
@@ -130,33 +126,28 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
 
                     fetchUserInfo()
                     _uiState.value = _uiState.value.copy(isLoading = false, loginSuccess = true)
-                } else {
-                    val message = response.get("message")?.asString ?: "登录失败"
-                    _uiState.value = _uiState.value.copy(isLoading = false, errorMessage = message)
+                }
+                is ApiResult.Error -> {
+                    _uiState.value = _uiState.value.copy(
+                        isLoading = false,
+                        errorMessage = result.message
+                    )
                     if (state.showCaptcha) loadCaptcha()
                 }
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    errorMessage = e.message ?: "网络连接失败"
-                )
             }
         }
     }
 
     private suspend fun fetchUserInfo() {
-        try {
-            val response = app.apiClient.api.getUserInfo()
-            val code = response.get("code")?.asInt ?: -1
-            if (code == 1000) {
-                val data = response.getAsJsonObject("data")
-                data?.let {
-                    val prefs = app.preferencesManager
-                    prefs.nickName = it.get("nickName")?.asString
-                    prefs.userInfoJson = it.toString()
-                }
+        when (val result = app.apiClient.safeApiCall { app.apiClient.user.getUserInfo() }) {
+            is ApiResult.Success -> {
+                val data = result.data
+                val prefs = app.preferencesManager
+                prefs.nickName = data.get("nickName")?.asString
+                prefs.userInfoJson = data.toString()
             }
-        } catch (_: Exception) { }
+            is ApiResult.Error -> { /* 获取用户信息失败不影响登录 */ }
+        }
     }
 
     fun logout() {

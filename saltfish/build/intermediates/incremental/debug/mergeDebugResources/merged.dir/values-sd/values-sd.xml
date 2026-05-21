@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>ڊفالٽ</item>  
+    <item>ڏينهن ۾ هڪ ڀيرو ڏيکاريو</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>بي ترتيب</item>  
+    <item>خبر</item>  
+    <item>سماجي رابطو</item>  
+    <item>ڪارٽون</item>  
+    <item>راند</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>مقامي دستاويز</item>  
+    <item>آن لائن دستاويز</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>قابل تدوين js فائل</item>  
+    <item>ناقابل تدوين بائنري</item> 
+  </string-array>
+    <string name="cancel">منسوخ ڪريو</string>
+    <string name="error_activity_not_found_for_apk_installing">Apk انسٽال ڪرڻ لاءِ ايپ نه ملي سگهي</string>
+    <string name="exception_notification_service_disabled">نوٽيفڪيشن سروس نه هلي رهي آهي، مهرباني ڪري نوٽيفڪيشن جي اجازت کي ٻيهر فعال ڪريو</string>
+    <string name="no_read_phone_state_permissin">ڊوائيس جي معلومات پڙهڻ جي اجازت ناهي</string>
+    <string name="no_write_settings_permissin">سسٽم سيٽنگون تبديل ڪرڻ جي اجازت ناهي</string>
+    <string name="ok">پڪ</string>
+    <string name="text_accessibility_service_description">اسڪرپٽ جي عملن کي خودڪار ڪرڻ جي ضرورت آهي (ڪلڪ ڪريو، ڊگھو پريس، سوائپ، وغيره)، جيڪڏهن غير فعال هجي، صرف اسڪرپٽ جيڪي خودڪار آپريشن شامل نه ڪندا آهن عمل ڪري سگھجن ٿيون.</string>
+    <string name="text_already_stop_n_scripts">%d هلندڙ اسڪرپٽ بند ٿي ويا</string>
+    <string name="text_console">ڪنسول</string>
+    <string name="text_drawer_close">ڊراپ ڊائون مينيو بند ڪريو</string>
+    <string name="text_drawer_open">ڊراپ ڊائون مينيو کوليو</string>
+    <string name="text_error">غلطي:</string>
+    <string name="text_file_not_exists">فائل موجود ناهي</string>
+    <string name="text_no_file_rw_permission">ڪابه فائل پڙهڻ ۽ لکڻ جي اجازت ناهي</string>
+    <string name="text_no_floating_window_permission">فلوٽنگ ونڊو جي اجازت ناهي</string>
+    <string name="text_no_running_script">نه هلندڙ اسڪرپٽ</string>
+    <string name="text_path_is_empty">رستو خالي آهي</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">ھن اسڪرپٽ کي هلائڻ لاءِ Auto.js ورجن نمبر %d يا وڌيڪ جي ضرورت آھي</string>
+    <string name="text_requires_sdk_version_to_run_the_script">هن اسڪرپٽ کي هلائڻ لاءِ هن Android ورجن جي ضرورت آهي:</string>
+    <string name="text_should_enable_gesture_observing">اشارو مانيٽرنگ فعال نه آهي، مهرباني ڪري ان کي سافٽ ويئر سيٽنگون ۾ فعال ڪريو</string>
+    <string name="text_should_enable_key_observing">ڪي مانيٽرنگ فعال نه آهي، مهرباني ڪري ان کي سافٽ ويئر سيٽنگون ۾ فعال ڪريو</string>
+    <string name="text_start_running">آپريشن شروع ڪريو</string>
+</resources>

@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.saltfish.assistant.saltfish-mergeReleaseResources-86:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\zhiyo\\.gradle\\caches\\transforms-3\\e9198f1c4bfa4c075d3e1bd3bb71fc18\\transformed\\appcompat-1.5.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\zhiyo\\.gradle\\caches\\transforms-3\\d30756a481c634b236f79e9d612dd6bf\\transformed\\core-1.8.0\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

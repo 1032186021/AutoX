@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="control_keys_short_names">
+      <item>Ball</item>
+      <item>\@</item>
+      <item>Venstre-Alt</item>
+      <item>Høyre-Alt</item>
+      <item>Vol-Opp</item>
+      <item>Vol-Ned</item>
+      <item>Kamera</item>
+      <item>Ingen</item>
+  </string-array>
+    <string-array name="entries_actionbar_preference">
+      
+      <item>Alltid vis handlingslinjen</item>
+      <item>Skjul handlingslinjen (Trykk på toppen av skjermen for å vise den)</item>
+  </string-array>
+    <string-array name="entries_backaction_preference">
+      <item>Lukker alle terminalvinduer</item>
+      <item>Lukker kun dette terminalviduet</item>
+      <item>Lukker aktiviteten, men lar økten kjøre</item>
+      <item>Sender ESC til terminalen</item>
+      <item>Sender TAB til terminalen</item>
+  </string-array>
+    <string-array name="entries_color_preference">
+    <item>Sort tekst på hvit</item>
+    <item>Hvit tekst på sort</item>
+    <item>Hvit tekst på blå</item>
+    <item>Grønn tekst på sort</item>
+    <item>Orange tekst på sort</item>
+    <item>Rød tekst på sort</item>
+    <item>Holo blå på sort</item>
+    <item>Solarized Lys</item>
+    <item>Solarized Mørk</item>
+    <item>Linux konsoll</item>
+  </string-array>
+    <string-array name="entries_controlkey_preference">
+    <item>Trackball</item>
+    <item>\@-tast</item>
+    <item>Venstre Alt-tast</item>
+    <item>Høyre Alt-tast</item>
+    <item>Vol opp</item>
+    <item>Vol ned</item>
+    <item>Kamera-tast</item>
+    <item>Ingen</item>
+  </string-array>
+    <string-array name="entries_cursorblink_preference">
+    <item>Ikke-blinkende peker</item>
+    <item>Blinkende peker</item>
+  </string-array>
+    <string-array name="entries_cursorstyle_preference">
+    <item>Rektangulær</item>
+    <item>Understreket</item>
+    <item>Vertikal linje</item>
+  </string-array>
+    <string-array name="entries_fnkey_preference">
+    <item>Trackball</item>
+    <item>\@-tast</item>
+    <item>Venstre Alt-tast</item>
+    <item>Høyre Alt-tast</item>
+    <item>Vol opp</item>
+    <item>Vol ned</item>
+    <item>Kamera-tast</item>
+    <item>Ingen</item>
+  </string-array>
+    <string-array name="entries_fontsize_preference">
+    <item>4x8 Piksler</item>
+    <item>6 Punkter</item>
+    <item>7 Punkter</item>
+    <item>8 Punkter</item>
+    <item>9 Punkter</item>
+    <item>10 Punkter</item>
+    <item>12 Punkter</item>
+    <item>14 Punkter</item>
+    <item>16 Punkter</item>
+    <item>20 Punkter</item>
+    <item>24 Punkter</item>
+    <item>28 Punkter</item>
+    <item>32 Punkter</item>
+    <item>36 Punkter</item>
+    <item>42 Punkter</item>
+    <item>48 Punkter</item>
+    <item>64 Punkter</item>
+    <item>72 Punkter</item>
+    <item>96 Punkter</item>
+    <item>144 Punkter</item>
+    <item>288 Punkter</item>
+  </string-array>
+    <string-array name="entries_ime_preference">
+    <item>Tegnbasert</item>
+    <item>Ordbasert</item>
+  </string-array>
+    <string-array name="entries_orientation_preference">
+        <item>Automatisk</item>
+        <item>Landskap</item>
+        <item>Portrett</item>
+    </string-array>
+    <string-array name="entries_statusbar_preference">
+    <item>Vis statuslinje</item>
+    <item>Skjul statuslinje</item>
+  </string-array>
+    <string-array name="fn_keys_short_names">
+      <item>Ball</item>
+      <item>\@</item>
+      <item>Venstre-Alt</item>
+      <item>Høyre-Alt</item>
+      <item>Vol-Opp</item>
+      <item>Vol-Ned</item>
+      <item>Kamera</item>
+      <item>Ingen</item>
+  </string-array>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">%d nytt varsel</item>
+    <item quantity="other">%d nye varsler</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"Naviger hjem"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"Gå opp"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"Flere alternativer"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"Ferdig"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"Se alle"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"Velg en app"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"AV"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"PÅ"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"slett"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Funksjon+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"mellomrom"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"Meny+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"Søk"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"Slett søket"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"Søkeord"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"Søk"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"Utfør søket"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"Talesøk"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Del med"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Del med <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Skjul"</string>
+    <string name="alt_sends_esc">Alt-tasten sender ESC</string>
+    <string name="alt_sends_esc_summary_off">Alt-tasten sender ikke ESC.</string>
+    <string name="alt_sends_esc_summary_on">Alt-tasten sender ESC.</string>
+    <string name="application_terminal">Terminalemulator</string>
+    <string name="bottomsheet_action_collapse">Skjul feltet nederst</string>
+    <string name="bottomsheet_action_expand">Vis feltet nederst</string>
+    <string name="bottomsheet_action_expand_halfway">Vis halve feltet nederst</string>
+    <string name="bottomsheet_drag_handle_clicked">Dobbelttrykket på håndtaket</string>
+    <string name="bottomsheet_drag_handle_content_description">Håndtak</string>
+    <string name="character_counter_content_description">%1$d av %2$d tegn er skrevet inn</string>
+    <string name="character_counter_overflowed_content_description">Tegngrensen er overskredet – %1$d av %2$d</string>
+    <string name="clear_text_end_icon_content_description">Fjern teksten</string>
+    <string msgid="406453423630273620" name="close_drawer">"Lukk navigasjonsmenyen"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"Lukk arket"</string>
+    <string name="close_window">Lukk vindu</string>
+    <string msgid="5389587048670450460" name="collapsed">"Skjult"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Aktivér</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s fungerer ikke med mindre du slår på Google Play-tjenester.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Slå på Google Play-tjenester</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Installer</string>
+    <string name="common_google_play_services_install_text">%1$s kan ikke kjøre uten Google Play-tjenester, som ikke er installert på enheten din.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Installer Google Play-tjenester</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play Tjenester-tilgjengelighet</string>
+    <string name="common_google_play_services_notification_ticker">Google Play Tjenester-feil</string>
+    <string name="common_google_play_services_unknown_issue">%1$s har problemer med Google Play-tjenester. Prøv på nytt.</string>
+    <string name="common_google_play_services_unsupported_text">%1$s kan ikke kjøre uten Google Play-tjenester, som ikke støttes av enheten din.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Oppdater</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s kjører ikke med mindre du oppdaterer Google Play Tjenester.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Oppdater Google Play-tjenester</string>
+    <string name="common_google_play_services_updating_text">%1$s kjører ikke uten Google Play-tjenester, som oppdateres akkurat nå.</string>
+    <string name="common_google_play_services_wear_update_text">Du må installere en ny versjon av Google Play-tjenester. Appen oppdateres automatisk om en kort stund.</string>
+    <string name="common_open_on_phone">Åpne på telefonen</string>
+    <string name="common_signin_button_text">Logg på</string>
+    <string name="common_signin_button_text_long">Logg på med Google</string>
+    <string name="confirm_window_close_message">Lukk dette vinduet?</string>
+    <string name="control_key_dialog_control_disabled_text">Ingen ctrl-tast valgt</string>
+    <string name="control_key_dialog_control_text">CTRLKEY Mellomrom : Ctrl-@ (NUL)\nCTRLKEY A..Z : Ctrl-A..Z\nCTRLKEY 5 : Ctrl-]\nCTRLKEY 6 : Ctrl-^\nCTRLKEY 7 : Ctrl-_\nCTRLKEY 9 : F11\nCTRLKEY 0 : F12</string>
+    <string name="control_key_dialog_fn_disabled_text">Ingen fn-tast valgt</string>
+    <string name="control_key_dialog_fn_text">FNKEY 1..9 : F1-F9\nFNKEY 0 : F10\nFNKEY W : Opp\nFNKEY A : Venstre\nFNKEY S : Ned\nFNKEY D : Høyre\nFNKEY P : PageUp\nFNKEY N : PageDown\nFNKEY T : Tab\nFNKEY L : | (pipe)\nFNKEY U : _ (understrek)\nFNKEY E : Ctrl-[ (ESC)\nFNKEY X : Delete\nFNKEY I : Insert\nFNKEY H : Home\nFNKEY F : End\nFNKEY . : Ctrl-\\\n</string>
+    <string name="control_key_dialog_title">Ctrl og fn-tast</string>
+    <string msgid="6083905920877235314" name="copy">"Kopiér"</string>
+    <string name="copy_all">Kopier alt</string>
+    <string msgid="8038256446254964252" name="default_error_message">"Ugyldige inndata"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"Forgrunnsvindu"</string>
+    <string msgid="4057925834421392736" name="dialog">"Dialogboks"</string>
+    <string name="dialog_title_actionbar_preference">Handlingslinje</string>
+    <string name="dialog_title_backaction_preference">Tilbaketast</string>
+    <string name="dialog_title_color_preference">Tekstfarge</string>
+    <string name="dialog_title_controlkey_preference">Ctrl-tast</string>
+    <string name="dialog_title_cursorblink_preference">Blinkende peker</string>
+    <string name="dialog_title_cursorstyle_preference">Pekertype</string>
+    <string name="dialog_title_fnkey_preference">Fn-tast</string>
+    <string name="dialog_title_fontsize_preference">Skriftstørrelse</string>
+    <string name="dialog_title_ime_preference">Inndatametode</string>
+    <string name="dialog_title_initialcommand_preference">Innledende kommando</string>
+    <string name="dialog_title_orientation_preference">Rotasjon</string>
+    <string name="dialog_title_shell_preference">Skall</string>
+    <string name="dialog_title_statusbar_preference">Statuslinje</string>
+    <string name="dialog_title_termtype_preference">Terminaltype</string>
+    <string name="disable_wakelock">Dropp WakeLock</string>
+    <string name="disable_wifilock">Dropp WifiLock</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"Rullegardinmeny"</string>
+    <string name="edit_text">Rediger tekst</string>
+    <string name="email_transcript_chooser_title">Mail transcript med:</string>
+    <string name="email_transcript_no_email_activity_found">Kunne ikke velge aktivitet for å sende transcript.</string>
+    <string name="email_transcript_subject">Transcript fra Android Terminalemulator</string>
+    <string name="enable_wakelock">Ta WakeLock</string>
+    <string name="enable_wifilock">Ta WifiLock</string>
+    <string name="error_icon_content_description">Feil</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"Avansert"</string>
+    <string msgid="5974471714631304645" name="expanded">"Vises"</string>
+    <string name="exposed_dropdown_menu_content_description">Vis rullegardinmenyen</string>
+    <string name="icon_content_description">Dialogboksikon</string>
+    <string msgid="6827826412747255547" name="in_progress">"Pågår"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"Delvis avmerket"</string>
+    <string name="item_view_role_description">Fane</string>
+    <string name="keyboard_preferences">Tastatur</string>
+    <string name="material_clock_toggle_content_description">Velg AM eller PM</string>
+    <string name="material_hour_24h_suffix">%1$s timer</string>
+    <string name="material_hour_selection">Velg time</string>
+    <string name="material_hour_suffix">%1$s null-null</string>
+    <string name="material_minute_selection">Angi minutter</string>
+    <string name="material_minute_suffix">%1$s minutter</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">Bytt til klokkemodus for tidsinndata.</string>
+    <string name="material_timepicker_hour">Time</string>
+    <string name="material_timepicker_minute">Minutt</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">Velg tidspunkt</string>
+    <string name="material_timepicker_text_input_mode_description">Bytt til tekstinndatamodus for tidsinndata.</string>
+    <string name="mtrl_badge_numberless_content_description">Nytt varsel</string>
+    <string name="mtrl_chip_close_icon_content_description">Fjern %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">Flere enn %1$d nye varsler</string>
+    <string name="mtrl_picker_a11y_next_month">Endre til neste måned</string>
+    <string name="mtrl_picker_a11y_prev_month">Endre til forrige måned</string>
+    <string name="mtrl_picker_announce_current_selection">Gjeldende valg: %1$s</string>
+    <string name="mtrl_picker_cancel">Avbryt</string>
+    <string name="mtrl_picker_confirm">OK</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Velg dato</string>
+    <string name="mtrl_picker_date_header_unselected">Valgt dato</string>
+    <string name="mtrl_picker_day_of_week_column_header">Kolonne for dager: %1$s</string>
+    <string name="mtrl_picker_invalid_format">Ugyldig format.</string>
+    <string name="mtrl_picker_invalid_format_example">Eksempel: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Bruk: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Ugyldig område.</string>
+    <string name="mtrl_picker_navigate_to_year_description">Naviger til år %1$s</string>
+    <string name="mtrl_picker_out_of_range">Utenfor rekkevidde: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Startdato – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – sluttdato</string>
+    <string name="mtrl_picker_range_header_selected">%1$s–%2$s</string>
+    <string name="mtrl_picker_range_header_title">Velg periode</string>
+    <string name="mtrl_picker_range_header_unselected">Startdato–sluttdato</string>
+    <string name="mtrl_picker_save">Lagre</string>
+    <string name="mtrl_picker_text_input_date_hint">Dato</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">Sluttdato</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Startdato</string>
+    <string name="mtrl_picker_text_input_day_abbr">d</string>
+    <string name="mtrl_picker_text_input_month_abbr">m</string>
+    <string name="mtrl_picker_text_input_year_abbr">å</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Bytt til kalenderinndatamodus</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Trykk for å bytte til å velge dag</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Bytt til tekstinndatamodus</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Trykk for å bytte til å velge år</string>
+    <string name="mtrl_timepicker_cancel">Avbryt</string>
+    <string name="mtrl_timepicker_confirm">OK</string>
+    <string msgid="542007171693138492" name="navigation_menu">"Navigasjonsmeny"</string>
+    <string name="new_window">Nytt vindu</string>
+    <string name="next_window">Neste vindu</string>
+    <string msgid="6610465462668679431" name="not_selected">"Ikke valgt"</string>
+    <string msgid="6573031135582639649" name="not_set">"Ikke angitt"</string>
+    <string msgid="875452955155264703" name="off">"Av"</string>
+    <string msgid="8655164131929253426" name="on">"På"</string>
+    <string name="password_toggle_content_description">Vis passordet</string>
+    <string name="paste">Lim inn</string>
+    <string name="perm_append_to_path">Legge til kommandoer i Terminalemulatoren</string>
+    <string name="perm_prepend_to_path">Overstyr kommandoer i Terminalemulatoren</string>
+    <string name="perm_run_script">Kjøre forskjellige kommandoer i Terminalemulatoren</string>
+    <string name="permdesc_append_to_path">Lar appen tilby flere kommandoer (Legge til i PATH) til Terminalemulatoren.</string>
+    <string name="permdesc_prepend_to_path">Lar appen overstyre eksisterende kommandoer med sine egene versjoner (legge til i begynnelsen av PATH) i Terminalemulatoren</string>
+    <string name="permdesc_run_script">Lar appen åpne nye vinduer i Terminalemulatoren, samt kjøre kommandoer i disse. Appen vil da kunne kjøre kommandoer med alle tillatelsene som Terminalemulatoren har, inkludert tilgang til Internett og SD-kortet. </string>
+    <string msgid="6685851473431805375" name="preference_copied">"«<ns1:g id="SUMMARY">%1$s</ns1:g>» er kopiert til utklippstavlen."</string>
+    <string name="preferences">Innstillinger</string>
+    <string name="prev_window">Forrige vindu</string>
+    <string name="process_exit_message">Terminaløkt ferdig</string>
+    <string msgid="5941395253238309765" name="range_end">"Områdeslutt"</string>
+    <string msgid="7097486360902471446" name="range_start">"Områdestart"</string>
+    <string name="reset">Tilbakestill terminal</string>
+    <string name="reset_toast_notification">Terminalen i dette vinduet ble tilbakestilt.</string>
+    <string name="screen_preferences">Skjerm</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"Søk"</string>
+    <string name="select_text">Marker tekst</string>
+    <string msgid="6043586758067023" name="selected">"Valgt"</string>
+    <string name="send_control_key">Send ctrl-tast</string>
+    <string name="send_email">Send epost til</string>
+    <string name="send_fn_key">Send fn-ast</string>
+    <string name="service_notify_text">Terminaløkt kjører</string>
+    <string name="shell_preferences">Skall</string>
+    <string name="special_keys">Spesielle tegn</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="summary_actionbar_preference">Velg hvordan handlingslinjen (ActionBar) skal oppføre seg (Android 3.0 og oppover).</string>
+    <string name="summary_allow_prepend_path_preference">Velg om andre apper skal kunne overstyre eksisterende kommandoer (legge til i begynnelsen av PATH).</string>
+    <string name="summary_backaction_preference">Velg hva som skal skje når det trykkes på tilbaketasten.</string>
+    <string name="summary_close_window_on_process_exit_preference">Velg om vinduet skal lukkes når skallet avsluttes.</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="summary_color_preference">Velg tekstfarge.</string>
+    <string name="summary_controlkey_preference">Velg Ctrl-tast</string>
+    <string name="summary_cursorblink_preference">Velg blinkende peker</string>
+    <string name="summary_cursorstyle_preference">Velg pekertype.</string>
+    <string name="summary_do_path_extensions_preference">Velg om andre apper skal kunne tilby flere kommandoer (legge til i PATH).</string>
+    <string name="summary_fnkey_preference">Velg Fn-tast.</string>
+    <string name="summary_fontsize_preference">Velg tegnhøyde i antall punkter.</string>
+    <string name="summary_home_path_preference">Sti til en skrivbar mappe som skal brukes som HOME.</string>
+    <string name="summary_ime_preference">Velg inndatametode for virtuelt tastatur.</string>
+    <string name="summary_initialcommand_preference">Sendes til skallet når det starter.</string>
+    <string name="summary_mouse_tracking_preference">Velg om trykk og scroll-sekvenser skal bli sendt som escape-sekvenser til terminalen.</string>
+    <string name="summary_orientation_preference">Velg hvordan rotasjon av skjermen skal håndteres.</string>
+    <string name="summary_shell_preference">Velg kommandolinjeskall.</string>
+    <string name="summary_statusbar_preference">Vis/Skjul statuslinje</string>
+    <string name="summary_termtype_preference">Velg terminaltype.</string>
+    <string name="summary_utf8_by_default_preference">Velg om UTF-8 skal være aktivert som standard.</string>
+    <string name="summary_verify_path_preference">Velg om utilgjengelige mapper skal fjernes fra PATH.</string>
+    <string msgid="1672349317127674378" name="tab">"Fane"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> prosent."</string>
+    <string name="text_preferences">Tekst</string>
+    <string name="title_actionbar_preference">Handlingslinje</string>
+    <string name="title_allow_prepend_path_preference">Tillat overstyring av PATH</string>
+    <string name="title_backaction_preference">Tilbaketast</string>
+    <string name="title_close_window_on_process_exit_preference">Lukk vinduet ved avslutning</string>
+    <string name="title_color_preference">Farger</string>
+    <string name="title_controlkey_preference">Ctrl-tast</string>
+    <string name="title_cursorblink_preference">Blinkende peker</string>
+    <string name="title_cursorstyle_preference">Pekertype</string>
+    <string name="title_do_path_extensions_preference">Tillat utvidelse av PATH</string>
+    <string name="title_fnkey_preference">Fn-tast</string>
+    <string name="title_fontsize_preference">Skriftstørrelse</string>
+    <string name="title_home_path_preference">HOME-mappe</string>
+    <string name="title_ime_preference">Inndatametode</string>
+    <string name="title_initialcommand_preference">Innledende kommando</string>
+    <string name="title_mouse_tracking_preference">Send musebevegelser</string>
+    <string name="title_orientation_preference">Rotasjon</string>
+    <string name="title_shell_preference">Kommandolinje</string>
+    <string name="title_statusbar_preference">Statuslinje</string>
+    <string name="title_termtype_preference">Terminaltype</string>
+    <string name="title_utf8_by_default_preference">Aktiver UTF-8</string>
+    <string name="title_verify_path_preference">Kontroller oppføringer i PATH</string>
+    <string name="toggle_soft_keyboard">Veksle virtuelt tastatur</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"AV"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"PÅ"</string>
+    <string name="window_list">Vinduer</string>
+    <string name="window_title">Vindu %1$d</string>
+</resources>

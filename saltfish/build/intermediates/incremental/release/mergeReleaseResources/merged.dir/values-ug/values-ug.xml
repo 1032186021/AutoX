@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>كۆڭۈلدىكى</item>  
+    <item>كۈندە بىر قېتىم كۆرسىتىڭ</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>تاسادىپىي</item>  
+    <item>خەۋەر</item>  
+    <item>ئىجتىمائىي ئالاقە</item>  
+    <item>كارتون</item>  
+    <item>ئويۇن</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>يەرلىك ھۆججەتلەر</item>  
+    <item>توردىكى ھۆججەتلەر</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>تەھرىرلەشكە بولىدىغان js ھۆججىتى</item>  
+    <item>Uneditable binary</item> 
+  </string-array>
+    <string name="cancel">بىكار قىلىش</string>
+    <string name="error_activity_not_found_for_apk_installing">Apk نى قاچىلايدىغان ئەپ تاپالمىدى</string>
+    <string name="exception_notification_service_disabled">ئۇقتۇرۇش مۇلازىمىتى ئىجرا قىلىنمايدۇ ، ئۇقتۇرۇش ئىجازىتىنى قايتا قوزغىتىڭ</string>
+    <string name="no_read_phone_state_permissin">ئۈسكۈنىنىڭ ئۇچۇرلىرىنى ئوقۇشقا ئىجازەت يوق</string>
+    <string name="no_write_settings_permissin">سىستېما تەڭشىكىنى ئۆزگەرتىشكە ئىجازەت يوق</string>
+    <string name="ok">ئەلۋەتتە</string>
+    <string name="text_accessibility_service_description">قوليازما مەشغۇلاتىنى ئاپتوماتلاشتۇرۇش تەلەپ قىلىنىدۇ (چېكىش ، ئۇزۇن بېسىش ، سۈرتۈش قاتارلىقلار) ، ئەگەر چەكلەنگەن بولسا ، پەقەت ئاپتوماتىك مەشغۇلاتقا چېتىشلىق ئورگىناللارنىلا ئىجرا قىلغىلى بولىدۇ.</string>
+    <string name="text_already_stop_n_scripts">%d ئىجرا قىلىنىۋاتقان قوليازمىلار توختىدى</string>
+    <string name="text_console">Console</string>
+    <string name="text_drawer_close">ئېسىلما تىزىملىكنى تاقاڭ</string>
+    <string name="text_drawer_open">ئېسىلما تىزىملىكنى ئېچىڭ</string>
+    <string name="text_error">خاتالىق:</string>
+    <string name="text_file_not_exists">ھۆججەت مەۋجۇت ئەمەس</string>
+    <string name="text_no_file_rw_permission">ھېچقانداق ھۆججەت ئوقۇش ۋە يېزىش ئىجازەتنامىسى يوق</string>
+    <string name="text_no_floating_window_permission">لەيلىمە كۆزنەك ئىجازەتنامىسى يوق</string>
+    <string name="text_no_running_script">ئىجرا قىلىنىۋاتقان قوليازما يوق</string>
+    <string name="text_path_is_empty">يول قۇرۇق</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">بۇ قوليازما ئىجرا قىلىش ئۈچۈن Auto.js نەشرىنىڭ %d ياكى ئۇنىڭدىن يۇقىرى نەشرىنى تەلەپ قىلىدۇ</string>
+    <string name="text_requires_sdk_version_to_run_the_script">بۇ قوليازما بۇ ئاندىرويىد نۇسخىسىنىڭ ئىجرا قىلىنىشىنى تەلەپ قىلىدۇ:</string>
+    <string name="text_should_enable_gesture_observing">قول ئىشارىسىنى نازارەت قىلىش قوزغىتىلمىدى ، يۇمشاق دېتال تەڭشىكىدە قوزغىتىڭ</string>
+    <string name="text_should_enable_key_observing">ئاچقۇچ نازارەت قىلىش قوزغىتىلمىغان ، ئۇنى يۇمشاق دېتال تەڭشىكىدە قوزغىتىڭ</string>
+    <string name="text_start_running">مەشغۇلاتنى باشلاش</string>
+</resources>

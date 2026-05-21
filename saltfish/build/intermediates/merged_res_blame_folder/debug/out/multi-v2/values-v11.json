@@ -1,0 +1,39 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.saltfish.assistant.saltfish-mergeDebugResources-90:/values-v11/values-v11.xml",
+            "map": [
+                {
+                    "source": "D:\\code\\AutoX\\LocalRepo\\term\\build\\.transforms\\221856f1f52fbb5624b657c88f041c1e\\transformed\\jetified-term-debug\\res\\values-v11\\values-v11.xml",
+                    "from": {
+                        "startLines": "2,7,11,15",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,300,495,728",
+                        "endLines": "6,10,14,17",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "295,490,723,882"
+                    },
+                    "to": {
+                        "startLines": "36,41,45,49",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "2115,2360,2555,2788",
+                        "endLines": "40,44,48,51",
+                        "endColumns": "12,12,12,12",
+                        "endOffsets": "2355,2550,2783,2942"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\zhiyo\\.gradle\\caches\\transforms-3\\940a905d3555e3dea7f19a04e4342783\\transformed\\jetified-core-0.9.2.3\\res\\values-v11\\values-v11.xml",
+                    "from": {
+                        "startLines": "2,19",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,1094",
+                        "endLines": "18,35",
+                        "endColumns": "12,12",
+                        "endOffsets": "1089,2110"
+                    }
+                }
+            ]
+        }
+    ]
+}

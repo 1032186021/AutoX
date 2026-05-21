@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ad_showing_mode_keys"> 
+    <item>Default</item>  
+    <item>Uri darba kuljum</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>Addoċċ</item>  
+    <item>Aħbarijiet</item>  
+    <item>Kuntatt soċjali</item>  
+    <item>Cartoons</item>  
+    <item>Logħba</item> 
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>Dokumentazzjoni lokali</item>  
+    <item>Dokumentazzjoni onlajn</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>Fajl js editable</item>  
+    <item>Binarju mhux editjat</item> 
+  </string-array>
+    <string name="cancel">Ikkanċella</string>
+    <string name="error_activity_not_found_for_apk_installing">Ma tistax issib app biex tinstalla l-apk</string>
+    <string name="exception_notification_service_disabled">Is-servizz ta\' notifika mhux qed jaħdem, jekk jogħġbok erġa\' ppermetti l-permess ta\' notifika</string>
+    <string name="no_read_phone_state_permissin">L-ebda permess biex taqra l-informazzjoni tal-apparat</string>
+    <string name="no_write_settings_permissin">L-ebda permess biex timmodifika s-settings tas-sistema</string>
+    <string name="ok">Żgur</string>
+    <string name="text_accessibility_service_description">Meħtieġa biex jiġu awtomatizzati l-operazzjonijiet tal-iskript (ikklikkja, agħfas fit-tul, swipe, eċċ.), jekk diżattivati, jistgħu jiġu esegwiti biss skripts li ma jinvolvux operazzjonijiet awtomatiċi.</string>
+    <string name="text_already_stop_n_scripts">%d skripts li qed jaħdmu waqfu</string>
+    <string name="text_console">Console</string>
+    <string name="text_drawer_close">Agħlaq il-menu drop down</string>
+    <string name="text_drawer_open">Iftaħ il-menu drop down</string>
+    <string name="text_error">Żball:</string>
+    <string name="text_file_not_exists">Fajl ma jeżistix</string>
+    <string name="text_no_file_rw_permission">Ebda permessi tal-qari u tal-kitba tal-fajls</string>
+    <string name="text_no_floating_window_permission">Ebda permess tieqa galleġġjanti</string>
+    <string name="text_no_running_script">Ebda skript running</string>
+    <string name="text_path_is_empty">Triq hija vojta</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">Din l-iskrittura teħtieġ in-numru tal-verżjoni Auto.js %d jew ogħla biex titħaddem</string>
+    <string name="text_requires_sdk_version_to_run_the_script">Din l-iskrittura teħtieġ li din il-verżjoni Android taħdem:</string>
+    <string name="text_should_enable_gesture_observing">Il-monitoraġġ tal-ġesti mhuwiex attivat, jekk jogħġbok ippermettih fis-settings tas-softwer</string>
+    <string name="text_should_enable_key_observing">Il-monitoraġġ ewlieni mhuwiex attivat, jekk jogħġbok ppermettih fis-settings tas-softwer</string>
+    <string name="text_start_running">Tibda l-operazzjoni</string>
+</resources>

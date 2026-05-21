@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2" xmlns:ns2="http://schemas.android.com/tools">
+    <string-array name="ad_showing_mode_keys"> 
+    <item>בְּרִירַת מֶחדָל</item>  
+    <item>הצגה פעם ביום</item> 
+  </string-array>
+    <string-array name="ad_types_keys"> 
+    <item>אַקרַאִי</item>  
+    <item>חֲדָשׁוֹת</item>  
+    <item>קשר חברתי</item>  
+    <item>קָרִיקָטוּרָה</item>  
+    <item>מִשְׂחָק</item> 
+  </string-array>
+    <string-array name="control_keys_short_names">
+    <item>כדור</item>
+    <item>\@</item>
+    <item>ALT-שמאלי</item>
+    <item>ALT-ימני</item>
+    <item>קול עליון</item>
+    <item>קול תחתון</item>
+    <item>מצלמה</item>
+    <item>ריק</item>
+  </string-array>
+    <string-array name="entries_actionbar_preference">
+    <item>הצג תמיד שורת מצב</item>
+    <item>הסתר בר פעולות (הקש בחלק עליון של המסך או על כפתור תפריט כדי להציג)</item>
+  </string-array>
+    <string-array name="entries_backaction_preference">
+    <item>סוגר את חלונות מסוף</item>
+    <item>סוגר את חלון המסוף הנוכחי בלבד</item>
+    <item>סוגר פעילות, ומשאיר הפעלות רצות</item>
+    <item>שולח ESC למסוף</item>
+    <item>שולח TAB למסוף</item>
+  </string-array>
+    <string-array name="entries_color_preference">
+    <item>טקסט שחור על לבן</item>
+    <item>טקסט לבן על שחור</item>
+    <item>טקסט לבן על כחול</item>
+    <item>טקסט ירוק על שחור</item>
+    <item>טקסט אמבר על שחור</item>
+    <item>טקסט אדום על שחור</item>
+    <item>טקסט כחול הולו על שחור</item>
+    <item>Solarized Light</item>
+    <item>Solarized Dark</item>
+    <item>מסוף לינוקס</item>
+  </string-array>
+    <string-array name="entries_controlkey_preference">
+    <item>רענון הכדור</item>
+    <item>\@ מפתח</item>
+    <item>מקש ALT שמאלי</item>
+    <item>מקש ALT ימני</item>
+    <item>מקש קול עליון</item>
+    <item>מקש קוך תחתון</item>
+    <item>לחצן מצלמה</item>
+    <item>ריק</item>
+  </string-array>
+    <string-array name="entries_cursorblink_preference">
+    <item>סמן לא מהבהב</item>
+    <item>סמן מהבהב</item>
+  </string-array>
+    <string-array name="entries_cursorstyle_preference">
+    <item>מלבן</item>
+    <item>קו תחתון</item>
+    <item>קו ניצב</item>
+  </string-array>
+    <string-array name="entries_fnkey_preference">
+    <item>רענון הכדור</item>
+    <item>\@ מפתח</item>
+    <item>מקש ALT שמאלי</item>
+    <item>מקש ALT ימני</item>
+    <item>מקש קול עליון</item>
+    <item>מקש קוך תחתון</item>
+    <item>לחצן מצלמה</item>
+    <item>ריק</item>
+  </string-array>
+    <string-array name="entries_fontsize_preference">
+    <item>4 * 8 פיקסלים</item>
+    <item>6 נק\'</item>
+    <item>7 נק\'</item>
+    <item>8 נק\'</item>
+    <item>9 נק\'</item>
+    <item>10 נק\'</item>
+    <item>12 נק\'</item>
+    <item>14 נק\'</item>
+    <item>16 נק\'</item>
+    <item>20 נק\'</item>
+    <item>24 נק\'</item>
+    <item>28 נק\'</item>
+    <item>32 נק\'</item>
+    <item>36 נק\'</item>
+    <item>42 נק\'</item>
+    <item>48 נק\'</item>
+    <item>64 נק\'</item>
+    <item>72 נק\'</item>
+    <item>96 נק\'</item>
+    <item>144 נק\'</item>
+    <item>288 נק\'</item>
+  </string-array>
+    <string-array name="entries_ime_preference">
+    <item>מבוסס תווים</item>
+    <item>מבוסס מילים</item>
+  </string-array>
+    <string-array name="entries_orientation_preference">
+    <item>אוטומטי</item>
+    <item>שוכב</item>
+    <item>עומד</item>
+  </string-array>
+    <string-array name="entries_statusbar_preference">
+    <item>הצג שורת המצב</item>
+    <item>הסתר שורת מצב</item>
+  </string-array>
+    <string-array name="fn_keys_short_names">
+    <item>כדור</item>
+    <item>\@</item>
+    <item>ALT-שמאלי</item>
+    <item>ALT-ימני</item>
+    <item>קול עליון</item>
+    <item>קול תחתון</item>
+    <item>מצלמה</item>
+    <item>ריק</item>
+  </string-array>
+    <string-array name="keys_documentation_source"> 
+    <item>תיעוד מקומי</item>  
+    <item>תיעוד מקוון</item> 
+  </string-array>
+    <string-array name="root_record_out_file_type_keys"> 
+    <item>קובץ js הניתן לעריכה</item>  
+    <item>בינארי בלתי ניתן לעריכה</item> 
+  </string-array>
+    <plurals name="mtrl_badge_content_description">
+    <item quantity="one">התראה חדשה אחת (%d)</item>
+    <item quantity="two">%d התראות חדשות</item>
+    <item quantity="many">%d התראות חדשות</item>
+    <item quantity="other">%d התראות חדשות</item>
+  </plurals>
+    <string msgid="5976598919945601918" name="abc_action_bar_home_description">"ניווט לדף הבית"</string>
+    <string msgid="8388173803310557296" name="abc_action_bar_up_description">"ניווט למעלה"</string>
+    <string msgid="3937310113216875497" name="abc_action_menu_overflow_description">"עוד אפשרויות"</string>
+    <string msgid="4692188335987374352" name="abc_action_mode_done">"סיום"</string>
+    <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"הצגת הכול"</string>
+    <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"בחירת אפליקציה"</string>
+    <string msgid="4215997306490295099" name="abc_capital_off">"כבוי"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"מופעל"</string>
+    <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
+    <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+‎"</string>
+    <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"מחיקה"</string>
+    <string msgid="7986526966204849475" name="abc_menu_enter_shortcut_label">"Enter"</string>
+    <string msgid="375214403600139847" name="abc_menu_function_shortcut_label">"Function+"</string>
+    <string msgid="4192209724446364286" name="abc_menu_meta_shortcut_label">"Meta+"</string>
+    <string msgid="4741552369836443843" name="abc_menu_shift_shortcut_label">"Shift+"</string>
+    <string msgid="5473865519181928982" name="abc_menu_space_shortcut_label">"רווח"</string>
+    <string msgid="6180552449598693998" name="abc_menu_sym_shortcut_label">"Sym+"</string>
+    <string msgid="5520303668377388990" name="abc_prepend_shortcut_label">"תפריט+"</string>
+    <string msgid="7208076849092622260" name="abc_search_hint">"חיפוש…"</string>
+    <string msgid="3741173234950517107" name="abc_searchview_description_clear">"מחיקת השאילתה"</string>
+    <string msgid="693312494995508443" name="abc_searchview_description_query">"שאילתת חיפוש"</string>
+    <string msgid="3417662926640357176" name="abc_searchview_description_search">"חיפוש"</string>
+    <string msgid="1486535517437947103" name="abc_searchview_description_submit">"שליחת שאילתה"</string>
+    <string msgid="2293578557972875415" name="abc_searchview_description_voice">"חיפוש קולי"</string>
+    <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"שיתוף עם"</string>
+    <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"שיתוף עם <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
+    <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"כיווץ"</string>
+    <string name="alt_sends_esc">ALT שולח ESC</string>
+    <string name="alt_sends_esc_summary_off">מקש ALT לא שולח ESC.</string>
+    <string name="alt_sends_esc_summary_on">ALT שולח ESC.</string>
+    <string name="application_terminal">אמולטור מסוף</string>
+    <string name="bottomsheet_action_collapse">כיווץ הגיליון התחתון</string>
+    <string name="bottomsheet_action_expand">הרחבת הגיליון התחתון</string>
+    <string name="bottomsheet_action_expand_halfway">הרחבה עד האמצע</string>
+    <string name="bottomsheet_drag_handle_clicked">בוצעה הקשה כפולה על נקודת האחיזה לגרירה</string>
+    <string name="bottomsheet_drag_handle_content_description">נקודת אחיזה לגרירה</string>
+    <string name="cancel">לְבַטֵל</string>
+    <string name="character_counter_content_description">הוזנו %1$d תווים מתוך %2$d</string>
+    <string name="character_counter_overflowed_content_description">מגבלת התווים חורגת ב-%1$d מתוך %2$d</string>
+    <string name="clear_text_end_icon_content_description">מחיקת הטקסט</string>
+    <string msgid="406453423630273620" name="close_drawer">"סגירת תפריט הניווט"</string>
+    <string msgid="7573152094250666567" name="close_sheet">"סגירת הגיליון"</string>
+    <string name="close_window">סגור חלון</string>
+    <string msgid="5389587048670450460" name="collapsed">"מכווץ"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">הפעל</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">‏האפליקציה %1$s לא תפעל אם לא תפעיל את שירותי Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">‏הפעל את שירותי Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">התקן</string>
+    <string name="common_google_play_services_install_text">‏האפליקציה %1$s לא תפעל ללא שירותי Google Play, שאינם מותקנים במכשיר.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">‏קבל את שירותי Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">‏זמינות של שירותי Google Play</string>
+    <string name="common_google_play_services_notification_ticker">‏שגיאה בשירותי Google Play</string>
+    <string name="common_google_play_services_unknown_issue">‏%1$s נתקלה בבעיה בשירותי Google Play. נסה שוב.</string>
+    <string name="common_google_play_services_unsupported_text">‏%1$s לא תפעל ללא שירותי Google Play, שאינם נתמכים במכשיר שלך.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">עדכון</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">‏%1$s לא יפעל אם לא תעדכן את שירותי Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">‏עדכון שירותי Google Play</string>
+    <string name="common_google_play_services_updating_text">‏האפליקציה %1$s לא תפעל ללא שירותי Google Play, שמתעדכנים כרגע.</string>
+    <string name="common_google_play_services_wear_update_text">‏דרושה גרסה חדשה של שירותי Google Play. הגרסה תתעדכן בעצמה תוך זמן קצר.</string>
+    <string name="common_open_on_phone">פתח בטלפון</string>
+    <string name="common_signin_button_text">כניסה</string>
+    <string name="common_signin_button_text_long">‏היכנס באמצעות Google</string>
+    <string name="confirm_window_close_message">לסגור חלון זה?</string>
+    <string name="control_key_dialog_control_disabled_text">לא הוגדר מקש CTRL.</string>
+    <string name="control_key_dialog_fn_disabled_text">לא הוגדר מקש FN.</string>
+    <string name="control_key_dialog_title">מקשי CTRL ו-FN</string>
+    <string msgid="6083905920877235314" name="copy">"העתקה"</string>
+    <string name="copy_all">העתק הכל</string>
+    <string msgid="8038256446254964252" name="default_error_message">"הקלט לא תקין"</string>
+    <string msgid="6312721426453364202" name="default_popup_window_title">"חלון קופץ"</string>
+    <string msgid="4057925834421392736" name="dialog">"תיבת דו-שיח"</string>
+    <string name="dialog_title_actionbar_preference">התנהגות בר הפעלה</string>
+    <string name="dialog_title_backaction_preference">אופן הפעולה של לחצן החזרה</string>
+    <string name="dialog_title_color_preference">צבע טקסט</string>
+    <string name="dialog_title_controlkey_preference">מקש CTRL</string>
+    <string name="dialog_title_cursorblink_preference">הבהוב הסמן</string>
+    <string name="dialog_title_cursorstyle_preference">סגנון הסמן</string>
+    <string name="dialog_title_fnkey_preference">מקש FN</string>
+    <string name="dialog_title_fontsize_preference">גודל גופן</string>
+    <string name="dialog_title_ime_preference">שיטת קלט</string>
+    <string name="dialog_title_initialcommand_preference">פקודה ראשונית</string>
+    <string name="dialog_title_orientation_preference">התנהגות כיוון מסך</string>
+    <string name="dialog_title_shell_preference">מעטפת</string>
+    <string name="dialog_title_statusbar_preference">שורת מצב</string>
+    <string name="dialog_title_termtype_preference">סוג המסוף</string>
+    <string name="disable_wakelock">אפשר כיבוי מסך</string>
+    <string name="disable_wifilock">אפשר כיבוי WiFi</string>
+    <string msgid="1890207353314751437" name="dropdown_menu">"תפריט נפתח"</string>
+    <string name="edit_text">ערוך טקסט</string>
+    <string name="email_transcript_chooser_title">תעתיק מייל באמצעות:</string>
+    <string name="email_transcript_no_email_activity_found">לא הצליחתי למצוא לקוח מייל כדי לשלוח תעתיק.</string>
+    <string name="email_transcript_subject">תעתיק של אימולטור מסוף באנדרואיד</string>
+    <string name="enable_wakelock">אל תכבה מסך</string>
+    <string name="enable_wifilock">אל תכבה WiFi</string>
+    <string name="error_activity_not_found_for_apk_installing">לא מוצא אפליקציה להתקנת apk</string>
+    <string name="error_icon_content_description">שגיאה</string>
+    <string name="exception_notification_service_disabled">שירות ההתראות אינו פועל, אנא הפעל מחדש את הרשאת ההתראה</string>
+    <string msgid="2427401033573778270" name="expand_button_title">"מתקדם"</string>
+    <string msgid="5974471714631304645" name="expanded">"מורחב"</string>
+    <string name="exposed_dropdown_menu_content_description">הצגת התפריט הנפתח</string>
+    <string name="icon_content_description">סמל לתיבת דו-שיח</string>
+    <string msgid="6827826412747255547" name="in_progress">"בתהליך"</string>
+    <string msgid="7933458017204019916" name="indeterminate">"מסומנת חלקית"</string>
+    <string name="item_view_role_description">מקש Tab</string>
+    <string name="keyboard_preferences">מקלדת</string>
+    <string name="material_clock_toggle_content_description">יש לבחור ב-AM או ב-PM</string>
+    <string name="material_hour_24h_suffix">%1$s שעות</string>
+    <string name="material_hour_selection">בחר שעה</string>
+    <string name="material_hour_suffix">השעה %1$s</string>
+    <string name="material_minute_selection">בחר דקות</string>
+    <string name="material_minute_suffix">%1$s דקות</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">העבר למצב שעון לצורך הזנת השעה</string>
+    <string name="material_timepicker_hour">שעה</string>
+    <string name="material_timepicker_minute">דקה</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">בחר שעה</string>
+    <string name="material_timepicker_text_input_mode_description">העבר למצב קלט טקסט לצורך הזנת השעה</string>
+    <string name="mtrl_badge_numberless_content_description">התראה חדשה</string>
+    <string name="mtrl_chip_close_icon_content_description">הסרה של %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description" ns2:ignore="PluralsCandidate">יותר מ-%1$d התראות חדשות</string>
+    <string name="mtrl_picker_a11y_next_month">מעבר לחודש הבא</string>
+    <string name="mtrl_picker_a11y_prev_month">מעבר לחודש הקודם</string>
+    <string name="mtrl_picker_announce_current_selection">הבחירה הנוכחית: %1$s</string>
+    <string name="mtrl_picker_cancel">ביטול</string>
+    <string name="mtrl_picker_confirm">אישור</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">יש לבחור תאריך</string>
+    <string name="mtrl_picker_date_header_unselected">התאריך הנבחר</string>
+    <string name="mtrl_picker_day_of_week_column_header">עמודה של ימים: %1$s</string>
+    <string name="mtrl_picker_invalid_format">פורמט לא חוקי.</string>
+    <string name="mtrl_picker_invalid_format_example">דוגמה: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">יש להשתמש בפורמט: %1$s</string>
+    <string name="mtrl_picker_invalid_range">טווח לא חוקי.</string>
+    <string name="mtrl_picker_navigate_to_year_description">ניווט לשנת %1$s</string>
+    <string name="mtrl_picker_out_of_range">מחוץ לטווח: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">תאריך התחלה – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – תאריך סיום</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">יש לבחור טווח</string>
+    <string name="mtrl_picker_range_header_unselected">תאריך התחלה - תאריך סיום</string>
+    <string name="mtrl_picker_save">שמירה</string>
+    <string name="mtrl_picker_text_input_date_hint">תאריך</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">תאריך סיום</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">תאריך התחלה</string>
+    <string name="mtrl_picker_text_input_day_abbr">י</string>
+    <string name="mtrl_picker_text_input_month_abbr">ח</string>
+    <string name="mtrl_picker_text_input_year_abbr">ש</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">החלפה לשיטת קלט של יומן</string>
+    <string name="mtrl_picker_toggle_to_day_selection">יש להקיש כדי להחליף לבחירת יום</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">החלפה לשיטת קלט של טקסט</string>
+    <string name="mtrl_picker_toggle_to_year_selection">יש להקיש כדי להחליף לבחירת שנה</string>
+    <string name="mtrl_timepicker_cancel">ביטול</string>
+    <string name="mtrl_timepicker_confirm">אישור</string>
+    <string msgid="542007171693138492" name="navigation_menu">"תפריט הניווט"</string>
+    <string name="new_window">חלון חדש</string>
+    <string name="next_window">החלון הבא</string>
+    <string name="no_read_phone_state_permissin">אין הרשאה לקרוא מידע על המכשיר</string>
+    <string name="no_write_settings_permissin">אין הרשאה לשנות את הגדרות המערכת</string>
+    <string msgid="6610465462668679431" name="not_selected">"לא נבחר"</string>
+    <string msgid="6573031135582639649" name="not_set">"לא מוגדרת"</string>
+    <string msgid="875452955155264703" name="off">"כבוי"</string>
+    <string name="ok">בטוח</string>
+    <string msgid="8655164131929253426" name="on">"פועל"</string>
+    <string name="password_toggle_content_description">הצגת סיסמה</string>
+    <string name="paste">הדבק</string>
+    <string name="perm_append_to_path">הוסף פקודות למסוף</string>
+    <string name="perm_prepend_to_path">דרוס פקודות ב-Terminal Emulator</string>
+    <string name="perm_run_script">הפעל פקודות שרירותיות במסוף</string>
+    <string msgid="6685851473431805375" name="preference_copied">"\"<ns1:g id="SUMMARY">%1$s</ns1:g>\" הועתק ללוח."</string>
+    <string name="preferences">העדפות</string>
+    <string name="prev_window">החלון הקודם</string>
+    <string name="process_exit_message">מסוף הסתיים</string>
+    <string msgid="5941395253238309765" name="range_end">"סוף הטווח"</string>
+    <string msgid="7097486360902471446" name="range_start">"תחילת הטווח"</string>
+    <string name="reset">איפוס המונח</string>
+    <string name="reset_toast_notification">מצב חלון המסוף אופס.</string>
+    <string name="screen_preferences">מסך</string>
+    <string msgid="6264217191555673260" name="search_menu_title">"חיפוש"</string>
+    <string name="select_text">בחר טקסט</string>
+    <string msgid="6043586758067023" name="selected">"נבחר"</string>
+    <string name="send_control_key">שלח CTRL</string>
+    <string name="send_email">דואר אלקטרוני ל</string>
+    <string name="send_fn_key">שלח FN</string>
+    <string name="service_notify_text">מסוף פועל</string>
+    <string name="shell_preferences">מעטפת</string>
+    <string name="special_keys">מקשים מיוחדים</string>
+    <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="summary_actionbar_preference">בחר התנהגות של בר הפעלה (אנרואיד 3.0 ומעלה).</string>
+    <string name="summary_allow_prepend_path_preference">האם יישומים אחרים יוכלו לשנות פקודות קיימות (להוסיף לתחילת PATH).</string>
+    <string name="summary_backaction_preference">בחר פעולה בעת לחיצה על לחצן חזור.</string>
+    <string name="summary_close_window_on_process_exit_preference">האם בסגירת shell חלון ייסגר.</string>
+    <string msgid="9167775378838880170" name="summary_collapsed_preference_list">"<ns1:g id="CURRENT_ITEMS">%1$s</ns1:g>, <ns1:g id="ADDED_ITEMS">%2$s</ns1:g>"</string>
+    <string name="summary_color_preference">בחר בצע טקסט.</string>
+    <string name="summary_controlkey_preference">בחר מקש CTRL.</string>
+    <string name="summary_cursorblink_preference">בחר הבהוב הסמן.</string>
+    <string name="summary_cursorstyle_preference">בחר סגנון לסמן.</string>
+    <string name="summary_do_path_extensions_preference">האם יישומים אחרים יקבלו גישה להוסיף פקודות (להוסיף ל-PATH).</string>
+    <string name="summary_fnkey_preference">בחר מקש FN.</string>
+    <string name="summary_fontsize_preference">בחר גובה תווים בנקודות.</string>
+    <string name="summary_home_path_preference">נתיב לתיקייה שתשומש כתיקיית HOME.</string>
+    <string name="summary_ime_preference">בחר בשיטת הקלט עבור מקלדת מסך.</string>
+    <string name="summary_initialcommand_preference">נשלח בעת הפעלת shell.</string>
+    <string name="summary_orientation_preference">בחר פעולה בשינוי כיוון מסך.</string>
+    <string name="summary_shell_preference">ציין את שורת הפקודה.</string>
+    <string name="summary_statusbar_preference">הצגת/הסתרת שורת מצב.</string>
+    <string name="summary_termtype_preference">איזה סוג מסוף לדווח ל-shell.</string>
+    <string name="summary_utf8_by_default_preference">האם UTF-8 מופעל כברירת מחדל.</string>
+    <string name="summary_verify_path_preference">האם תיקיות בלתי נגישות צריכות לרדת מ-PATH.</string>
+    <string msgid="1672349317127674378" name="tab">"‏מקש Tab"</string>
+    <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> אחוזים."</string>
+    <string name="text_accessibility_service_description">נדרש לאוטומציה של פעולות סקריפט (לחיצה, לחיצה ארוכה, החלקה וכו\'), אם מושבת, ניתן לבצע רק סקריפטים שאינם כוללים פעולות אוטומטיות.</string>
+    <string name="text_already_stop_n_scripts">%d הפעלת סקריפטים הופסקה</string>
+    <string name="text_console">לְנַחֵם</string>
+    <string name="text_drawer_close">סגור את התפריט הנפתח</string>
+    <string name="text_drawer_open">פתח את התפריט הנפתח</string>
+    <string name="text_error">טעות:</string>
+    <string name="text_file_not_exists">הקובץ אינו קיים</string>
+    <string name="text_no_file_rw_permission">אין הרשאות קריאה וכתיבה של קובץ</string>
+    <string name="text_no_floating_window_permission">אין הרשאת חלון צף</string>
+    <string name="text_no_running_script">אין סקריפט פועל</string>
+    <string name="text_path_is_empty">השביל ריק</string>
+    <string name="text_preferences">טקסט</string>
+    <string formatted="true" name="text_requires_app_version_to_run_the_script">סקריפט זה דורש גרסה של Auto.js מספר %d ומעלה כדי להפעיל</string>
+    <string name="text_requires_sdk_version_to_run_the_script">הסקריפט הזה מחייב את גרסת האנדרואיד הזו כדי לרוץ:</string>
+    <string name="text_should_enable_gesture_observing">ניטור מחוות אינו מופעל, אנא הפעל אותו בהגדרות התוכנה</string>
+    <string name="text_should_enable_key_observing">ניטור מפתח אינו מופעל, אנא הפעל אותו בהגדרות התוכנה</string>
+    <string name="text_start_running">להתחיל פעולה</string>
+    <string name="title_actionbar_preference">בר הפעלות</string>
+    <string name="title_allow_prepend_path_preference">אפשר שינוי נתיב PATH</string>
+    <string name="title_backaction_preference">אופן הפעולה של לחצן החזרה</string>
+    <string name="title_close_window_on_process_exit_preference">סגור חלון ביציאה</string>
+    <string name="title_color_preference">צבעים</string>
+    <string name="title_controlkey_preference">מקש CTRL</string>
+    <string name="title_cursorblink_preference">הבהוב הסמן</string>
+    <string name="title_cursorstyle_preference">סגנון הסמן</string>
+    <string name="title_do_path_extensions_preference">אפשר הרחבות PATH</string>
+    <string name="title_fnkey_preference">מקש FN</string>
+    <string name="title_fontsize_preference">גודל גופן</string>
+    <string name="title_home_path_preference">תיקיית HOME</string>
+    <string name="title_ime_preference">שיטת קלט</string>
+    <string name="title_initialcommand_preference">פקודה ראשונית</string>
+    <string name="title_mouse_tracking_preference">שלח אירועי עכבר</string>
+    <string name="title_orientation_preference">כיוון מסך</string>
+    <string name="title_shell_preference">שורת הפקודה</string>
+    <string name="title_statusbar_preference">שורת מצב</string>
+    <string name="title_termtype_preference">סוג המסוף</string>
+    <string name="title_use_keyboard_shortcuts">השתמש בקיצורי מקלדת</string>
+    <string name="title_utf8_by_default_preference">ברירת מחדל UTF-8</string>
+    <string name="title_verify_path_preference">אמת ערך PATH</string>
+    <string name="toggle_soft_keyboard">מתג מקלדת מסך</string>
+    <string name="use_keyboard_shortcuts_summary_off">קיצורי מקלדת מושבתים.</string>
+    <string msgid="3140233346420563315" name="v7_preference_off">"כבוי"</string>
+    <string msgid="89551595707643515" name="v7_preference_on">"מופעל"</string>
+    <string name="window_list">חלונות</string>
+    <string name="window_title">חלון %1$d</string>
+</resources>
