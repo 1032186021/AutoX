@@ -87,24 +87,31 @@ fun DeviceActivationScreen(
         errorText = ""
 
         scope.launch {
-            val success: Boolean = withContext(Dispatchers.IO) {
-                if (isRenew) {
-                    deviceManager.renew(input)
-                } else {
-                    deviceManager.register(input) != null
+            try {
+                val success: Boolean = withContext(Dispatchers.IO) {
+                    if (isRenew) {
+                        deviceManager.renew(input)
+                    } else {
+                        deviceManager.register(input) != null
+                    }
                 }
-            }
-            if (success) {
-                isSuccess = true
-                app.deviceManager.onActivationResolved?.invoke()
-                delay(600)
-                onDone()
-            } else {
+                if (success) {
+                    isSuccess = true
+                    app.deviceManager.onActivationResolved?.invoke()
+                    delay(600)
+                    onDone()
+                } else {
+                    isLoading = false
+                    isSuccess = false
+                    submitted = false
+                    isShakeError = true
+                    errorText = if (isRenew) "续费失败，请检查卡密是否正确" else "激活失败，请检查卡密是否正确"
+                }
+            } catch (e: Exception) {
                 isLoading = false
                 isSuccess = false
                 submitted = false
-                isShakeError = true
-                errorText = if (isRenew) "续费失败，请检查卡密是否正确" else "激活失败，请检查卡密是否正确"
+                errorText = "网络连接失败，请检查网络后重试"
             }
         }
     }
