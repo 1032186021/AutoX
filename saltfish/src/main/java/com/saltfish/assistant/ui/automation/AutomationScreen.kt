@@ -28,6 +28,7 @@ fun AutomationTopBar() {
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AutomationContent(viewModel: AutomationViewModel = viewModel()) {
     val uiState by viewModel.uiState.collectAsState()
@@ -117,7 +118,7 @@ fun AutomationContent(viewModel: AutomationViewModel = viewModel()) {
             }
         }
 
-        HorizontalDivider()
+        Divider()
 
         // Platform selector
         Text("选择平台", style = MaterialTheme.typography.titleMedium)
@@ -188,7 +189,7 @@ fun AutomationContent(viewModel: AutomationViewModel = viewModel()) {
             )
         }
 
-        HorizontalDivider()
+        Divider()
 
         // Log section
         Row(

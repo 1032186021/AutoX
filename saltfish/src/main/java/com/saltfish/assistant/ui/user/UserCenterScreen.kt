@@ -26,6 +26,7 @@ fun UserCenterTopBar() {
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun UserCenterContent(
     onLogout: () -> Unit
@@ -119,7 +120,7 @@ fun UserCenterContent(
                     title = "个人信息",
                     subtitle = prefs.nickName ?: "查看/修改个人信息"
                 )
-                HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
+                Divider(modifier = Modifier.padding(horizontal = 16.dp))
                 CenterItem(
                     icon = Icons.Default.Lock,
                     title = "权限列表",
@@ -139,7 +140,7 @@ fun UserCenterContent(
                     title = "同步数据",
                     subtitle = "从服务器同步最新配置"
                 )
-                HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
+                Divider(modifier = Modifier.padding(horizontal = 16.dp))
                 CenterItem(
                     icon = Icons.Default.Delete,
                     title = "清除缓存",

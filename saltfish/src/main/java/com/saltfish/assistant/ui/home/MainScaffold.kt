@@ -6,7 +6,9 @@ import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.navOptions
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -42,9 +44,7 @@ fun MainScaffold(rootNavController: NavController) {
                 currentRoute = currentRoute,
                 onNavigate = { route ->
                     mainNavController.navigate(route) {
-                        popUpTo(mainNavController.graph.findStartDestination().id) {
-                            saveState = true
-                        }
+                        popUpTo(Screen.Home.route) { saveState = true }
                         launchSingleTop = true
                         restoreState = true
                     }
@@ -91,8 +91,7 @@ private fun SaltfishBottomBar(currentRoute: String, onNavigate: (String) -> Unit
     )
 
     NavigationBar(
-        containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.85f),
-        tonalElevation = 0.dp
+        containerColor = MaterialTheme.colorScheme.surface.copy(alpha = 0.85f)
     ) {
         NavigationBarItem(
             selected = currentRoute == Screen.Home.route,

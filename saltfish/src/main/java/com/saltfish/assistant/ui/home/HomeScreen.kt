@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.ExperimentalTextApi
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -71,6 +72,7 @@ fun HomeTopBar(onSettings: () -> Unit) {
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeContent(
     rootNavController: NavController,
@@ -211,7 +213,7 @@ fun HomeContent(
                             context.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
                         }
                     )
-                    HorizontalDivider(
+                    Divider(
                         modifier = Modifier.padding(horizontal = 16.dp),
                         color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f)
                     )
@@ -223,7 +225,7 @@ fun HomeContent(
                             context.startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION))
                         }
                     )
-                    HorizontalDivider(
+                    Divider(
                         modifier = Modifier.padding(horizontal = 16.dp),
                         color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.3f)
                     )
@@ -368,6 +370,7 @@ fun HomeContent(
     }
 }
 
+@OptIn(ExperimentalTextApi::class)
 @Composable
 private fun HeroStatItem(
     label: String,
